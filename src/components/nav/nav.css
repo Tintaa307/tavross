@@ -1,0 +1,39 @@
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+}
+
+.header-container .container-nav .container-list {
+  position: absolute;
+  top: 32px;
+  right: 80px;
+}
+
+.header-container .container-nav .container-list ul li {
+  display: inline-block;
+  margin: 0 30px;
+}
+
+.header-container .container-nav .container-list ul li a {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.header-container .container-nav .container-list ul li:nth-child(5) {
+  position: relative;
+  left: 40px;
+}
+
+.header-container .container-nav .container-name {
+  position: absolute;
+  top: 29px;
+  left: 90px;
+}
+
+.header-container .container-nav .container-name h4 {
+  color: #fff;
+  font-size: 1.3rem;
+}
