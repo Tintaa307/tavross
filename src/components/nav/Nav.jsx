@@ -7,24 +7,24 @@ const Nav = () => {
     <header className="header-container">
       <nav className="container-nav">
         <div className="container-name">
-          <h4>🦾Tavross</h4>
+          <h4>🦾TAVROSS</h4>
         </div>
         <div className="container-list">
           <ul className="list">
             <li>
-              <a href="#Home">Inicio</a>
+              <a href="#Home">INICIO</a>
             </li>
             <li>
-              <a href="#Rutines">Rutinas</a>
+              <a href="#Rutines">RUTINAS</a>
             </li>
             <li>
-              <a href="#Diet">Progreso</a>
+              <a href="#Diet">PROGRESO</a>
             </li>
             <li>
-              <a href="#Contact">Contacto</a>
+              <a href="#Contact">CONTACTO</a>
             </li>
             <li>
-              <Link to={"/register"} className="link">
+              <Link to={"/register"} className="link-nav">
                 Crear Cuenta
               </Link>
             </li>
