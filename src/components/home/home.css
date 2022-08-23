@@ -4,13 +4,129 @@
   margin-top: 6rem;
 }
 
-.container-main .container-home .container-decor {
-  width: 30%;
-  height: 83.2vh;
+.container-main .container-home {
+  width: 100%;
+}
+
+.container-triangle {
+  height: 120%;
   position: absolute;
   right: 0;
+  bottom: 0;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.container-tri-uno {
+  width: 355px;
   background-color: var(--color-main);
 }
 
-.container-main .container-home .container-decor .decor {
+.container-tri-dos {
+  width: 455px;
+  background-color: var(--color-main-light);
+}
+
+.container-tri-tre {
+  width: 555px;
+  background-color: var(--color-main-lighten);
+}
+
+.container-main .container-home .container-presentation {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.container-main .container-home .container-presentation .content-presentation {
+  position: absolute;
+  top: 100px;
+  left: 160px;
+}
+
+.container-main
+  .container-home
+  .container-presentation
+  .content-presentation
+  h1 {
+  color: transparent;
+  font-family: var(--red-hat-font);
+  letter-spacing: 1.2px;
+  font-size: 3.2rem;
+  -webkit-text-stroke: 1px #fff;
+  padding-bottom: 0.6rem;
+}
+
+.container-main
+  .container-home
+  .container-presentation
+  .content-presentation
+  h2 {
+  font-family: var(--red-hat-font);
+  font-size: 4.5rem;
+  color: #fff;
+  padding-bottom: 2rem;
+  font-weight: bold;
+}
+
+.container-main
+  .container-home
+  .container-presentation
+  .content-presentation
+  p {
+  color: #ffff;
+  font-size: 1rem;
+  width: 60%;
+  line-height: 25px;
+  padding-bottom: 3rem;
+}
+
+.container-main
+  .container-home
+  .container-presentation
+  .content-presentation
+  .container-a {
+  width: 200px;
+  height: 60px;
+  border-radius: 5px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  background-color: var(--color-main);
+}
+
+.container-main
+  .container-home
+  .container-presentation
+  .content-presentation
+  .container-a
+  a {
+  width: 100%;
+  height: 100px;
+  margin-top: 14px;
+  color: #fff;
+  z-index: 1;
+  font-weight: bold;
+}
+
+.container-main
+  .container-home
+  .container-presentation
+  .content-presentation
+  .container-a
+  a
+  i {
+  position: relative;
+  top: 5px;
+  z-index: -1;
+}
+
+.container-main
+  .container-home
+  .container-presentation
+  .content-presentation
+  a
+  i {
+  margin-left: 5px;
+  font-size: 1.4rem;
 }

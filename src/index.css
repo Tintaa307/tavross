@@ -7,13 +7,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&display=swap");
 
 :root {
   /* =========== COLORS =========== */
   --color-main: #ec000f;
   --color-main-opaque: #001890;
-  --color-main-light: #0049cf;
-  --color-main-lighten: #0061de;
+  --color-main-light: #ff1928;
+  --color-main-lighten: #ff303f;
   --title-color: #000;
   --text-color: #1e1e1e;
   --nav-color-text: #fff;
@@ -29,6 +30,7 @@
   --body-font: "Patua One", cursive;
   --details-font: "La Belle Aurore", cursive;
   --info-font: "Roboto Mono", monospace;
+  --red-hat-font: "Red Hat Display", sans-serif;
   --title-font: "Exo 2", sans-serif;
   --patua-font: "Patua One", cursive;
   --poppins-font: "Poppins", sans-serif;
@@ -66,7 +68,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: #fff;
   border-radius: 5rem;
 }
 
@@ -112,30 +114,40 @@ a {
 
 [color="red"] {
   --color-main: #ec000f;
+  --color-main-light: #ff1928;
+  --color-main-lighten: #ff1f2e;
   --color-main-opaque: #b9000c;
   --box-shadow: 0 0 12px #ec000f;
 }
 
 [color="blue"] {
   --color-main: #0020c3;
+  --color-main-light: #1939dc;
+  --color-main-lighten: #2444e7;
   --color-main-opaque: #001890;
   --box-shadow: 0 0 12px #0020c3;
 }
 
 [color="orange"] {
   --color-main: #ff4d00ff;
+  --color-main-light: #ff6114;
+  --color-main-lighten: #ff7124;
   --color-main-opaque: #cc3e00;
   --box-shadow: 0 0 12px #ff4d00ff;
 }
 
 [color="green"] {
   --color-main: #33a100ff;
+  --color-main-light: #4cba19;
+  --color-main-lighten: #57c524;
   --color-main-opaque: #236e00;
   --box-shadow: 0 0 12px #33a100ff;
 }
 
 [color="rosa"] {
   --color-main: #8800ac;
+  --color-main-light: #9f17c3;
+  --color-main-lighten: #ac24d0;
   --color-main-opaque: #600079;
   --box-shadow: 0 0 12px #8800ac;
 }
