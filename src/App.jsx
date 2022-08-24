@@ -26,7 +26,7 @@ function App() {
           <Nav hide={hide} />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/" element={<Register />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </BrowserRouter>
       </div>

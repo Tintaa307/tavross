@@ -1,0 +1,31 @@
+.container-register {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 3;
+}
+
+.container-register .container-content-register {
+  width: 80%;
+  height: 90%;
+  background-color: #13131a;
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  border-radius: 3rem;
+}
+
+.container-register .container-content-register .container-login-img {
+  width: 50%;
+  height: 100%;
+}
+
+.container-register .container-content-register .container-login-img img {
+  position: relative;
+  top: 100px;
+  left: 70px;
+  width: 60%;
+}

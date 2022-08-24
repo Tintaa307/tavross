@@ -1,0 +1,15 @@
+.section-settings {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100vh;
+  z-index: 4;
+  background-color: #13131a;
+  transition: var(--transition);
+}
+
+.section-settings.open {
+  width: 100%;
+  transition: var(--transition);
+}
