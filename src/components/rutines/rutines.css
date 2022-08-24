@@ -152,6 +152,11 @@
   font-weight: 400;
 }
 
+.container-section-rutines .card .box .content .container-arrow {
+  font-size: 2rem;
+  color: #fff;
+}
+
 .section .buttons-rutinas {
   position: absolute;
   width: 100%;

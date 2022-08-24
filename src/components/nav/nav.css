@@ -21,7 +21,7 @@
 .header-container .container-nav .container-list {
   position: absolute;
   top: 32px;
-  right: 80px;
+  right: 110px;
 }
 
 .header-container .container-nav .container-list ul li {
@@ -42,7 +42,7 @@
 
 .header-container .container-nav .container-list ul li:nth-child(5) {
   position: relative;
-  left: 40px;
+  left: 10px;
 }
 
 .header-container .container-nav .container-list ul li .link-nav {
@@ -70,4 +70,5 @@
   color: #fff;
   font-size: 1.3rem;
   letter-spacing: 1px;
+  font-weight: bold;
 }

@@ -19,20 +19,10 @@ const Rutines = () => {
               <div className="container-arrow">
                 <i class="ri-arrow-down-line"></i>
               </div>
-              <ul>
-                <li>
-                  <i class="ri-check-line" aria-hidden="true"></i>10 GB Space
-                </li>
-                <li>
-                  <i class="ri-check-line" aria-hidden="true"></i>10 GB Space
-                </li>
-                <li>
-                  <i class="ri-check-line" aria-hidden="true"></i>10 GB Space
-                </li>
-                <li>
-                  <i class="ri-check-line" aria-hidden="true"></i>10 GB Space
-                </li>
-              </ul>
+              <div className="container-descrip">
+                Rutinas para aquellos que este buscando ganar masa muscular y
+                aumentar su fuerza.
+              </div>
               <a href="#">Order Now</a>
             </div>
           </div>
@@ -48,20 +38,10 @@ const Rutines = () => {
               <div className="container-arrow">
                 <i class="ri-arrow-down-line"></i>
               </div>
-              <ul>
-                <li>
-                  <i class="ri-check-line" aria-hidden="true"></i>20 GB Space
-                </li>
-                <li>
-                  <i class="ri-check-line" aria-hidden="true"></i>20 GB Space
-                </li>
-                <li>
-                  <i class="ri-check-line" aria-hidden="true"></i>20 GB Space
-                </li>
-                <li>
-                  <i class="ri-check-line" aria-hidden="true"></i>20 GB Space
-                </li>
-              </ul>
+              <div className="container-descrip">
+                En este programa podrás encontrar movimientos secuenciales para
+                hacer un rango de 20 a 30 minutos
+              </div>
               <a href="#">Order Now</a>
             </div>
           </div>
@@ -74,23 +54,13 @@ const Rutines = () => {
                 <i class="fa-solid fa-heart-circle-plus"></i>
               </div>
               <h3>HEALTHY</h3>
-              <div className="contaner-arrow">
+              <div className="container-arrow">
                 <i class="ri-arrow-down-line"></i>
               </div>
-              <ul>
-                <li>
-                  <i class="ri-check-line" aria-hidden="true"></i>60 GB Space
-                </li>
-                <li>
-                  <i class="ri-check-line" aria-hidden="true"></i>60 GB Space
-                </li>
-                <li>
-                  <i class="ri-check-line" aria-hidden="true"></i>60 GB Space
-                </li>
-                <li>
-                  <i class="ri-check-line" aria-hidden="true"></i>60 GB Space
-                </li>
-              </ul>
+              <div className="container-descrip">
+                Rutina diseñada para aquells que su objetivo sea mantenerse
+                saludable.
+              </div>
               <a href="#">Order Now</a>
             </div>
           </div>

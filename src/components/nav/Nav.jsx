@@ -1,8 +1,10 @@
 import React, { useState } from "react"
 import "./nav.css"
 import { Link } from "react-router-dom"
+import ButtonConfig from "./ButtonConfig"
 
 const Nav = ({ hide }) => {
+  const [isOpen, setIsOpen] = useState("")
   const [navbar, setNavbar] = useState("")
   const onScroll = () => {
     if (window.scrollY > 100) {
@@ -12,6 +14,15 @@ const Nav = ({ hide }) => {
     }
   }
   window.addEventListener("scroll", onScroll)
+
+  const handleOpen = () => {
+    setIsOpen(isOpen === "" ? "open" : "")
+  }
+
+  const handleClose = () => {
+    setIsOpen("")
+  }
+
   return (
     <header className={["header-container", navbar, hide].join(" ")}>
       <nav className="container-nav">
@@ -40,6 +51,11 @@ const Nav = ({ hide }) => {
           </ul>
         </div>
       </nav>
+      <ButtonConfig
+        isOpen={isOpen}
+        handleOpen={handleOpen}
+        handleClose={handleClose}
+      />
     </header>
   )
 }

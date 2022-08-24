@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Nav from "./components/nav/Nav"
 import Home from "./components/home/Home"
 import Register from "./components/register/Register"
+import ScrollReveal from "scrollreveal"
 
 function App() {
   const [hide, setHide] = useState("")
