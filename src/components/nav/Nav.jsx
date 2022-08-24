@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import "./nav.css"
 import { Link } from "react-router-dom"
 
-const Nav = () => {
+const Nav = ({ hide }) => {
   const [navbar, setNavbar] = useState("")
   const onScroll = () => {
     if (window.scrollY > 100) {
@@ -13,7 +13,7 @@ const Nav = () => {
   }
   window.addEventListener("scroll", onScroll)
   return (
-    <header className={["header-container", navbar].join(" ")}>
+    <header className={["header-container", navbar, hide].join(" ")}>
       <nav className="container-nav">
         <div className="container-name">
           <a href="#Home">🦾TAVROSS</a>

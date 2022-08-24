@@ -6,11 +6,16 @@
   height: 90px;
   z-index: 3;
   transition: var(--transition);
+  display: block;
 }
 
 .header-container.active {
   background-color: #000;
   transition: var(--transition);
+}
+
+.header-container.hide {
+  display: none;
 }
 
 .header-container .container-nav .container-list {
