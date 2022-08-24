@@ -2,10 +2,12 @@ import React from "react"
 import "./home.css"
 import Image from "../../assets/img-home.png"
 import Rutines from "../rutines/Rutines"
+import Calculadora from "../calculadora/Calculadora"
 
 const Home = () => {
   return (
     <>
+      <div id="Home" className="ancla"></div>
       <main className="container-main">
         <div className="container-home">
           <div className="container-triangle container-tri-tre"></div>
@@ -30,6 +32,9 @@ const Home = () => {
       </main>
       <div className="container-rutinas">
         <Rutines />
+      </div>
+      <div className="container-calculadora">
+        <Calculadora />
       </div>
     </>
   )

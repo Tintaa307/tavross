@@ -61,7 +61,7 @@
   left: 90px;
 }
 
-.header-container .container-nav .container-name h4 {
+.header-container .container-nav .container-name a {
   color: #fff;
   font-size: 1.3rem;
   letter-spacing: 1px;

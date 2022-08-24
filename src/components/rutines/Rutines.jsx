@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 const Rutines = () => {
   return (
-    <section className="section">
+    <section id="Rutines" className="section">
       <div className="container-rutines-title">
         <h1>RUTINAS</h1>
       </div>
@@ -13,9 +13,9 @@ const Rutines = () => {
           <div className="box">
             <div className="content">
               <div className="icon">
-                <i class="fa-solid fa-dumbbell"></i>
+                <i class="fa-solid fa-dumbbell" aria-hidden="true"></i>
               </div>
-              <h3>WIN MUSCLE </h3>
+              <h3>WIN MUSCLE</h3>
               <div className="container-arrow">
                 <i class="ri-arrow-down-line"></i>
               </div>

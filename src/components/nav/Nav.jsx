@@ -16,15 +16,15 @@ const Nav = () => {
     <header className={["header-container", navbar].join(" ")}>
       <nav className="container-nav">
         <div className="container-name">
-          <h4>🦾TAVROSS</h4>
+          <a href="#Home">🦾TAVROSS</a>
         </div>
         <div className="container-list">
           <ul className="list">
             <li>
-              <a href="#Home">INICIO</a>
+              <a href="#Rutines">RUTINAS</a>
             </li>
             <li>
-              <a href="#Rutines">RUTINAS</a>
+              <a href="#Calculadora">TÚ RM</a>
             </li>
             <li>
               <a href="#Diet">PROGRESO</a>

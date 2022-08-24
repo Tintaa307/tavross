@@ -21,7 +21,6 @@
   font-size: 60px;
   font-family: var(--montserrat-font);
   color: #fff;
-  margin-bottom: 2rem;
 }
 
 .container-section-rutines {
@@ -31,6 +30,7 @@
   flex-wrap: wrap;
   max-width: 1200px;
   padding: 100px 0 50px;
+  margin-top: 6rem;
 }
 
 .container-section-rutines .card {
@@ -102,6 +102,13 @@
   font-size: 1.6em;
 }
 
+.container-section-rutines .card .box .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .container-section-rutines .card .box .content h3 {
   font-size: 1.8em;
   color: #fff;
@@ -153,7 +160,7 @@
 
 .section .buttons-rutinas .links-rutinas {
   position: absolute;
-  bottom: -40px;
+  bottom: -110px;
   right: 60px;
   margin: 0 20px;
 }
