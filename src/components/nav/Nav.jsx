@@ -29,7 +29,7 @@ const Nav = ({ hide }) => {
       <header className={["header-container", navbar, hide].join(" ")}>
         <nav className="container-nav">
           <div className="container-name">
-            <a href="#Home">🦾TAVROSS</a>
+            <a href="#Home">TAVROSS</a>
           </div>
           <div className="container-list">
             <ul className="list">

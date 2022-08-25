@@ -11,7 +11,7 @@
 
 :root {
   /* =========== COLORS =========== */
-  --color-main: #ec000f;
+  --color-main: #8800ac;
   --color-main-opaque: #001890;
   --color-main-light: #ff1928;
   --color-main-lighten: #ff303f;
@@ -76,6 +76,7 @@ body {
   font-family: var(--montserrat-font);
   font-size: var(--default-size);
   background-color: #040404;
+  overflow-x: hidden;
 }
 
 h1,

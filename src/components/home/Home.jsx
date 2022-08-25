@@ -1,10 +1,43 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./home.css"
 import Image from "../../assets/img-home.png"
 import Rutines from "../rutines/Rutines"
 import Calculadora from "../calculadora/Calculadora"
+import ScrollReveal from "scrollreveal"
 
 const Home = () => {
+  useEffect(() => {
+    const sr = ScrollReveal()
+
+    sr.reveal(".container-presentation", {
+      delay: 400,
+      origin: "left",
+      distance: "100px",
+      duration: 1000,
+    })
+
+    sr.reveal(".container-tri-tre", {
+      delay: 400,
+      origin: "right",
+      distance: "100px",
+      duration: 1000,
+    })
+
+    sr.reveal(".container-tri-dos", {
+      delay: 300,
+      origin: "right",
+      distance: "100px",
+      duration: 1000,
+    })
+
+    sr.reveal(".container-tri-uno", {
+      delay: 200,
+      origin: "right",
+      distance: "100px",
+      duration: 1000,
+    })
+  })
+
   return (
     <>
       <div id="Home" className="ancla"></div>

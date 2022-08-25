@@ -1,8 +1,20 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./rutines.css"
 import { Link } from "react-router-dom"
+import ScrollReveal from "scrollreveal"
 
 const Rutines = () => {
+  useEffect(() => {
+    const sr = ScrollReveal()
+
+    sr.reveal(".section", {
+      delay: 400,
+      origin: "top",
+      distance: "100px",
+      duration: 1000,
+    })
+  })
+
   return (
     <section id="Rutines" className="section">
       <div className="container-rutines-title">

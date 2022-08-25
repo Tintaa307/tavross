@@ -62,8 +62,8 @@
 
 .header-container .container-nav .container-name {
   position: absolute;
-  top: 29px;
-  left: 90px;
+  top: 30px;
+  left: 120px;
 }
 
 .header-container .container-nav .container-name a {
@@ -80,7 +80,7 @@
 }
 
 .container-buttons-config .container-buttons .button-rueda {
-  position: absolute;
+  position: fixed;
   top: 27px;
   right: 45px;
   transition: var(--transition);
@@ -98,7 +98,7 @@
 }
 
 .container-buttons-config .container-buttons .button-back {
-  position: absolute;
+  position: fixed;
   top: 30px;
   left: 35px;
   transition: var(--transition);
