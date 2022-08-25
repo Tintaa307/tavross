@@ -3,6 +3,7 @@ import "./nav.css"
 import { Link } from "react-router-dom"
 import ButtonConfig from "./ButtonConfig"
 import Settings from "../settings/Settings"
+import Logo from "../../assets/pincheTavros.jpg"
 
 const Nav = ({ hide }) => {
   const [isOpen, setIsOpen] = useState("")
@@ -29,7 +30,7 @@ const Nav = ({ hide }) => {
       <header className={["header-container", navbar, hide].join(" ")}>
         <nav className="container-nav">
           <div className="container-name">
-            <a href="#Home">TAVROSS</a>
+            <a href="#Home"> TAVROSS</a>
           </div>
           <div className="container-list">
             <ul className="list">

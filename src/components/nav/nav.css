@@ -73,6 +73,10 @@
   font-weight: bold;
 }
 
+.header-container .container-nav .container-name a img {
+  width: 35%;
+}
+
 .container-buttons-config {
   width: 100%;
   height: 90px;
