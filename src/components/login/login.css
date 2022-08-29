@@ -1,0 +1,80 @@
+.container-register .container-content-register .container-form-login {
+  position: absolute;
+  top: 34px;
+  left: 545px;
+  height: 90%;
+  width: 50%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.container-register .container-content-register .container-form-login .form {
+  margin-top: 100px;
+}
+
+.container-register .container-content-register .container-form-login .form h2 {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.container-register
+  .container-content-register
+  .container-form-login
+  .form
+  .input {
+  width: 320px;
+  height: 50px;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0 35px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  outline: none;
+}
+
+.container-register .container-content-register .container-form-login .form i {
+  position: relative;
+  top: 35px;
+  color: #fff;
+  left: -140px;
+}
+
+.container-register .container-content-register .container-form-login .error {
+  padding-top: 0.5rem;
+  color: #fff;
+}
+
+.container-register .container-content-register .container-form-login button {
+  width: 250px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.container-register
+  .container-content-register
+  .container-form-login
+  .container-already
+  h5 {
+  margin-top: 1.3rem;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.container-register
+  .container-content-register
+  .container-form-login
+  .container-already
+  h5
+  .inicia-sesion {
+  color: var(--color-main);
+}

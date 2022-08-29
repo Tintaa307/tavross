@@ -1,6 +1,6 @@
 import express from "express"
 import cors from "cors"
-import userRoutes from "./routers/router.js"
+import userRoutes from "./routes/router.js"
 import bd from "./dataBase/bd.js"
 
 const app = express()

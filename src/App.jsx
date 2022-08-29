@@ -6,6 +6,7 @@ import Nav from "./components/nav/Nav"
 import Home from "./components/home/Home"
 import Register from "./components/register/Register"
 import ScrollReveal from "scrollreveal"
+import Login from "./components/login/Login"
 
 function App() {
   const [hide, setHide] = useState("")
@@ -27,6 +28,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </BrowserRouter>
       </div>

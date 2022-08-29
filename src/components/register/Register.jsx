@@ -5,6 +5,7 @@ import { Formik, Form, Field } from "formik"
 import * as Yup from "yup"
 import axios from "axios"
 import { Link, useNavigate } from "react-router-dom"
+import ScrollReveal from "scrollreveal"
 
 const SignupSchema = Yup.object().shape({
   username: Yup.string()
@@ -21,6 +22,24 @@ const SignupSchema = Yup.object().shape({
 const URI = "http://localhost:8000/usuarios/"
 
 const Register = () => {
+  useEffect(() => {
+    const sr = ScrollReveal()
+
+    sr.reveal(".container-login-img", {
+      delay: 400,
+      origin: "left",
+      distance: "100px",
+      duration: 1000,
+    })
+
+    sr.reveal(".container-form", {
+      delay: 400,
+      origin: "right",
+      distance: "100px",
+      duration: 1000,
+    })
+  })
+
   const navigate = useNavigate()
 
   const saveUser = async (values) => {
