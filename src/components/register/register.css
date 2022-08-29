@@ -107,3 +107,15 @@
   .inicia-sesion {
   color: var(--color-main);
 }
+
+.container-register .container-back-reg {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.container-register .container-back-reg i {
+  color: #fff;
+  z-index: 3;
+  font-size: var(--title-size);
+}

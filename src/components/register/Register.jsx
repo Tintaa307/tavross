@@ -139,6 +139,11 @@ const Register = () => {
           </Formik>
         </div>
       </div>
+      <div className="container-back-reg">
+        <Link to={"/"} className="link">
+          <i className="ri-arrow-left-line"></i>{" "}
+        </Link>
+      </div>
     </div>
   )
 }

@@ -23,3 +23,18 @@ export const updateUser = async (req, res) => {
     console.log(error)
   }
 }
+
+// get one user
+
+export const getOneUser = async (req, res) => {
+  try {
+    await UserModel.findAll(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    })
+    res.json({ message: "user found" })
+  } catch (error) {
+    console.log("error", error)
+  }
+}

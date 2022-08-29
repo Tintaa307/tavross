@@ -15,6 +15,7 @@ const Nav = ({ hide }) => {
       setNavbar("")
     }
   }
+
   window.addEventListener("scroll", onScroll)
 
   const handleOpen = () => {

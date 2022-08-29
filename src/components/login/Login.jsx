@@ -77,6 +77,11 @@ const Login = () => {
           </form>
         </div>
       </div>
+      <div className="container-back-reg">
+        <Link to={"/register"} className="link">
+          <i className="ri-arrow-left-line"></i>{" "}
+        </Link>
+      </div>
     </div>
   )
 }
