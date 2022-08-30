@@ -1,15 +1,189 @@
 .section-settings {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 0%;
+  width: 100%;
   height: 100vh;
   z-index: 4;
   background-color: #13131a;
+  transform-origin: left;
   transition: var(--transition);
 }
 
-.section-settings.open {
+.section-settings .container-settings .container-settings-title {
   width: 100%;
-  transition: var(--transition);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.section-settings .container-settings .container-settings-title h1 {
+  margin-top: 1.5rem;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.section-settings .container-settings .container-settings-title::after {
+  content: "";
+  position: absolute;
+  top: 80px;
+  width: 90%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.section-settings .container-settings .container-content-settings {
+  width: 100%;
+  height: 100%;
+}
+
+.section-settings
+  .container-settings
+  .container-content-settings
+  .container-info-section {
+  margin-top: 3.5rem;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+
+.section-settings
+  .container-settings
+  .container-content-settings
+  .container-info-section
+  h2 {
+  color: #fff;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.section-settings
+  .container-settings
+  .container-content-settings
+  .container-info-section
+  input {
+  margin: 50px 0;
+}
+
+.section-settings
+  .container-settings
+  .container-content-settings
+  .container-info-section
+  h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 22px 0;
+}
+
+.section-settings
+  .container-settings
+  .container-content-settings
+  .container-info-section
+  h3.second {
+  margin-bottom: 2rem;
+}
+
+.section-settings
+  .container-settings
+  .container-content-settings
+  .container-info-section
+  i {
+  color: #00ff00;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+.section-settings
+  .container-settings
+  .container-content-settings
+  .container-info-section
+  h6 {
+  color: #fff;
+  padding-top: 20px;
+  font-size: 1rem;
+}
+
+.section-settings .container-settings .container-content-settings .separador {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 120px;
+  width: 2px;
+  height: 75%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.section-settings
+  .container-settings
+  .container-content-settings
+  .container-buttons-config {
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  width: 50%;
+}
+
+.section-settings
+  .container-settings
+  .container-content-settings
+  .container-buttons-config
+  .buttons {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.section-settings
+  .container-settings
+  .container-content-settings
+  .container-buttons-config
+  .buttons
+  .boton {
+  width: 330px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 20px 0;
+  letter-spacing: 0.8px;
+  border: 1px solid #fff;
+  outline: none;
+}
+
+.section-settings
+  .container-settings
+  .container-content-settings
+  .container-buttons-config
+  .indicador {
+  width: 8px;
+  height: 45px;
+  background-color: #0000ff;
+  position: absolute;
+  top: 100px;
+  right: 160px;
+  border-radius: 10px;
+}
+
+.section-settings
+  .container-settings
+  .container-content-settings
+  .container-buttons-config
+  .indicador
+  .one {
+  transform: translateY(0);
+}
+
+.section-settings
+  .container-settings
+  .container-content-settings
+  .container-buttons-config
+  .indicador
+  .two {
+  transform: translateY(60px);
 }

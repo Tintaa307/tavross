@@ -61,7 +61,6 @@ const Nav = ({ hide }) => {
         handleOpen={handleOpen}
         handleClose={handleClose}
       />
-      <Settings isOpen={isOpen} />
     </>
   )
 }
