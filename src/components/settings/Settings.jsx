@@ -1,55 +1,38 @@
-import React, { useRef, useState, useEffect } from "react"
+import React, { useRef, useState, useEffect, Children } from "react"
 import "./settings.css"
 
 const buttons = [
   {
     content: "MI CUENTA",
     className: "boton",
-    id: 1,
+    id: "one",
   },
   {
     content: "ACCESIBILIDAD",
     className: "boton",
-    id: 2,
+    id: "two",
   },
   {
     content: "IDIOMA",
     className: "boton",
-    id: 3,
+    id: "three",
   },
   {
     content: "APARIENCIA",
     className: "boton",
-    id: 4,
+    id: "four",
   },
 ]
 
 const Settings = () => {
-  const indicadorRef = useRef(null)
-  const buttonsRef = useRef([])
   const [move, setMove] = useState("one")
 
-  const handleClick = () => {
-    const id = buttonsRef.current.id
-    console.log(id)
+  const handleSelected = (e, isSelected) => {
+    isSelected = e.target.id
+    setMove(isSelected)
   }
 
-  useEffect(() => {
-    console.log(buttonsRef)
-    buttonsRef &&
-      buttonsRef.forEach((button) => {
-        const id = button.id
-        if (id === 1) {
-          setMove("one")
-        } else if (id === 2) {
-          setMove("two")
-        } else if (id === 3) {
-          setMove("three")
-        } else {
-          setMove("four")
-        }
-      })
-  }, [buttonsRef])
+  console.log(move)
 
   return (
     <section className="section-settings">
@@ -71,20 +54,15 @@ const Settings = () => {
             <div className="buttons">
               {buttons.map(({ content, className, id }, index) => {
                 return (
-                  <div key={index} className="button">
-                    <button
-                      id={id}
-                      ref={buttonsRef}
-                      className={[className, move].join(" ")}
-                      onClick={handleClick}
-                    >
+                  <div key={index} onClick={handleSelected} className="button">
+                    <button id={id} className={className}>
                       {content}
                     </button>
                   </div>
                 )
               })}
             </div>
-            <div ref={indicadorRef} className="indicador"></div>
+            <div className={["indicador", move].join(" ")}></div>
           </div>
         </div>
       </div>
