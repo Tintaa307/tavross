@@ -1,5 +1,6 @@
-import React, { useRef, useState, useEffect, Children } from "react"
+import React, { useRef, useState, useEffect } from "react"
 import "./settings.css"
+import ProfileImage from "../../assets/gymbro.png"
 
 const buttons = [
   {
@@ -26,13 +27,24 @@ const buttons = [
 
 const Settings = () => {
   const [move, setMove] = useState("one")
+  const [image, setImage] = useState("")
+  const fileRef = useRef(null)
+  const imageRef = useRef("")
+
+  const handleImage = () => {
+    fileRef.current.click()
+  }
 
   const handleSelected = (e, isSelected) => {
     isSelected = e.target.id
     setMove(isSelected)
   }
 
-  console.log(move)
+  console.log(imageRef.current.currentSrc)
+
+  useEffect(() => {
+    imageRef.current.currentSrc === "" ? setImage("") : setImage("active")
+  }, [imageRef])
 
   return (
     <section className="section-settings">
@@ -43,7 +55,19 @@ const Settings = () => {
         <div className="container-content-settings">
           <div className="container-info-section">
             <h2>HOLA @USUARIO</h2>
-            <input type="file" className="file" />
+            <input ref={fileRef} type="file" className="file" />
+            <div
+              itemType="file"
+              className="container-img-profile"
+              onClick={handleImage}
+            >
+              <img
+                ref={imageRef}
+                onClick={handleImage}
+                className="image-profile"
+              />
+              <i class={["ri-user-line", image].join(" ")}></i>
+            </div>
             <h3>Nombre...</h3>
             <h3 className="second">Email...</h3>
             <i class="ri-add-circle-line"></i>

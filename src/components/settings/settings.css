@@ -63,6 +63,19 @@
   .container-info-section
   input {
   margin: 50px 0;
+  display: none;
+}
+
+.section-settings
+  .container-settings
+  .container-content-settings
+  .container-img-profile {
+  display: block;
+  margin: auto;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #fff;
 }
 
 .section-settings
