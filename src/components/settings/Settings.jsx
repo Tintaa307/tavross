@@ -29,7 +29,7 @@ const Settings = () => {
   const [move, setMove] = useState("one")
   const [image, setImage] = useState("")
   const fileRef = useRef(null)
-  const imageRef = useRef("")
+  const imageRef = useRef(null)
 
   const handleImage = () => {
     fileRef.current.click()
@@ -40,10 +40,12 @@ const Settings = () => {
     setMove(isSelected)
   }
 
-  console.log(imageRef.current.currentSrc)
+  console.log(fileRef)
 
   useEffect(() => {
-    imageRef.current.currentSrc === "" ? setImage("") : setImage("active")
+    imageRef && imageRef.current.currentSrc === null
+      ? setImage("")
+      : setImage("active")
   }, [imageRef])
 
   return (
@@ -54,24 +56,18 @@ const Settings = () => {
         </div>
         <div className="container-content-settings">
           <div className="container-info-section">
-            <h2>HOLA @USUARIO</h2>
-            <input ref={fileRef} type="file" className="file" />
-            <div
-              itemType="file"
-              className="container-img-profile"
-              onClick={handleImage}
-            >
-              <img
-                ref={imageRef}
-                onClick={handleImage}
-                className="image-profile"
-              />
-              <i class={["ri-user-line", image].join(" ")}></i>
+            <div className="container-cuenta">
+              <h2>HOLA @USUARIO</h2>
+              <input ref={fileRef} type="file" className="file" />
+              <div className="container-img-profile" onClick={handleImage}>
+                <img ref={imageRef} className="image-profile" />
+                <i class={["ri-user-line", image].join(" ")}></i>
+              </div>
+              <h3>Nombre...</h3>
+              <h3 className="second">Email...</h3>
+              <i class="ri-add-circle-line"></i>
+              <h6>Mas info</h6>
             </div>
-            <h3>Nombre...</h3>
-            <h3 className="second">Email...</h3>
-            <i class="ri-add-circle-line"></i>
-            <h6>Mas info</h6>
           </div>
           <div className="separador"></div>
           <div className="container-buttons-config">

@@ -51,6 +51,15 @@
   .container-settings
   .container-content-settings
   .container-info-section
+  .container-cuenta {
+  width: 100%;
+  height: 100%;
+}
+
+.section-settings
+  .container-settings
+  .container-content-settings
+  .container-info-section
   h2 {
   color: #fff;
   padding-bottom: 2rem;
@@ -76,6 +85,26 @@
   height: 140px;
   border-radius: 50%;
   background-color: #fff;
+}
+
+.section-settings
+  .container-settings
+  .container-content-settings
+  .container-info-section
+  .container-img-profile
+  i {
+  font-size: 6rem;
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.section-settings
+  .container-settings
+  .container-content-settings
+  .container-info-section
+  .container-img-profile
+  i.active {
+  display: none;
 }
 
 .section-settings
