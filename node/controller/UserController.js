@@ -58,7 +58,7 @@ export const login = async (req, res) => {
     UserModel.findOne({ where: { id: req.params.id } }).contrasenia
   )
 
-  // const user = await UserModel.findOne({ where: { nombre: nombre } })
+  if (!verifyPassword) return res.send(alert("Las contraseñas no coinciden"))
 
   const token = jwt.sign(
     {

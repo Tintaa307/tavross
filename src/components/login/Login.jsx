@@ -28,6 +28,15 @@ const Login = () => {
     })
   })
 
+  const validateUser = async () => {
+    const data = await axios.get(URI)
+    console.log(data)
+  }
+
+  useEffect(() => {
+    validateUser()
+  })
+
   return (
     <div className="container-register">
       <div className="container-content-register">
