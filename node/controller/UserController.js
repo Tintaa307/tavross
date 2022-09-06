@@ -1,10 +1,18 @@
 import UserModel from "../models/userModel.js"
+import jwt from "jsonwebtoken"
+import "dotenv/config"
+import bcrypt from "bcrypt"
 
 // create User
 
 export const createUser = async (req, res) => {
   try {
-    const data = await UserModel.create(req.body)
+    const { contrasenia } = req.body
+    const hash = bcrypt.hash(contrasenia, 12)
+    const data = await UserModel.create({
+      ...req.body,
+      contrasenia: hash,
+    })
     res.json({ message: "user added", data: data })
   } catch (error) {
     console.log(error)
@@ -37,4 +45,28 @@ export const getOneUser = async (req, res) => {
   } catch (error) {
     console.log("error", error)
   }
+}
+
+// get token
+
+export const login = async (req, res) => {
+  const { id, nombre, contrasenia } = req.body
+
+  const verifyPassword = await bcrypt.compare(
+    contrasenia,
+    UserModel.findOne({ where: { contrasenia: contrasenia } })
+  )
+
+  // const user = await UserModel.findOne({ where: { nombre: nombre } })
+
+  const token = jwt.sign(
+    {
+      expiresIn: "15m",
+      data: {
+        id,
+        nombre,
+      },
+    },
+    process.env.SECRET
+  )
 }
