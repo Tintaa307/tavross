@@ -2,6 +2,7 @@ import UserModel from "../models/userModel.js"
 import jwt from "jsonwebtoken"
 import "dotenv/config"
 import bcrypt from "bcrypt"
+import { serialize } from "cookie"
 
 // create User
 
@@ -52,9 +53,9 @@ export const getOneUser = async (req, res) => {
 export const login = async (req, res) => {
   const { id, nombre, contrasenia } = req.body
 
-  const verifyPassword = await bcrypt.compare(
+  const verifyPassword = bcrypt.compare(
     contrasenia,
-    UserModel.findOne({ where: { contrasenia: contrasenia } })
+    UserModel.findOne({ where: { id: req.params.id } }).contrasenia
   )
 
   // const user = await UserModel.findOne({ where: { nombre: nombre } })
@@ -69,4 +70,24 @@ export const login = async (req, res) => {
     },
     process.env.SECRET
   )
+
+  const refreshToken = jwt.sign(
+    {
+      expiresIn: Math.floor(Date.now() / 1000) * 60 * 60 * 24 * 30,
+      id: { where: req.params.id },
+    },
+    process.env.REFRESH_TOKEN
+  )
+
+  const setCookieAccess = serialize("AccessToken", token, {
+    httpOnly: true,
+    expires: 0,
+  })
+
+  const setCookieRefresh = serialize("RefreshToken", refreshToken, {
+    httpOnly: true,
+    expires: 0,
+  })
+
+  res.setHeader("Set-Cookie", [setCookieAccess, setCookieRefresh])
 }
