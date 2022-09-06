@@ -9,7 +9,7 @@ import { serialize } from "cookie"
 export const createUser = async (req, res) => {
   try {
     const { contrasenia } = req.body
-    const hash = bcrypt.hash(contrasenia, 12)
+    const hash = await bcrypt.hash(contrasenia, 12)
     const data = await UserModel.create({
       ...req.body,
       contrasenia: hash,
