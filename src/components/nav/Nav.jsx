@@ -42,7 +42,7 @@ const Nav = ({ hide }) => {
                 <a href="#Calculadora">TÚ RM</a>
               </li>
               <li>
-                <a href="#Diet">PROGRESO</a>
+                <a href="#Progress">PROGRESO</a>
               </li>
               <li>
                 <a href="#Contact">CONTACTO</a>

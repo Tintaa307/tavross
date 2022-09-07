@@ -4,6 +4,7 @@ import Image from "../../assets/img-home.png"
 import Rutines from "../rutines/Rutines"
 import Calculadora from "../calculadora/Calculadora"
 import ScrollReveal from "scrollreveal"
+import Graphics from "../graphics/Graphics"
 
 const Home = () => {
   useEffect(() => {
@@ -68,6 +69,9 @@ const Home = () => {
       </div>
       <div className="container-calculadora">
         <Calculadora />
+      </div>
+      <div className="container-graphics">
+        <Graphics />
       </div>
     </>
   )
