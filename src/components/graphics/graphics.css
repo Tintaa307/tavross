@@ -12,6 +12,7 @@
 }
 
 .container-section-graphics .container-form-info {
+  position: absolute;
   width: 50%;
   margin-top: 5rem;
 }
@@ -61,4 +62,19 @@
   background-color: #fff;
   color: #000;
   transition: var(--transition);
+}
+
+.container-section-graphics .container-graphics-info {
+  width: 50%;
+  position: absolute;
+  margin-top: 7rem;
+  right: 0;
+}
+
+.container-section-graphics .container-graphics-info .graphics {
+}
+
+.container-section-graphics .container-graphics-info .graphics .graphic {
+  width: 400px;
+  height: 400px;
 }

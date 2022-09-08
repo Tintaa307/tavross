@@ -1,5 +1,6 @@
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import "./graphics.css"
+import { Chart } from "react-charts"
 
 const Graphics = () => {
   const [title, setTitle] = useState("Example...")
@@ -27,6 +28,11 @@ const Graphics = () => {
           <input type="number" placeholder="Repeticiones..." ref={repsRef} />
           <button type="submit">Enviar</button>
         </form>
+      </div>
+      <div className="container-graphics-info">
+        <div className="graphics">
+          <h3>Title</h3>
+        </div>
       </div>
     </section>
   )
