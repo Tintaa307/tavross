@@ -36,8 +36,10 @@ export const updateUser = async (req, res) => {
 // get one user
 
 export const getOneUser = async (req, res) => {
+  console.log(req.params)
+
   try {
-    await UserModel.findAll(req.body, {
+    await UserModel.findAll({
       where: {
         id: req.params.id,
       },
