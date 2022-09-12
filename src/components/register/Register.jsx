@@ -72,6 +72,7 @@ const Register = () => {
             {({ errors, touched, handleChange, values }) => (
               <Form className="form" autoComplete="off">
                 <h2 className="title">REGISTRARSE</h2>
+                <p>Registrate ahora para acceder a beneficios increibles</p>
                 <div className="input-div one ">
                   <div className="i">
                     <i className="fa fa-envelope"></i>

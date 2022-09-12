@@ -24,12 +24,14 @@ const Rutines = () => {
         <div className="card">
           <div className="box">
             <div className="content">
-              <div className="icon">
-                <i class="fa-solid fa-dumbbell" aria-hidden="true"></i>
-              </div>
-              <h3>WIN MUSCLE</h3>
-              <div className="container-arrow">
-                <i class="ri-arrow-down-line"></i>
+              <div className="container-rut-data">
+                <div className="icon">
+                  <i class="fa-solid fa-dumbbell" aria-hidden="true"></i>
+                </div>
+                <h3>WIN MUSCLE</h3>
+                <div className="container-arrow">
+                  <i class="ri-arrow-down-line"></i>
+                </div>
               </div>
               <div className="container-descrip">
                 Rutinas para aquellos que este buscando ganar masa muscular y
@@ -43,16 +45,18 @@ const Rutines = () => {
         <div className="card">
           <div className="box">
             <div className="content">
-              <div className="icon">
-                <i class="ri-run-line" aria-hidden="true"></i>
-              </div>
-              <h3>CARDIO</h3>
-              <div className="container-arrow">
-                <i class="ri-arrow-down-line"></i>
+              <div className="container-rut-data">
+                <div className="icon">
+                  <i class="ri-run-line" aria-hidden="true"></i>
+                </div>
+                <h3>CARDIO</h3>
+                <div className="container-arrow">
+                  <i class="ri-arrow-down-line"></i>
+                </div>
               </div>
               <div className="container-descrip">
-                En este programa podrás encontrar movimientos secuenciales para
-                hacer un rango de 20 a 30 minutos
+                Aquí odrás encontrar rutinas aerobicas y de resistencia, para
+                correr, bicicleta, zumba y más.
               </div>
               <a href="#">Order Now</a>
             </div>
@@ -62,16 +66,18 @@ const Rutines = () => {
         <div className="card">
           <div className="box">
             <div className="content">
-              <div className="icon">
-                <i class="fa-solid fa-heart-circle-plus"></i>
-              </div>
-              <h3>HEALTHY</h3>
-              <div className="container-arrow">
-                <i class="ri-arrow-down-line"></i>
+              <div className="container-rut-data">
+                <div className="icon">
+                  <i class="fa-solid fa-heart-circle-plus"></i>
+                </div>
+                <h3>HEALTHY</h3>
+                <div className="container-arrow">
+                  <i class="ri-arrow-down-line"></i>
+                </div>
               </div>
               <div className="container-descrip">
-                Rutina diseñada para aquells que su objetivo sea mantenerse
-                saludable.
+                Rutinas diseñadas para aquellas personas que su objetivo sea
+                mantenerse saludable.
               </div>
               <a href="#">Order Now</a>
             </div>

@@ -32,7 +32,7 @@ const Calculadora = () => {
           <h1>Calculadora de RM</h1>
           <p>
             Calcula tu meta de resistencia muscular. <br /> <br />{" "}
-            <span>Todo en KG</span>
+            <span>Expresado en KG</span>
           </p>
         </div>
         <div className="container-form">

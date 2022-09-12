@@ -16,7 +16,7 @@
   margin: auto;
   margin-top: 2rem;
   border-radius: 3rem;
-  box-shadow: 0 0 20px var(--color-main);
+  box-shadow: 0 0 20px #fff;
 }
 
 .container-register .container-content-register .container-login-img {
@@ -53,6 +53,10 @@
   font-size: 2rem;
 }
 
+.container-register .container-content-register .container-form .form p {
+  color: rgba(255, 255, 255, 0.365);
+}
+
 .container-register .container-content-register .container-form .form .input {
   width: 320px;
   height: 50px;
@@ -74,7 +78,8 @@
 
 .container-register .container-content-register .container-form .error {
   padding-top: 0.5rem;
-  color: #fff;
+  font-weight: 900;
+  color: red;
 }
 
 .container-register .container-content-register .container-form button {
@@ -87,6 +92,11 @@
   border-radius: 10px;
   margin-top: 2rem;
   cursor: pointer;
+  transition: 0.5s;
+}
+
+.container-register .container-content-register .container-form button:hover {
+  background-color: var(--color-main);
 }
 
 .container-register
@@ -97,6 +107,7 @@
   margin-top: 1.3rem;
   color: #fff;
   font-size: 0.9rem;
+  letter-spacing: 1px;
 }
 
 .container-register

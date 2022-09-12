@@ -74,7 +74,7 @@
   flex-direction: column;
 }
 
-.container-section-rutines .card .box .content .icon {
+.container-section-rutines .card .box .content .container-rut-data .icon {
   position: relative;
   width: 80px;
   height: 80px;
@@ -87,26 +87,51 @@
   margin-bottom: 10px;
 }
 
-.container-section-rutines .card .box .content .icon .ri-run-line {
+.container-section-rutines
+  .card
+  .box
+  .content
+  .container-rut-data
+  .icon
+  .ri-run-line {
   color: #fff;
   font-size: 2em;
 }
 
-.container-section-rutines .card .box .content .icon .fa-dumbbell {
+.container-section-rutines
+  .card
+  .box
+  .content
+  .container-rut-data
+  .icon
+  .fa-dumbbell {
   color: #fff;
   font-size: 1.6em;
 }
 
-.container-section-rutines .card .box .content .icon .fa-heart-circle-plus {
+.container-section-rutines
+  .card
+  .box
+  .content
+  .container-rut-data
+  .icon
+  .fa-heart-circle-plus {
   color: #fff;
   font-size: 1.6em;
 }
 
-.container-section-rutines .card .box .content {
+.container-section-rutines .card .box .content .container-rut-data {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.container-section-rutines .card .box .content .container-descrip {
+  color: rgba(255, 255, 255, 0.365);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .container-section-rutines .card .box .content h3 {
@@ -146,6 +171,7 @@
   padding: 8px 20px;
   background: var(--color-main);
   margin-top: 15px;
+  text-align: center;
   border-radius: 20px;
   text-decoration: none;
   color: #fff;
