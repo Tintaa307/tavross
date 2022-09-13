@@ -4,12 +4,16 @@ import Image from "../../assets/loginPerson.png"
 import { Formik, Form, Field } from "formik"
 import * as Yup from "yup"
 import axios from "axios"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import ScrollReveal from "scrollreveal"
 
 const URI = "http://localhost:8000/usuarios"
 
 const Login = () => {
+  const userRef = useRef(null)
+  const passwordRef = useRef(null)
+  const navigate = useNavigate()
+  const { id } = useParams()
   useEffect(() => {
     const sr = ScrollReveal()
 
@@ -28,14 +32,13 @@ const Login = () => {
     })
   })
 
-  const validateUser = async () => {
-    const data = await axios.get(URI)
-    console.log(data)
+  const validateUser = async (e) => {
+    e.preventDefault()
+    await axios.post(URI + "/login", {
+      nombre: userRef.current.value,
+      contrasenia: passwordRef.current.value,
+    })
   }
-
-  useEffect(() => {
-    validateUser()
-  })
 
   return (
     <div className="container-register">
@@ -44,7 +47,11 @@ const Login = () => {
           <img src={Image} alt="" />
         </div>
         <div className="container-form-login">
-          <form className="form" autoComplete="off">
+          <form
+            onSubmit={(e) => validateUser(e)}
+            className="form"
+            autoComplete="off"
+          >
             <h2 className="title">INICIAR SESION</h2>
             <div className="input-div one ">
               <div className="i">
@@ -52,6 +59,7 @@ const Login = () => {
               </div>
               <div className="div">
                 <input
+                  ref={userRef}
                   name={"username"}
                   placeholder="Username..."
                   type="text"
@@ -65,6 +73,7 @@ const Login = () => {
               </div>
               <div className="div">
                 <input
+                  ref={passwordRef}
                   name={"password"}
                   type="password"
                   placeholder="Password..."

@@ -15,6 +15,7 @@ export const createUser = async (req, res) => {
       contrasenia: hash,
     })
     res.json({ message: "user added", data: data })
+    console.log(hash)
   } catch (error) {
     console.log(error)
   }
@@ -30,6 +31,17 @@ export const updateUser = async (req, res) => {
     res.json({ message: "user updated" })
   } catch (error) {
     console.log(error)
+  }
+}
+
+// get all users
+
+export const getAllUsers = async (req, res) => {
+  try {
+    const users = await UserModel.findAll()
+    res.json({ message: "Users Found", data: users })
+  } catch (error) {
+    console.log("Hubo un error", error)
   }
 }
 
@@ -55,12 +67,9 @@ export const getOneUser = async (req, res) => {
 export const login = async (req, res) => {
   const { id, nombre, contrasenia } = req.body
 
-  const verifyPassword = bcrypt.compare(
-    contrasenia,
-    UserModel.findOne({ where: { id: req.params.id } }).contrasenia
-  )
-
-  if (!verifyPassword) return res.send(alert("Las contraseñas no coinciden"))
+  const user_query = await UserModel.findOne({
+    where: { nombre: nombre },
+  })
 
   const token = jwt.sign(
     {
@@ -83,13 +92,24 @@ export const login = async (req, res) => {
 
   const setCookieAccess = serialize("AccessToken", token, {
     httpOnly: true,
-    expires: 0,
+    maxAge: 1000 * 60 * 60,
   })
 
   const setCookieRefresh = serialize("RefreshToken", refreshToken, {
     httpOnly: true,
-    expires: 0,
+    maxAge: 1000 * 60 * 60,
   })
 
-  res.setHeader("Set-Cookie", [setCookieAccess, setCookieRefresh])
+  if (user_query) {
+    const verifyPassword = await bcrypt.compare(
+      contrasenia,
+      user_query.toJSON().contrasenia
+    )
+    !verifyPassword
+      ? console.log("El usuario y/0 contraseña no coinciden")
+      : res.setHeader("Set-Cookie", [setCookieAccess, setCookieRefresh])
+    console.log("Login Exitoso")
+  } else {
+    console.log("Error")
+  }
 }
