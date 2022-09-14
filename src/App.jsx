@@ -8,6 +8,7 @@ import Register from "./components/register/Register"
 import ScrollReveal from "scrollreveal"
 import Login from "./components/login/Login"
 import Settings from "./components/settings/Settings"
+import Page404 from "./components/notFound/Page404"
 
 function App() {
   const [hide, setHide] = useState("")
@@ -32,6 +33,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="*" element={<Page404 />} />
           </Routes>
         </BrowserRouter>
       </div>

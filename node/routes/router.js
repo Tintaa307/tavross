@@ -16,6 +16,4 @@ router.post("/login", login)
 router.put("/:id", updateUser)
 router.get("/:id", getOneUser)
 
-// ruta solo si estas autenticado
-
 export default router

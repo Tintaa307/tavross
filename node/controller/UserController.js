@@ -15,7 +15,6 @@ export const createUser = async (req, res) => {
       contrasenia: hash,
     })
     res.json({ message: "user added", data: data })
-    console.log(hash)
   } catch (error) {
     console.log(error)
   }
@@ -48,8 +47,6 @@ export const getAllUsers = async (req, res) => {
 // get one user
 
 export const getOneUser = async (req, res) => {
-  console.log(req.params)
-
   try {
     await UserModel.findAll({
       where: {
@@ -93,11 +90,13 @@ export const login = async (req, res) => {
   const setCookieAccess = serialize("AccessToken", token, {
     httpOnly: true,
     maxAge: 1000 * 60 * 60,
+    path: "/",
   })
 
   const setCookieRefresh = serialize("RefreshToken", refreshToken, {
     httpOnly: true,
     maxAge: 1000 * 60 * 60,
+    path: "/",
   })
 
   if (user_query) {
@@ -105,11 +104,12 @@ export const login = async (req, res) => {
       contrasenia,
       user_query.toJSON().contrasenia
     )
+
     !verifyPassword
       ? console.log("El usuario y/0 contraseña no coinciden")
       : res.setHeader("Set-Cookie", [setCookieAccess, setCookieRefresh])
-    console.log("Login Exitoso")
   } else {
-    console.log("Error")
+    console.log("El usuario y/0 contraseña no son correctos")
   }
+  console.log(res.setHeader("Set-Cookie", [setCookieAccess, setCookieRefresh]))
 }
