@@ -5,8 +5,20 @@ import Rutines from "../rutines/Rutines"
 import Calculadora from "../calculadora/Calculadora"
 import ScrollReveal from "scrollreveal"
 import Graphics from "../graphics/Graphics"
+import { useState } from "react"
+import { UserData } from "../graphics/UserData"
 
 const Home = () => {
+  const [userData, setUserData] = useState({
+    labels: UserData.map((data) => data.meses),
+    datasets: [
+      {
+        label: "User Gained",
+        data: UserData.map((data) => data.peso / data.repeticiones),
+      },
+    ],
+  })
+
   useEffect(() => {
     const sr = ScrollReveal()
 
@@ -71,7 +83,7 @@ const Home = () => {
         <Calculadora />
       </div>
       <div className="container-graphics">
-        <Graphics />
+        <Graphics chartData={userData} />
       </div>
     </>
   )

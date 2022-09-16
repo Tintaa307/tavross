@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from "react"
 import "./graphics.css"
-import { Chart } from "react-charts"
+import { Bar } from "react-chartjs-2"
+import Chart from "chart.js/auto"
 
-const Graphics = () => {
+const Graphics = ({ chartData }) => {
   const [title, setTitle] = useState("Example...")
   const exRef = useRef(null)
   const pesoRef = useRef(null)
@@ -16,7 +17,6 @@ const Graphics = () => {
     <section id="Progress" className="container-section-graphics">
       <h1>PROGRESO</h1>
       <div className="container-form-info">
-        <h2 className="title-ej">{title}</h2>
         <form className="form">
           <input
             type="text"
@@ -31,7 +31,10 @@ const Graphics = () => {
       </div>
       <div className="container-graphics-info">
         <div className="graphics">
-          <h3>Title</h3>
+          <h3>{title}</h3>
+          <div style={{ color: "#fff" }} className="graphic">
+            <Bar data={chartData}></Bar>
+          </div>
         </div>
       </div>
     </section>
