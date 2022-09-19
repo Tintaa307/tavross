@@ -8,12 +8,12 @@ const ButtonConfig = ({ isOpen, handleOpen, handleClose }) => {
       <div className="container-buttons">
         <div className={["button-rueda", isOpen].join(" ")}>
           <Link to={"/settings"} className="link-settings">
-            <i onClick={handleOpen} class="ri-settings-2-line"></i>
+            <i onClick={handleOpen} className="ri-settings-2-line"></i>
           </Link>
         </div>
         <div className={["button-back", isOpen].join(" ")}>
           <Link to={"/"}>
-            <i onClick={handleClose} class="ri-arrow-left-line"></i>
+            <i onClick={handleClose} className="ri-arrow-left-line"></i>
           </Link>
         </div>
       </div>

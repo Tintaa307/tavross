@@ -1,31 +1,43 @@
 import React, { useState, useRef, useEffect } from "react"
 import "./graphics.css"
-import { Line } from "react-chartjs-2"
-import Chart from "chart.js/auto"
+import * as V from "victory"
+import {
+  VictoryBar,
+  VictoryChart,
+  VictoryTheme,
+  VictoryStack,
+  dataComponent,
+  labelComponent,
+  gorupComponent,
+  containerComponent,
+} from "victory"
 
-const Graphics = ({ chartData }) => {
+const Graphics = () => {
   const [title, setTitle] = useState("Example...")
   const exRef = useRef(null)
   const pesoRef = useRef(null)
   const repsRef = useRef(null)
+  const [data, setData] = useState([
+    {
+      peso: 12,
+      repeticiones: 10,
+    },
+    {
+      peso: 13,
+      repeticiones: 11,
+    },
+    {
+      peso: 14,
+      repeticiones: 12,
+    },
+    {
+      peso: 15,
+      repeticiones: 13,
+    },
+  ])
 
   const handleChange = (e) => {
     setTitle(e.target.value)
-  }
-
-  //change design of chart
-
-  const options = {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: "top",
-        labels: {
-          usePointStyle: true,
-          pointStyle: "circle",
-        },
-      },
-    },
   }
 
   return (
@@ -48,7 +60,11 @@ const Graphics = ({ chartData }) => {
         <div className="graphics">
           <h3>{title}</h3>
           <div className="graphic">
-            <Line options={options} data={chartData}></Line>
+            <VictoryChart domainPadding={22} theme={VictoryTheme.material}>
+              <VictoryStack colorScale={"warm"}>
+                <VictoryBar data={data} y="repeticiones" x="peso" />
+              </VictoryStack>
+            </VictoryChart>
           </div>
         </div>
       </div>

@@ -26,11 +26,11 @@ const Rutines = () => {
             <div className="content">
               <div className="container-rut-data">
                 <div className="icon">
-                  <i class="fa-solid fa-dumbbell" aria-hidden="true"></i>
+                  <i className="fa-solid fa-dumbbell" aria-hidden="true"></i>
                 </div>
                 <h3>WIN MUSCLE</h3>
                 <div className="container-arrow">
-                  <i class="ri-arrow-down-line"></i>
+                  <i className="ri-arrow-down-line"></i>
                 </div>
               </div>
               <div className="container-descrip">
@@ -47,11 +47,11 @@ const Rutines = () => {
             <div className="content">
               <div className="container-rut-data">
                 <div className="icon">
-                  <i class="ri-run-line" aria-hidden="true"></i>
+                  <i className="ri-run-line" aria-hidden="true"></i>
                 </div>
                 <h3>CARDIO</h3>
                 <div className="container-arrow">
-                  <i class="ri-arrow-down-line"></i>
+                  <i className="ri-arrow-down-line"></i>
                 </div>
               </div>
               <div className="container-descrip">
@@ -68,11 +68,11 @@ const Rutines = () => {
             <div className="content">
               <div className="container-rut-data">
                 <div className="icon">
-                  <i class="fa-solid fa-heart-circle-plus"></i>
+                  <i className="fa-solid fa-heart-circle-plus"></i>
                 </div>
                 <h3>HEALTHY</h3>
                 <div className="container-arrow">
-                  <i class="ri-arrow-down-line"></i>
+                  <i className="ri-arrow-down-line"></i>
                 </div>
               </div>
               <div className="container-descrip">
