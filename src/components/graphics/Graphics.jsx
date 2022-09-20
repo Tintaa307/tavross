@@ -1,7 +1,16 @@
 import React, { useState, useRef, useEffect } from "react"
 import "./graphics.css"
 import * as V from "victory"
-import { VictoryBar, VictoryChart, VictoryTheme, VictoryStack } from "victory"
+import {
+  VictoryBar,
+  VictoryChart,
+  VictoryTheme,
+  VictoryStack,
+  dataComponent,
+  labelComponent,
+  gorupComponent,
+  containerComponent,
+} from "victory"
 
 const Graphics = () => {
   const [title, setTitle] = useState("Example...")
