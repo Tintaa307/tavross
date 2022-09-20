@@ -1,5 +1,6 @@
 import React from "react"
 import "./notFound.css"
+import { Link } from "react-router-dom"
 
 const page404 = () => {
   return (
@@ -8,10 +9,9 @@ const page404 = () => {
         <h2>PAGE NOT FOUND</h2>
         <h1>404</h1>
       </div>
-      <div className="container-404-links">
-        <a href="#"></a>
-        <a href="#"></a>
-      </div>
+      <Link to={"/"} className="link404">
+        VOLVER <i className="ri-arrow-left-line"></i>
+      </Link>
     </div>
   )
 }

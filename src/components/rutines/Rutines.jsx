@@ -37,7 +37,7 @@ const Rutines = () => {
                 Rutinas para aquellos que este buscando ganar masa muscular y
                 aumentar su fuerza.
               </div>
-              <a href="#">Order Now</a>
+              <a href="#">VER RUTINAS</a>
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@ const Rutines = () => {
                 Aquí odrás encontrar rutinas aerobicas y de resistencia, para
                 correr, bicicleta, zumba y más.
               </div>
-              <a href="#">Order Now</a>
+              <a href="#">VER RUTINAS</a>
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@ const Rutines = () => {
                 <div className="icon">
                   <i className="fa-solid fa-heart-circle-plus"></i>
                 </div>
-                <h3>HEALTHY</h3>
+                <h3>SALUD</h3>
                 <div className="container-arrow">
                   <i className="ri-arrow-down-line"></i>
                 </div>
@@ -79,7 +79,7 @@ const Rutines = () => {
                 Rutinas diseñadas para aquellas personas que su objetivo sea
                 mantenerse saludable.
               </div>
-              <a href="#">Order Now</a>
+              <a href="#">VER RUTINAS</a>
             </div>
           </div>
         </div>

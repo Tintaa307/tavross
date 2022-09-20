@@ -23,17 +23,17 @@
 
 .container-tri-uno {
   width: 355px;
-  background-color: var(--color-main);
+  background-color: #8800ac;
 }
 
 .container-tri-dos {
   width: 455px;
-  background-color: var(--color-main-light);
+  background-color: #9f17c3;
 }
 
 .container-tri-tre {
   width: 555px;
-  background-color: var(--color-main-lighten);
+  background-color: #ac24d0;
 }
 
 .container-main .container-home .container-presentation {
