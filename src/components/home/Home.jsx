@@ -6,6 +6,7 @@ import Calculadora from "../calculadora/Calculadora"
 import ScrollReveal from "scrollreveal"
 import Graphics from "../graphics/Graphics"
 import { useState } from "react"
+import Contact from "../contact/Contact"
 
 const Home = () => {
   useEffect(() => {
@@ -73,6 +74,9 @@ const Home = () => {
       </div>
       <div className="container-graphics">
         <Graphics />
+      </div>
+      <div className="container-contact">
+        <Contact />
       </div>
     </>
   )

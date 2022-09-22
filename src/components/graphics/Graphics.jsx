@@ -1,15 +1,12 @@
-import React, { useState, useRef, useEffect } from "react"
+import React, { useState, useRef, useEffect, useMemo } from "react"
 import "./graphics.css"
-import * as V from "victory"
 import {
   VictoryBar,
   VictoryChart,
-  VictoryTheme,
   VictoryStack,
-  dataComponent,
-  labelComponent,
-  gorupComponent,
-  containerComponent,
+  VictoryLine,
+  VictoryScatter,
+  VictoryAxis,
 } from "victory"
 
 const Graphics = () => {
@@ -20,11 +17,11 @@ const Graphics = () => {
   const [data, setData] = useState([
     {
       peso: 12,
-      repeticiones: 10,
+      repeticiones: 2,
     },
     {
       peso: 13,
-      repeticiones: 11,
+      repeticiones: 8,
     },
     {
       peso: 14,
@@ -32,7 +29,7 @@ const Graphics = () => {
     },
     {
       peso: 15,
-      repeticiones: 13,
+      repeticiones: 18,
     },
   ])
 
@@ -60,9 +57,26 @@ const Graphics = () => {
         <div className="graphics">
           <h3>{title}</h3>
           <div className="graphic">
-            <VictoryChart domainPadding={22} theme={VictoryTheme.material}>
-              <VictoryStack colorScale={"warm"}>
-                <VictoryBar data={data} y="repeticiones" x="peso" />
+            <VictoryChart
+              className="chart"
+              animate={{
+                duration: 1500,
+                onLoad: { duration: 900 },
+              }}
+              domainPadding={10}
+              width={800}
+              height={400}
+            >
+              <VictoryStack colorScale={"cool"}>
+                <VictoryLine
+                  style={{
+                    parent: { border: "1px solid #ccc" },
+                  }}
+                  data={data}
+                  y="repeticiones"
+                  x="peso"
+                  interpolation="natural"
+                />
               </VictoryStack>
             </VictoryChart>
           </div>
