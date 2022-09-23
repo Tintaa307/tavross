@@ -8,6 +8,14 @@ import {
   VictoryScatter,
   VictoryAxis,
 } from "victory"
+// import Swiper core and required modules
+import { Pagination } from "swiper"
+
+import { Swiper, SwiperSlide } from "swiper/react"
+
+// Import Swiper styles
+import "swiper/css"
+import "swiper/css/pagination"
 
 const Graphics = () => {
   const [title, setTitle] = useState("Example...")
@@ -54,33 +62,68 @@ const Graphics = () => {
         </form>
       </div>
       <div className="container-graphics-info">
-        <div className="graphics">
-          <h3>{title}</h3>
-          <div className="graphic">
-            <VictoryChart
-              className="chart"
-              animate={{
-                duration: 1500,
-                onLoad: { duration: 900 },
-              }}
-              domainPadding={10}
-              width={800}
-              height={400}
-            >
-              <VictoryStack colorScale={"cool"}>
-                <VictoryLine
-                  style={{
-                    parent: { border: "1px solid #ccc" },
-                  }}
-                  data={data}
-                  y="repeticiones"
-                  x="peso"
-                  interpolation="natural"
-                />
-              </VictoryStack>
-            </VictoryChart>
-          </div>
-        </div>
+        <Swiper
+          modules={[Pagination]}
+          spaceBetween={20}
+          slidesPerView={1}
+          loop={false}
+          grabCursor={true}
+        >
+          <SwiperSlide className="graphics">
+            <h3>{title}</h3>
+            <div className="graphic">
+              <VictoryChart
+                className="chart"
+                animate={{
+                  duration: 1500,
+                  onLoad: { duration: 900 },
+                }}
+                domainPadding={10}
+                width={800}
+                height={400}
+              >
+                <VictoryStack colorScale={"cool"}>
+                  <VictoryLine
+                    style={{
+                      parent: { border: "1px solid #ccc" },
+                    }}
+                    data={data}
+                    y="repeticiones"
+                    x="peso"
+                    interpolation="natural"
+                  />
+                </VictoryStack>
+              </VictoryChart>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="graphics">
+            <h3>{title}</h3>
+            <div className="graphic">
+              <VictoryChart
+                className="chart"
+                animate={{
+                  duration: 1500,
+                  onLoad: { duration: 900 },
+                }}
+                domainPadding={10}
+                width={800}
+                height={400}
+              >
+                <VictoryStack colorScale={"cool"}>
+                  <VictoryLine
+                    style={{
+                      parent: { border: "1px solid #ccc" },
+                    }}
+                    data={data}
+                    y="repeticiones"
+                    x="peso"
+                    interpolation="natural"
+                  />
+                </VictoryStack>
+              </VictoryChart>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </section>
   )

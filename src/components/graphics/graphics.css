@@ -85,14 +85,21 @@
   margin-bottom: 2rem;
 }
 
+.swiper-pagination-bullet {
+  background-color: #0000ff;
+  margin-top: 10rem;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #0000ff;
+}
+
 .container-section-graphics .container-graphics-info .graphics .graphic {
   width: 500px;
   height: 250px;
   margin-bottom: 4rem;
   color: #fff;
-}
-
-.container-section-graphics .container-graphics-info .graphics .graphic .chart {
-  font-size: 17px;
-  color: #fff;
+  background-color: rgba(255, 255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
