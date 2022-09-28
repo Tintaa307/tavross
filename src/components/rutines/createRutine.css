@@ -1,0 +1,74 @@
+.container-create-rutine {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: #040404;
+}
+
+.container-create-rutine h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.8rem;
+  margin-top: 2rem;
+}
+
+.container-create-rutine .container-form {
+  width: 40%;
+  height: 400px;
+  background-color: #13131a;
+  display: block;
+  margin: auto;
+  margin-top: 3rem;
+  border-radius: 15px;
+}
+
+.container-create-rutine .container-form .container-header-pasos {
+  width: 100%;
+  height: 80px;
+}
+
+.container-create-rutine
+  .container-form
+  .container-header-pasos
+  .container-headers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.container-create-rutine
+  .container-form
+  .container-header-pasos
+  .container-headers
+  .item {
+  text-align: center;
+}
+
+.container-create-rutine
+  .container-form
+  .container-header-pasos
+  .container-headers
+  .item
+  .circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  color: #fff;
+  margin-left: 4.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-create-rutine
+  .container-form
+  .container-header-pasos
+  .container-headers
+  h5 {
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  color: #fff;
+}
