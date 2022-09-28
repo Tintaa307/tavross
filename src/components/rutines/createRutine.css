@@ -55,12 +55,53 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1.5px solid #fff;
+  border: 2px solid #fff;
   color: #fff;
-  margin-left: 4.4rem;
+  margin-left: 4.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
+}
+
+.container-create-rutine
+  .container-form
+  .container-header-pasos
+  .container-headers
+  .item
+  .circle
+  i {
+  position: absolute;
+  display: none;
+  color: #fff;
+}
+
+.container-create-rutine
+  .container-form
+  .container-header-pasos
+  .container-headers
+  .item:nth-child(1)
+  .circle::before {
+  content: "";
+  position: absolute;
+  margin-left: 11.5rem;
+  background-color: #fff;
+  width: 153px;
+  height: 2px;
+}
+
+.container-create-rutine
+  .container-form
+  .container-header-pasos
+  .container-headers
+  .item:nth-child(2)
+  .circle::before {
+  content: "";
+  position: absolute;
+  margin-left: 11.5rem;
+  background-color: #fff;
+  width: 153px;
+  height: 2px;
 }
 
 .container-create-rutine

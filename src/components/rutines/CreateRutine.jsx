@@ -10,15 +10,21 @@ const CreateRutine = () => {
           <div className="container-headers">
             <div className="item">
               <h5>Paso 1</h5>
-              <div className="circle">1</div>
+              <div className="circle">
+                1 <i class="ri-check-line"></i>
+              </div>
             </div>
             <div className="item">
               <h5>Paso 2</h5>
-              <div className="circle">2</div>
+              <div className="circle">
+                2 <i class="ri-check-line"></i>
+              </div>
             </div>
             <div className="item">
               <h5>Fin</h5>
-              <div className="circle">3</div>
+              <div className="circle">
+                3 <i class="ri-check-line"></i>
+              </div>
             </div>
           </div>
         </div>
