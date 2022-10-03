@@ -2,9 +2,14 @@ import React, { useRef, useState } from "react"
 import "./createRutine.css"
 
 const CreateRutine = () => {
+  const [move, setMove] = useState("")
   const [change, setChange] = useState("")
+  const [change2, setChange2] = useState("")
   const nameRef = useRef(null)
   const typeRef = useRef(null)
+  const divMuscularRef = useRef(null)
+  const sesionesRef = useRef(null)
+  const descripcionRef = useRef(null)
   const [res, setRes] = useState("")
 
   const handleChange = () => {
@@ -12,6 +17,19 @@ const CreateRutine = () => {
       setRes("Todos los campos son requeridos")
     } else {
       change === "" ? setChange("change") : setChange("")
+      setRes("")
+    }
+  }
+
+  const handleMove = () => {
+    if (
+      divMuscularRef.current.value === "" ||
+      sesionesRef.current.value === ""
+    ) {
+      setRes("Todos los campos son requeridos")
+    } else {
+      change2 === "" ? setChange2("change") : setChange2("")
+      move === "" ? setMove("move") : setMove("")
       setRes("")
     }
   }
@@ -31,8 +49,9 @@ const CreateRutine = () => {
             </div>
             <div className="item">
               <h5>Paso 2</h5>
-              <div className="circle">
-                <span>2</span> <i class="ri-check-line"></i>
+              <div className={["circle", change2].join(" ")}>
+                <span>2</span>{" "}
+                <i class={["ri-check-line", change2].join(" ")}></i>
               </div>
             </div>
             <div className="item">
@@ -61,7 +80,35 @@ const CreateRutine = () => {
                 Siguiente
               </div>
             </div>
-            {/* <button type="submit"></button> */}
+            <div className={["steps two", change, move].join(" ")}>
+              <div className="item">
+                <h4>Cantidad de divisiones musculares</h4>
+                <select ref={divMuscularRef} className="select">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <div className="item">
+                <h4>Cantidad de sesiones</h4>
+                <input ref={sesionesRef} type="number" />
+                <div className="message">{res}</div>
+              </div>
+              <div className="btn-sig" onClick={handleMove}>
+                Siguiente
+              </div>
+            </div>
+            <div className={["steps three", move].join(" ")}>
+              <div className="item">
+                <h4>Descripcion</h4>
+                <textarea ref={descripcionRef} />
+              </div>
+              <button className="btn-sig" type="submit">
+                Enviar
+              </button>
+            </div>
           </form>
         </div>
         <form className="form"></form>
