@@ -105,7 +105,7 @@ const CreateRutine = () => {
                 <h4>Descripcion</h4>
                 <textarea ref={descripcionRef} />
               </div>
-              <button className="btn-sig" type="submit">
+              <button className="btn-sig send" type="submit">
                 Enviar
               </button>
             </div>
