@@ -61,6 +61,11 @@ const CreateRutine = () => {
                 Siguiente
               </div>
             </div>
+            <div className="steps">
+              <div className="item">
+                
+              </div>
+            </div>
             {/* <button type="submit"></button> */}
           </form>
         </div>
