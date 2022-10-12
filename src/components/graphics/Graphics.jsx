@@ -42,7 +42,7 @@ const Graphics = () => {
   ])
 
   const handleChange = (e) => {
-    setTitle(e.target.value)
+    exRef === "" ? setTitle("Example...") : setTitle(exRef.current.value)
   }
 
   return (
