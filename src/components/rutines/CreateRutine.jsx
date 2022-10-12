@@ -82,6 +82,11 @@ const CreateRutine = () => {
             </div>
             <div className={["steps two", change, move].join(" ")}>
               <div className="item">
+                <h4>Cantidad de sesiones</h4>
+                <input ref={sesionesRef} type="number" />
+                <div className="message">{res}</div>
+              </div>
+              <div className="item">
                 <h4>Cantidad de divisiones musculares</h4>
                 <select ref={divMuscularRef} className="select">
                   <option value="1">1</option>
@@ -91,18 +96,13 @@ const CreateRutine = () => {
                   <option value="5">5</option>
                 </select>
               </div>
-              <div className="item">
-                <h4>Cantidad de sesiones</h4>
-                <input ref={sesionesRef} type="number" />
-                <div className="message">{res}</div>
-              </div>
               <div className="btn-sig" onClick={handleMove}>
                 Siguiente
               </div>
             </div>
             <div className={["steps three", move].join(" ")}>
               <div className="item">
-                <h4>Descripcion</h4>
+                <h4 className="desc">Descripcion</h4>
                 <textarea ref={descripcionRef} />
               </div>
               <button className="btn-sig send" type="submit">
