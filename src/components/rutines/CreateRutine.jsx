@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react"
 import "./createRutine.css"
 import axios from "axios"
+import { useNavigate } from "react-router-dom"
 
 const URI = "http://localhost:8000/rutines"
 
@@ -14,6 +15,7 @@ const CreateRutine = () => {
   const sesionesRef = useRef(null)
   const descripcionRef = useRef(null)
   const [res, setRes] = useState("")
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -23,13 +25,15 @@ const CreateRutine = () => {
     const sesiones = sesionesRef.current.value
     const descripcion = descripcionRef.current.value
 
-    await axios.post(URI, {
+    const rutina = await axios.post(URI, {
       name: name,
       type: type,
       divMusculares: divMuscular,
       sesiones: sesiones,
       descripcion: descripcion,
     })
+
+    rutina ? navigate("/") : alert("La rutina no se ha podido crear")
   }
 
   const handleChange = () => {

@@ -4,7 +4,7 @@ import {
   getRutineById,
   updateRutine,
   deleteRutine,
-} from "../controllers/RutinesController"
+} from "../controller/RutinesController.js"
 
 const router = express.Router()
 
