@@ -9,7 +9,7 @@ import {
 
 const router = express.Router()
 
-// rutas de autenticaion
+// rutas de autenticaion de usuarios
 router.post("/", createUser)
 router.get("/", getAllUsers)
 router.post("/login", login)

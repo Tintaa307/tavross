@@ -1,7 +1,8 @@
 import express from "express"
 import cors from "cors"
-import userRoutes from "./routes/router.js"
+import userRoutes from "./routes/UsersRouter.js"
 import bd from "./dataBase/bd.js"
+import rutineRoutes from "./routes/RutinesRouter.js"
 
 const app = express()
 
@@ -16,6 +17,7 @@ app.get("/", (req, res) => {
 app.use(cors())
 app.use(express.json())
 app.use("/usuarios", userRoutes)
+app.use("/rutinas", rutineRoutes)
 
 // try connection
 

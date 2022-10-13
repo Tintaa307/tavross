@@ -1,5 +1,8 @@
 import React, { useRef, useState } from "react"
 import "./createRutine.css"
+import axios from "axios"
+
+const URI = "http://localhost:8000/rutines"
 
 const CreateRutine = () => {
   const [move, setMove] = useState("")
@@ -11,6 +14,23 @@ const CreateRutine = () => {
   const sesionesRef = useRef(null)
   const descripcionRef = useRef(null)
   const [res, setRes] = useState("")
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const name = nameRef.current.value
+    const type = typeRef.current.value
+    const divMuscular = divMuscularRef.current.value
+    const sesiones = sesionesRef.current.value
+    const descripcion = descripcionRef.current.value
+
+    await axios.post(URI, {
+      name: name,
+      type: type,
+      divMusculares: divMuscular,
+      sesiones: sesiones,
+      descripcion: descripcion,
+    })
+  }
 
   const handleChange = () => {
     if (nameRef.current.value === "" || typeRef.current.value === "") {
@@ -61,7 +81,7 @@ const CreateRutine = () => {
               </div>
             </div>
           </div>
-          <form className="form">
+          <form onSubmit={handleSubmit} className="form">
             <div className={["steps", change].join(" ")}>
               <div className="item">
                 <h4>Nombre de la rutina</h4>
