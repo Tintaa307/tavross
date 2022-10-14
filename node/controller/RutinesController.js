@@ -1,4 +1,4 @@
-import RutinesModel from "../models/RutinesModel"
+import RutinesModel from "../models/RutinesModel.js"
 
 // create rutine
 

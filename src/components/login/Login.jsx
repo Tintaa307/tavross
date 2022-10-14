@@ -38,6 +38,12 @@ const Login = () => {
       nombre: userRef.current.value,
       contrasenia: passwordRef.current.value,
     })
+    getDataLogin()
+  }
+
+  const getDataLogin = async () => {
+    const result = await axios.get(URI + "/login")
+    console.log(result)
   }
 
   return (

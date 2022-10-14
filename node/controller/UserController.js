@@ -105,11 +105,15 @@ export const login = async (req, res) => {
       user_query.toJSON().contrasenia
     )
 
-    !verifyPassword
-      ? console.log("El usuario y/0 contraseña no coinciden")
-      : res.setHeader("Set-Cookie", [setCookieAccess, setCookieRefresh])
+    if (!verifyPassword) {
+      console.log("El usuario y/0 contraseña no coinciden")
+      res.status(404).send("El usuario y/0 contraseña no coinciden")
+    } else {
+      console.log("Login Exitoso")
+      res.setHeader("Set-Cookie", setCookieRefresh)
+      res.status(200).send("El token" + token)
+    }
   } else {
     console.log("El usuario y/0 contraseña no son correctos")
   }
-  console.log(res.setHeader("Set-Cookie", [setCookieAccess, setCookieRefresh]))
 }
