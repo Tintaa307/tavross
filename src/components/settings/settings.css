@@ -32,218 +32,177 @@
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-.section-settings .container-settings .container-content-settings {
-  width: 100%;
+.section-settings .container-settings .config-aside {
+  width: 420px;
   height: 100%;
+  margin-top: 70px;
 }
 
-.section-settings
-  .container-settings
-  .container-content-settings
-  .container-info-section {
-  margin-top: 3.5rem;
-  width: 50%;
-  height: 100%;
-  text-align: center;
-}
-
-.section-settings
-  .container-settings
-  .container-content-settings
-  .container-info-section
-  .container-cuenta {
-  width: 100%;
-  height: 100%;
-}
-
-.section-settings
-  .container-settings
-  .container-content-settings
-  .container-info-section
-  h2 {
-  color: #fff;
-  padding-bottom: 2rem;
-  font-size: 2rem;
-}
-
-.section-settings
-  .container-settings
-  .container-content-settings
-  .container-info-section
-  input {
-  margin: 50px 0;
-  display: none;
-}
-
-.section-settings
-  .container-settings
-  .container-content-settings
-  .container-img-profile {
-  display: block;
-  margin: auto;
-  width: 140px;
-  height: 140px;
+.section-settings .container-settings .config-aside .personal-info-top div {
+  width: 120px;
+  height: 120px;
+  background-color: #21262d;
+  margin-left: 20px;
   border-radius: 50%;
-  background-color: #fff;
 }
 
-.section-settings
-  .container-settings
-  .container-content-settings
-  .container-info-section
-  .container-img-profile
-  i {
-  font-size: 6rem;
-  display: block;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.section-settings
-  .container-settings
-  .container-content-settings
-  .container-info-section
-  .container-img-profile
-  i.active {
-  display: none;
-}
-
-.section-settings
-  .container-settings
-  .container-content-settings
-  .container-info-section
-  h3 {
+.section-settings .container-settings .config-aside .personal-info-top h2 {
+  position: absolute;
+  top: 130px;
+  left: 160px;
   color: #fff;
   font-size: 1.5rem;
-  padding: 22px 0;
+  margin-top: 20px;
 }
 
-.section-settings
-  .container-settings
-  .container-content-settings
-  .container-info-section
-  h3.second {
-  margin-bottom: 2rem;
-}
-
-.section-settings
-  .container-settings
-  .container-content-settings
-  .container-info-section
-  i {
-  color: #00ff00;
-  font-size: 2.2rem;
-  cursor: pointer;
-}
-
-.section-settings
-  .container-settings
-  .container-content-settings
-  .container-info-section
-  h6 {
-  color: #fff;
-  padding-top: 20px;
+.section-settings .container-settings .config-aside .personal-info-top h3 {
+  position: absolute;
+  top: 190px;
+  left: 145px;
+  color: rgba(255, 255, 255, 0.4);
   font-size: 1rem;
+  margin-left: 20px;
 }
 
-.section-settings .container-settings .container-content-settings .separador {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 120px;
-  width: 2px;
-  height: 75%;
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-.section-settings
-  .container-settings
-  .container-content-settings
-  .container-buttons-config {
-  position: absolute;
-  top: 100px;
-  right: 0px;
-  width: 50%;
+.section-settings .container-settings .config-aside .container-list-config {
+  width: 100%;
+  height: 100%;
+  margin-top: 45px;
+  margin-left: 35px;
 }
 
 .section-settings
   .container-settings
-  .container-content-settings
-  .container-buttons-config
-  .buttons {
+  .config-aside
+  .container-list-config
+  .list-config {
+  width: 100%;
+  height: 50px;
   display: flex;
-  text-align: center;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
   flex-direction: column;
-  margin-top: 5rem;
 }
 
 .section-settings
   .container-settings
-  .container-content-settings
-  .container-buttons-config
-  .buttons
-  .boton {
-  width: 330px;
-  height: 45px;
-  background-color: rgba(255, 255, 255, 0.7);
+  .config-aside
+  .container-list-config
+  .list-config
+  li {
+  width: 80%;
+  height: 100%;
+  margin: 15px 0;
+  transition: var(--transition);
   border-radius: 15px;
-  color: #000;
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin: 20px 0;
-  letter-spacing: 0.8px;
-  border: 1px solid #fff;
-  outline: none;
 }
 
 .section-settings
   .container-settings
-  .container-content-settings
-  .container-buttons-config
-  .indicador {
-  width: 8px;
-  height: 45px;
-  background-color: var(--color-main);
+  .config-aside
+  .container-list-config
+  .list-config
+  li:hover {
+  background-color: #484f58;
+  transition: var(--transition);
+}
+
+.section-settings
+  .container-settings
+  .config-aside
+  .container-list-config
+  .list-config
+  li
+  h6 {
+  position: relative;
+  top: -13px;
+  left: 50px;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.section-settings
+  .container-settings
+  .config-aside
+  .container-list-config
+  .list-config
+  li
+  i {
+  position: relative;
+  top: 11px;
+  left: 10px;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.section-settings
+  .container-settings
+  .config-aside
+  .container-list-config
+  .container-quit-sesion {
   position: absolute;
-  top: 100px;
-  right: 160px;
-  border-radius: 10px;
+  top: 680px;
+  left: 40px;
 }
 
 .section-settings
   .container-settings
-  .container-content-settings
-  .container-buttons-config
-  .indicador.one {
-  transform: translateY(0);
-  transition: var(--transition);
+  .config-aside
+  .container-list-config
+  .container-quit-sesion
+  button {
+  width: 200px;
+  height: 30px;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  background-color: transparent;
+  font-weight: bold;
 }
 
 .section-settings
   .container-settings
-  .container-content-settings
-  .container-buttons-config
-  .indicador.two {
-  transform: translateY(85px);
-  transition: var(--transition);
+  .config-aside
+  .container-list-config
+  .container-quit-sesion
+  button
+  i {
+  position: relative;
+  top: 2px;
+  font-size: 1.3rem;
+  padding-right: 10px;
 }
 
-.section-settings
-  .container-settings
-  .container-content-settings
-  .container-buttons-config
-  .indicador.three {
-  transform: translateY(170px);
-  transition: var(--transition);
+.section-settings .container-settings .container-config-parts {
+  width: 69%;
+  height: 83.6vh;
+  position: absolute;
+  top: 130px;
+  left: 420px;
 }
 
-.section-settings
-  .container-settings
-  .container-content-settings
-  .container-buttons-config
-  .indicador.four {
-  transform: translateY(255px);
-  transition: var(--transition);
+.section-cuenta {
+  width: 100%;
+  height: 83.6vh;
+}
+
+.section-cuenta .container-cuenta-info .container-cuenta-title {
+  position: relative;
+  top: 80px;
+  left: 30px;
+  width: 100%;
+  height: 70px;
+}
+
+.section-cuenta .container-cuenta-info .container-cuenta-title::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.section-cuenta .container-cuenta-info .container-cuenta-title h2 {
+  font-size: 1.9rem;
+  color: #fff;
+  margin-bottom: 10px;
 }

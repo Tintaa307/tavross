@@ -29,7 +29,7 @@
   grid-template-columns: 1fr;
   justify-items: center;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 .container-section-graphics .container-form-info .form input {
@@ -95,11 +95,9 @@
 }
 
 .container-section-graphics .container-graphics-info .graphics .graphic {
-  width: 500px;
-  height: 250px;
-  margin-bottom: 4rem;
-  color: #fff;
-  background-color: rgba(255, 255, 255, 255);
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  width: 100%;
+  height: 350px;
+  background-color: #fff;
+  margin-bottom: 3rem;
+  border-radius: 5px;
 }
