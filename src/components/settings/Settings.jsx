@@ -38,6 +38,12 @@ const Settings = () => {
 
   const handleImage = () => {
     fileRef.current.click()
+    const file = e.target.files[0]
+    const reader = new FileReader()
+    reader.onloadend = () => {
+      setImage(reader.result)
+    }
+    reader.readAsDataURL(file)
   }
 
   const handleSelected = (e, isSelected) => {
@@ -55,7 +61,7 @@ const Settings = () => {
           <div className="personal-info-top">
             <input type="file" ref={fileRef} style={{ display: "none" }} />
             <div onClick={handleImage} className="container-profile-img">
-              <img src="" className="img-profile" />
+              <img src={image} className="img-profile" />
             </div>
             <h2>Valentin Gonzalez</h2>
             <h3>Tu cuenta personal</h3>
