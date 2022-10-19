@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@amcharts/amcharts5": "^5.2.30",
+    "@amcharts/amcharts5": "^5.2.31",
     "@emailjs/browser": "^3.6.2",
     "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
