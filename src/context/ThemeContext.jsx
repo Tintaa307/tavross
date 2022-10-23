@@ -3,7 +3,7 @@ import React, { useState, createContext, useEffect } from "react"
 const ThemeContext = createContext()
 
 const ThemeProvider = ({ children }) => {
-  const [color, setColor] = useState("red")
+  const [color, setColor] = useState("capa-content red")
 
   const loadData = () => {
     const color = localStorage.getItem("color")

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import reactLogo from "./assets/react.svg"
 import "./App.css"
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom"
@@ -10,9 +10,11 @@ import Login from "./components/login/Login"
 import Settings from "./components/settings/Settings"
 import Page404 from "./components/notFound/Page404"
 import CreateRutine from "./components/rutines/CreateRutine"
+import ThemeContext from "./context/ThemeContext"
 
 function App() {
   const [hide, setHide] = useState("")
+
   const path = window.location.pathname
   console.log(path)
 
@@ -20,13 +22,15 @@ function App() {
     path === "/register" ? setHide("hide") : setHide("")
   }
 
+  const { color } = useContext(ThemeContext)
+
   useEffect(() => {
     hanldleUrl()
   }, [path])
 
   return (
     <>
-      <div className="container-all">
+      <div color={color} className="container-all">
         <BrowserRouter>
           <Nav hide={hide} />
           <Routes>

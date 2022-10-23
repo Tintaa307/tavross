@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react"
 import "./settings.css"
 import ProfileImage from "../../assets/gymbro.png"
 import Cuenta from "./Cuenta"
+import Apariencia from "./Apariencia"
 
 const buttons = [
   {
@@ -32,24 +33,6 @@ const buttons = [
 
 const Settings = () => {
   const [move, setMove] = useState("one")
-  const [image, setImage] = useState("")
-  const fileRef = useRef(null)
-  const imageRef = useRef(null)
-
-  const handleImage = () => {
-    fileRef.current.click()
-    const file = e.target.files[0]
-    const reader = new FileReader()
-    reader.onloadend = () => {
-      setImage(reader.result)
-    }
-    reader.readAsDataURL(file)
-  }
-
-  const handleSelected = (e, isSelected) => {
-    isSelected = e.target.id
-    setMove(isSelected)
-  }
 
   return (
     <section className="section-settings">
@@ -59,24 +42,23 @@ const Settings = () => {
         </div>
         <aside className="config-aside">
           <div className="personal-info-top">
-            <input type="file" ref={fileRef} style={{ display: "none" }} />
-            <div onClick={handleImage} className="container-profile-img">
-              <img src={image} className="img-profile" />
+            <div className="container-profile-img">
+              <img src={""} className="img-profile" />
             </div>
             <h2>Valentin Gonzalez</h2>
             <h3>Tu cuenta personal</h3>
           </div>
           <div className="container-list-config">
             <ul className="list-config">
-              {buttons.map((button) => (
+              {buttons.map(({ content, className, id, icon }, index) => (
                 <li
-                  key={button.id}
-                  id={button.id}
-                  className={button.className}
-                  onClick={(e) => handleSelected(e, move)}
+                  key={index}
+                  id={id}
+                  className={className}
+                  onClick={() => setMove(id)}
                 >
-                  <i className={button.icon}></i>
-                  <h6>{button.content}</h6>
+                  <i className={icon}></i>
+                  <h6>{content}</h6>
                 </li>
               ))}
             </ul>
@@ -89,7 +71,10 @@ const Settings = () => {
         </aside>
         <div className="container-config-parts">
           <div className="container-cuenta">
-            <Cuenta />
+            <Cuenta move={move} />
+          </div>
+          <div className="container-apariencia">
+            <Apariencia move={move} />
           </div>
         </div>
       </div>

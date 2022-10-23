@@ -113,7 +113,7 @@ a {
   --nav-color-text: #000;
 }
 
-[color="red"] {
+[color="capa-content red"] {
   --color-main: #ec000f;
   --color-main-light: #ff1928;
   --color-main-lighten: #ff1f2e;
@@ -121,7 +121,7 @@ a {
   --box-shadow: 0 0 12px #ec000f;
 }
 
-[color="blue"] {
+[color="capa-content blue"] {
   --color-main: #0020c3;
   --color-main-light: #1939dc;
   --color-main-lighten: #2444e7;
@@ -129,7 +129,7 @@ a {
   --box-shadow: 0 0 12px #0020c3;
 }
 
-[color="orange"] {
+[color="capa-content orange"] {
   --color-main: #ff4d00ff;
   --color-main-light: #ff6114;
   --color-main-lighten: #ff7124;
@@ -137,7 +137,7 @@ a {
   --box-shadow: 0 0 12px #ff4d00ff;
 }
 
-[color="green"] {
+[color="capa-content green"] {
   --color-main: #33a100ff;
   --color-main-light: #4cba19;
   --color-main-lighten: #57c524;
@@ -145,7 +145,7 @@ a {
   --box-shadow: 0 0 12px #33a100ff;
 }
 
-[color="rosa"] {
+[color="capa-content rosa"] {
   --color-main: #8800ac;
   --color-main-light: #9f17c3;
   --color-main-lighten: #ac24d0;

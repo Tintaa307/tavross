@@ -43,7 +43,7 @@ const Login = () => {
 
   const getDataLogin = async () => {
     const result = await axios.get(URI + "/login")
-    console.log(result)
+    console.log(result.data)
   }
 
   return (

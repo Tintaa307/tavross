@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 120vh;
+  height: 127.8%;
   z-index: 4;
   background-color: #13131a;
   transform-origin: left;
@@ -183,6 +183,11 @@
 .section-cuenta {
   width: 100%;
   height: 83.6vh;
+  display: none;
+}
+
+.section-cuenta.one {
+  display: block;
 }
 
 .section-cuenta .container-cuenta-info .container-cuenta-title {
@@ -205,4 +210,364 @@
   font-size: 1.9rem;
   color: #fff;
   margin-bottom: 10px;
+}
+
+.section-cuenta .container-cuenta-info .container-info-user {
+  position: relative;
+  top: 90px;
+  left: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.section-cuenta .container-cuenta-info .container-info-user .item {
+  margin: 30px 0;
+}
+
+.section-cuenta .container-cuenta-info .container-info-user .item h4 {
+  color: #fff;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  font-weight: 100;
+  letter-spacing: 0.4px;
+}
+
+.section-cuenta .container-cuenta-info .container-info-user .item input {
+  width: 40%;
+  height: 35px;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  background-color: #010409;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 100;
+  font-size: 0.8rem;
+  padding-left: 10px;
+  letter-spacing: 0.55px;
+  outline: none;
+}
+
+.section-cuenta .container-cuenta-info .container-info-user .item p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.7rem;
+  margin-top: 8px;
+}
+
+.section-cuenta .container-cuenta-info .container-info-user .item textarea {
+  width: 40%;
+  height: 80px;
+  border-radius: 5px;
+  border: 1px solid #30363d;
+  background-color: #010409;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 100;
+  font-size: 0.9rem;
+  padding: 10px 10px;
+  outline: none;
+  resize: vertical;
+}
+
+.section-cuenta .container-cuenta-info .container-info-user button {
+  width: 170px;
+  height: 32px;
+  color: #fff;
+  background-color: #1f6feb;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.section-cuenta .container-cuenta-info .container-info-user .img-user-edit {
+  position: absolute;
+  right: 230px;
+}
+
+.section-cuenta .container-cuenta-info .container-info-user .img-user-edit h4 {
+  position: relative;
+  top: -15px;
+  left: -40px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.section-cuenta
+  .container-cuenta-info
+  .container-info-user
+  .img-user-edit
+  .img-editor {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #21262d;
+}
+
+.section-cuenta
+  .container-cuenta-info
+  .container-info-user
+  .img-user-edit
+  .btn-edit {
+  position: relative;
+  top: -40px;
+  left: -20px;
+  width: 80px;
+  height: 30px;
+  color: #fff;
+  background-color: #010409;
+  border: 1px solid #30363d;
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.9rem;
+  font-weight: 100;
+  text-align: center;
+  cursor: pointer;
+}
+
+.section-cuenta
+  .container-cuenta-info
+  .container-info-user
+  .img-user-edit
+  .btn-edit
+  span {
+  position: relative;
+  top: 5px;
+}
+
+.section-cuenta
+  .container-cuenta-info
+  .container-info-user
+  .img-user-edit
+  .btn-edit
+  i {
+  position: relative;
+  top: 7px;
+  margin-right: 5px;
+}
+
+.section-apariencia {
+  width: 100%;
+  height: 83.6vh;
+  display: none;
+}
+
+.section-apariencia.four {
+  display: block;
+}
+
+.section-apariencia .container-apariencia-content .container-apariencia-title {
+  position: relative;
+  top: 80px;
+  left: 30px;
+  width: 100%;
+  height: 70px;
+}
+
+.section-apariencia
+  .container-apariencia-content
+  .container-apariencia-title::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.section-apariencia
+  .container-apariencia-content
+  .container-apariencia-title
+  h2 {
+  font-size: 1.9rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.section-apariencia
+  .container-apariencia-content
+  .container-apariencia-options {
+  position: relative;
+  top: 90px;
+  left: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.section-apariencia
+  .container-apariencia-content
+  .container-apariencia-options
+  h3 {
+  position: relative;
+  left: 330px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.section-apariencia
+  .container-apariencia-content
+  .container-apariencia-options
+  .container-colors {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-apariencia
+  .container-apariencia-content
+  .container-apariencia-options
+  .container-colors
+  .color {
+  width: 80%;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.section-apariencia
+  .container-apariencia-content
+  .container-apariencia-options
+  .container-colors
+  .color
+  img {
+  position: relative;
+  left: 70px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.section-apariencia
+  .container-apariencia-content
+  .container-apariencia-options
+  .container-colors
+  .capa {
+  position: absolute;
+  top: 15px;
+  left: 78px;
+  width: 0%;
+  height: 91.2%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  transition: var(--transition);
+  transform-origin: bottom;
+}
+
+.section-apariencia
+  .container-apariencia-content
+  .container-apariencia-options
+  .container-colors
+  .color:hover
+  .capa {
+  width: 80%;
+  transition: var(--transition);
+}
+
+.section-apariencia
+  .container-apariencia-content
+  .container-apariencia-options
+  .container-colors
+  .color:hover
+  .capa
+  .capa-content {
+  position: relative;
+  top: -20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  opacity: 1;
+  transition: var(--transition);
+  transition-delay: 0.5s;
+}
+
+.section-apariencia
+  .container-apariencia-content
+  .container-apariencia-options
+  .container-colors
+  .color:hover
+  .capa
+  .capa-content
+  h4 {
+  padding: 4rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.section-apariencia
+  .container-apariencia-content
+  .container-apariencia-options
+  .container-colors
+  .color:hover
+  .capa
+  .capa-content
+  i {
+  position: relative;
+  color: rgba(255, 255, 255, 0.4);
+  top: -40px;
+  font-size: 2rem;
+  transition: var(--transition);
+}
+
+.section-apariencia
+  .container-apariencia-content
+  .container-apariencia-options
+  .container-colors
+  .color:hover
+  .capa
+  .capa-content
+  i.check {
+  color: #00ff00;
+  transition: var(--transition);
+}
+
+.section-apariencia
+  .container-apariencia-content
+  .container-apariencia-options
+  .container-colors
+  .color:hover
+  .capa
+  .capa-content
+  h5 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+}
+
+.section-apariencia
+  .container-apariencia-content
+  .container-apariencia-options
+  .container-colors
+  .color
+  .capa
+  .capa-content {
+  opacity: 0;
+  transition-delay: 0;
+  transition: var(--transition);
+}
+
+.section-apariencia
+  .container-apariencia-content
+  .container-apariencia-options
+  button {
+  position: relative;
+  left: 315px;
+  cursor: pointer;
+  width: 170px;
+  height: 32px;
+  color: #fff;
+  background-color: #1f6feb;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  left: 100px;
+}
+
+.swiper-button-next {
+  position: relative;
+  right: -130px;
 }
