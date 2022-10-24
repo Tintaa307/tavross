@@ -2,8 +2,11 @@ import React, { useEffect } from "react"
 import "./rutines.css"
 import { Link } from "react-router-dom"
 import ScrollReveal from "scrollreveal"
+import { useTranslation } from "react-i18next"
 
 const Rutines = () => {
+  const [t, i18n] = useTranslation("global")
+
   useEffect(() => {
     const sr = ScrollReveal()
 
@@ -18,7 +21,7 @@ const Rutines = () => {
   return (
     <section id="Rutines" className="section">
       <div className="container-rutines-title">
-        <h1>RUTINAS</h1>
+        <h1>{t("rutinas.titulo")}</h1>
       </div>
       <div className="container-section-rutines">
         <div className="card">
@@ -28,16 +31,15 @@ const Rutines = () => {
                 <div className="icon">
                   <i className="fa-solid fa-dumbbell" aria-hidden="true"></i>
                 </div>
-                <h3>WIN MUSCLE</h3>
+                <h3>{t("rutinas.section1")}</h3>
                 <div className="container-arrow">
                   <i className="ri-arrow-down-line"></i>
                 </div>
               </div>
               <div className="container-descrip">
-                Rutinas para aquellos que este buscando ganar masa muscular y
-                aumentar su fuerza.
+                {t("rutinas.descpRutine1")}
               </div>
-              <a href="#">VER RUTINAS</a>
+              <a href="#">{t("rutinas.verRutinas")}</a>
             </div>
           </div>
         </div>
@@ -49,16 +51,15 @@ const Rutines = () => {
                 <div className="icon">
                   <i className="ri-run-line" aria-hidden="true"></i>
                 </div>
-                <h3>CARDIO</h3>
+                <h3>{t("rutinas.cardio")}</h3>
                 <div className="container-arrow">
                   <i className="ri-arrow-down-line"></i>
                 </div>
               </div>
               <div className="container-descrip">
-                Aquí odrás encontrar rutinas aerobicas y de resistencia, para
-                correr, bicicleta, zumba y más.
+                {t("rutinas.descpRutine2")}
               </div>
-              <a href="#">VER RUTINAS</a>
+              <a href="#">{t("rutinas.verRutinas")}</a>
             </div>
           </div>
         </div>
@@ -70,16 +71,15 @@ const Rutines = () => {
                 <div className="icon">
                   <i className="fa-solid fa-heart-circle-plus"></i>
                 </div>
-                <h3>SALUD</h3>
+                <h3>{t("rutinas.salud")}</h3>
                 <div className="container-arrow">
                   <i className="ri-arrow-down-line"></i>
                 </div>
               </div>
               <div className="container-descrip">
-                Rutinas diseñadas para aquellas personas que su objetivo sea
-                mantenerse saludable.
+                {t("rutinas.descpRutine3")}
               </div>
-              <a href="#">VER RUTINAS</a>
+              <a href="#">{t("rutinas.verRutinas")}</a>
             </div>
           </div>
         </div>
@@ -88,12 +88,12 @@ const Rutines = () => {
         <div className="links-rutinas">
           <div className="btn-rutina">
             <Link to={"/me/rutinas"} className="link-rutines">
-              Mis Rutinas
+              {t("rutinas.misRutinas")}
             </Link>
           </div>
           <div className="btn-rutina">
             <Link to={"/create/rutine"} className="link-rutines">
-              Crear Rutina
+              {t("rutinas.crearRutina")}
             </Link>
           </div>
         </div>

@@ -2,8 +2,10 @@ import React, { useRef } from "react"
 import { useEffect } from "react"
 import "./calculadora.css"
 import ScrollReveal from "scrollreveal"
+import { useTranslation } from "react-i18next"
 
 const Calculadora = () => {
+  const [t, i18n] = useTranslation("global")
   const pesoRef = useRef(null)
   const repsRef = useRef(null)
   const RM1 = useRef(null)
@@ -85,18 +87,18 @@ const Calculadora = () => {
     <section id="Calculadora" className="section-calculadora">
       <div className="container-calculadora">
         <div className="container-calculadora-title">
-          <h1>Calculadora de RM</h1>
+          <h1>{t("calculadora.titulo")}</h1>
           <p>
-            Calcula tu meta de resistencia muscular. <br /> <br />{" "}
-            <span>Expresado en KG</span>
+            {t("calculadora.sub-titulo")} <br /> <br />{" "}
+            <span>{t("calculadora.aclaracion")}</span>
           </p>
         </div>
         <div className="container-form">
           <form className="formulario-calc">
-            <input ref={pesoRef} type="number" placeholder="Peso..." />
-            <input ref={repsRef} type="number" placeholder="Repeticiones..." />
+            <input ref={pesoRef} type="number" placeholder={t("calculadora.peso")} />
+            <input ref={repsRef} type="number" placeholder={t("calculadora.repeticiones")} />
             <button onClick={calcular} type="submit">
-              Enviar
+              {t("calculadora.enviar")}
             </button>
           </form>
         </div>

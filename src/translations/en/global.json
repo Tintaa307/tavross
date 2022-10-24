@@ -22,8 +22,8 @@
     "descpRutine2": "Here you will find aerobic and resistance routines, for running, cycling, zumba and more.",
     "descpRutine3": "Routines designed for those whose goal is to stay healthy.",
     "verRutinas": "SEE ROUTINES",
-    "misRutinas": "MY ROUTINES",
-    "crearRutina": "CREATE ROUTINE"
+    "misRutinas": "MYy Routines",
+    "crearRutina": "Create Routine"
   },
 
   "calculadora": {
@@ -47,13 +47,13 @@
   "contact": {
     "descpContact": "Website dedicated to the gym and with the aim that each person achieve their goals in a simple and effective way.",
     "nuestrasRedes": "OUR SOCIAL NETWORKS",
-    "conctactanos": "CONTACT US",
+    "conctactanos": "Contact Us",
     "ayuda": "help and/or problems",
     "enviar": "Send"
   },
 
   "register": {
-    "titulo": "REGISTRASE",
+    "titulo": "REGISTER",
     "subtitulo": "Register now to access incredible benefits",
     "enviar": "Send",
     "registrarse": "REGISTER",

@@ -3,6 +3,7 @@ import "./graphics.css"
 import * as am5 from "@amcharts/amcharts5"
 import * as am5xy from "@amcharts/amcharts5/xy"
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated"
+import { useTranslation } from "react-i18next"
 // import Swiper core and required modules
 import { Pagination } from "swiper"
 
@@ -13,6 +14,7 @@ import "swiper/css"
 import "swiper/css/pagination"
 
 const Graphics = () => {
+  const [t, i18n] = useTranslation("global")
   const [title, setTitle] = useState("Example...")
   const exRef = useRef(null)
   const pesoRef = useRef(null)
@@ -234,11 +236,11 @@ const Graphics = () => {
 
   return (
     <section id="Progress" className="container-section-graphics">
-      <h1>PROGRESO</h1>
+      <h1>{t("progreso.titulo")}</h1>
       <div className="container-form-info">
         <form className="form">
           <h2 style={{ paddingBottom: "10px", fontSize: "28px" }}>
-            Ingresa tus datos
+            {t("progreso.ingresaTusDatos")}
           </h2>
           <input
             type="text"

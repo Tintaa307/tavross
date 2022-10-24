@@ -7,8 +7,11 @@ import ScrollReveal from "scrollreveal"
 import Graphics from "../graphics/Graphics"
 import { useState } from "react"
 import Contact from "../contact/Contact"
+import { useTranslation } from "react-i18next"
 
 const Home = () => {
+  const [t, i18n] = useTranslation("global")
+
   useEffect(() => {
     const sr = ScrollReveal()
 
@@ -51,15 +54,14 @@ const Home = () => {
           <div className="container-triangle container-tri-uno"></div>
           <div className="container-presentation">
             <div className="content-presentation">
-              <h1>CONSTRUÍ TU</h1>
-              <h2>CUERPO IDEAL</h2>
+              <h1>{t("home.construiTu")}</h1>
+              <h2>{t("home.cuerpoIdeal")}</h2>
               <p>
-                En Tavross te vamos a ayudar a formar el cuerpo de tus sueños y
-                tener una mejor salud y calidad de vida.
+                {t("home.descripcionHome")}
               </p>
               <div className="container-a">
                 <a href="#Rutines">
-                  Comienza<i className="ri-arrow-right-line"></i>
+                  {t("home.comienza")}<i className="ri-arrow-right-line"></i>
                 </a>
               </div>
             </div>
