@@ -5,6 +5,8 @@ const ThemeContext = createContext()
 const ThemeProvider = ({ children }) => {
   const [color, setColor] = useState("capa-content red")
 
+  color === "" ? setColor("capa-content red") : ""
+
   const loadData = () => {
     const color = localStorage.getItem("color")
     if (color) {
