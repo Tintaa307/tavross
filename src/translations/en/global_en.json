@@ -1,0 +1,112 @@
+{
+  "header": {
+    "rutinas": "ROUTINES",
+    "turm": "YOUR RM",
+    "progreso": "PROGRESS",
+    "contacto": "CONTACT",
+    "crearCuenta": "Register"
+  },
+
+  "home": {
+    "construiTu": "BUILD YOUR",
+    "cuerpoIdeal": "BODY SHAPE",
+    "descripcionHome": "At Tavross we are going to help you form the body of your dreams and have better health and quality of life.",
+    "comienza": "START NOW"
+  },
+
+  "rutinas": {
+    "titulo": "RUTINES",
+    "section1": "WIN MUSCLE",
+    "salud": "HEALTH",
+    "descpRutine1": "Routines for those who are looking to gain muscle mass and increase their strength.",
+    "descpRutine2": "Here you will find aerobic and resistance routines, for running, cycling, zumba and more.",
+    "descpRutine3": "Routines designed for those whose goal is to stay healthy.",
+    "verRutinas": "SEE ROUTINES",
+    "misRutinas": "MY ROUTINES",
+    "crearRutina": "CREATE ROUTINE"
+  },
+
+  "calculadora": {
+    "titulo": "RM Calculator",
+    "sub-titulo": "Calculate your muscular endurance goal.",
+    "aclaracion": "Expressed in KG",
+    "peso": "Weight",
+    "repeticiones": "Repetitions",
+    "enviar": "Send"
+  },
+
+  "progreso": {
+    "titulo": "PROGRESS",
+    "ingresaTusDatos": "Enter your data",
+    "ejercicio": "Exercise",
+    "peso": "Weight",
+    "repeticiones": "Repetitions",
+    "enviar": "Send"
+  },
+
+  "contact": {
+    "descpContact": "Website dedicated to the gym and with the aim that each person achieve their goals in a simple and effective way.",
+    "nuestrasRedes": "OUR SOCIAL NETWORKS",
+    "conctactanos": "CONTACT US",
+    "ayuda": "help and/or problems",
+    "enviar": "Send"
+  },
+
+  "register": {
+    "titulo": "REGISTRASE",
+    "subtitulo": "Register now to access incredible benefits",
+    "enviar": "Send",
+    "registrarse": "REGISTER",
+    "yaTienesCuenta": "Already have an account?",
+    "iniciarSesion": "LogIn here"
+  },
+
+  "login": {
+    "titulo": "LOG IN",
+    "iniciarSesion": "LOG IN",
+    "noTeHasRegistrado": "You have not registered yet?",
+    "registrarse": "Register here"
+  },
+
+  "createRoutine": {
+    "titulo": "Create your routine",
+    "step": "Step",
+    "nombreDeLaRutina": "Routine name",
+    "FinDeLaRutina": "Use of the routine",
+    "salud": "Health",
+    "fuerza": "Strength",
+    "cardio": "Cardio",
+    "cantidadDeSesiones": "Number of sessions",
+    "cantidadDeDivisionesMusculares": "Number of muscle divisions",
+    "descripcion": "Description",
+    "enviar": "Send"
+  },
+
+  "settings": {
+    "titulo": "SETTINGS",
+    "tuCuentaPersonal": "Your personal account",
+    "miCuenta": "MY ACCOUNT",
+    "accesibilidad": "ACCESSIBILITY",
+    "idioma": "LANGUAGE",
+    "apariencia": "APPEARANCE",
+    "cerrarSesion": "LOG OUT"
+  },
+
+  "account": {
+    "tuCuenta": "Your account",
+    "nombre": "Name",
+    "info1": "Your name can be changed at any time from here.",
+    "info2": "Your email can be changed at any time from here.",
+    "bio": "Bio",
+    "info3": "Your bio can be changed at any time from here.",
+    "imagenDePerfil": "Profile image",
+    "editar": "Edit",
+    "guardarCambios": "Save changes"
+  },
+
+  "Appearance": {
+    "apariencia": "Appearance",
+    "colorDeFondo": "Background color",
+    "guardarCambios": "Save changes"
+  }
+}
