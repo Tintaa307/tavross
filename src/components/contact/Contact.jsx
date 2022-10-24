@@ -2,7 +2,6 @@ import React from "react"
 import "./contact.css"
 import { useTranslation } from "react-i18next"
 
-
 const Contact = () => {
   const [t, i18n] = useTranslation("global")
 
@@ -13,16 +12,14 @@ const Contact = () => {
           <h2>{t("contact.contactanos")}</h2>
           <h3>tavross2022@gmail.com</h3>
           <form className="form">
-            <textarea placeholder="Ayuda y/o problemas..." />
+            <textarea placeholder={t("contact.ayuda")} />
             <button type="submit">{t("contact.enviar")}</button>
           </form>
         </div>
         <div className="container-name">
           <div className="item">
             <h2>Tavross</h2>
-            <p>
-            {t("contact.descContac")}
-            </p>
+            <p>{t("contact.descpContact")}</p>
             <h6>Tavross Design © 2022</h6>
           </div>
         </div>

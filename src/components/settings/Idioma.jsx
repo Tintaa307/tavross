@@ -3,31 +3,18 @@ import { useNavigate } from "react-router-dom"
 import "./settings.css"
 import Espana from "../../assets/img-españa.png"
 import EstadosUnidos from "../../assets/img-EstadosUnidos.png"
+import Francia from "../../assets/img-francia.png"
+import Italia from "../../assets/img-italiano.png"
 import { useTranslation } from "react-i18next"
 
-
 const Idioma = ({ move }) => {
+  const [idioma, setIdioma] = useState("es")
   const [t, i18n] = useTranslation("global")
   const [active, setActive] = useState("")
   const navigate = useNavigate()
 
-  const handleActive = () => {
-    setActive("active")
-  }
-
-  const loadData = () => {
-    localStorage.getItem("active")
-    if (active) {
-      setActive(active)
-    }
-  }
-
-  useEffect(() => {
-    loadData()
-  }, [])
-
   const saveData = () => {
-    localStorage.setItem("active", active)
+    localStorage.setItem("idioma", idioma)
     navigate("/settings")
   }
 
@@ -41,18 +28,57 @@ const Idioma = ({ move }) => {
           <h3>{t("idioma.selecIdioma")}</h3>
           <div className="container-idiomas">
             <div className="idioma">
-              <div className={["card", active].join(" ")}>
-                <i class="ri-check-line"></i>
-              </div>
-              <img onClick={handleActive} src={Espana} alt="" />
+              <img
+                onClick={() => {
+                  i18n.changeLanguage(idioma)
+                  setIdioma("ita")
+                  setActive("borderOne")
+                  localStorage.getItem("idioma")
+                }}
+                src={Italia}
+                className={"img"}
+              />
             </div>
             <div className="idioma">
-              <div className={["card", active].join(" ")}>
-                <i class="ri-check-line"></i>
-              </div>
-              <img onClick={handleActive} src={EstadosUnidos} alt="" />
+              <img
+                onClick={() => {
+                  i18n.changeLanguage(idioma)
+                  setIdioma("en")
+                  setActive("borderTwo")
+                  localStorage.getItem("idioma")
+                }}
+                src={EstadosUnidos}
+                className={"img"}
+              />
+            </div>
+            <div className="idioma">
+              <img
+                onClick={() => {
+                  i18n.changeLanguage(idioma)
+                  setIdioma("fr")
+                  setActive("borderThree")
+                  localStorage.getItem("idioma")
+                }}
+                src={Francia}
+                className={"img"}
+              />
+            </div>
+            <div className="idioma">
+              <img
+                onClick={() => {
+                  i18n.changeLanguage(idioma)
+                  setActive("borderFour")
+                  setIdioma("es")
+                  localStorage.getItem("idioma")
+                }}
+                src={Espana}
+                className={"img"}
+              />
             </div>
           </div>
+          <button className="btn-save" onClick={saveData}>
+            {t("account.guardarCambios")}
+          </button>
         </div>
       </div>
     </section>

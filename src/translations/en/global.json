@@ -18,6 +18,7 @@
     "titulo": "RUTINES",
     "section1": "WIN MUSCLE",
     "salud": "HEALTH",
+    "cardio": "CARDIO",
     "descpRutine1": "Routines for those who are looking to gain muscle mass and increase their strength.",
     "descpRutine2": "Here you will find aerobic and resistance routines, for running, cycling, zumba and more.",
     "descpRutine3": "Routines designed for those whose goal is to stay healthy.",
@@ -38,9 +39,9 @@
   "progreso": {
     "titulo": "PROGRESS",
     "ingresaTusDatos": "Enter your data",
-    "ejercicio": "Exercise",
-    "peso": "Weight",
-    "repeticiones": "Repetitions",
+    "ejercicio": "Exercise...",
+    "peso": "Weight...",
+    "repeticiones": "Repetitions...",
     "enviar": "Send"
   },
 
@@ -98,7 +99,6 @@
     "titulo": "LANGUAGE",
     "selecIdioma": "Choose your language"
   },
-
 
   "account": {
     "tuCuenta": "Your account",

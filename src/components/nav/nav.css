@@ -46,6 +46,8 @@
 }
 
 .header-container .container-nav .container-list ul li .link-nav {
+  width: 200px;
+  height: 30px;
   background-color: #fff;
   padding: 16px 19px;
   color: #000;

@@ -6,37 +6,35 @@ import Apariencia from "./Apariencia"
 import Idioma from "./Idioma"
 import { useTranslation } from "react-i18next"
 
-
-const buttons = [
-  {
-    content: "MI CUENTA",
-    className: "boton",
-    id: "one",
-    icon: "ri-user-line",
-  },
-  {
-    content: "ACCESIBILIDAD",
-    className: "boton",
-    id: "two",
-    icon: "fas fa-wheelchair",
-  },
-  {
-    content: "IDIOMA",
-    className: "boton",
-    id: "three",
-    icon: "fas fa-language",
-  },
-  {
-    content: "APARIENCIA",
-    className: "boton",
-    id: "four",
-    icon: "fas fa-palette",
-  },
-]
-
 const Settings = () => {
   const [t, i18n] = useTranslation("global")
   const [move, setMove] = useState("one")
+  const buttons = [
+    {
+      content: t("settings.miCuenta"),
+      className: "boton",
+      id: "one",
+      icon: "ri-user-line",
+    },
+    {
+      content: t("settings.accesibilidad"),
+      className: "boton",
+      id: "two",
+      icon: "fas fa-wheelchair",
+    },
+    {
+      content: t("settings.idioma"),
+      className: "boton",
+      id: "three",
+      icon: "fas fa-language",
+    },
+    {
+      content: t("settings.apariencia"),
+      className: "boton",
+      id: "four",
+      icon: "fas fa-palette",
+    },
+  ]
 
   return (
     <section className="section-settings">
@@ -68,7 +66,8 @@ const Settings = () => {
             </ul>
             <div className="container-quit-sesion">
               <button className="quit-sesion">
-                <i className="ri-door-open-line"></i>{t("settings.cerrarSesion")}
+                <i className="ri-door-open-line"></i>
+                {t("settings.cerrarSesion")}
               </button>
             </div>
           </div>

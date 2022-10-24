@@ -1,122 +1,121 @@
 {
-    "header": {
-      "rutinas": "RUTINAS",
-      "turm": "TU RM",
-      "progreso": "PROGESO",
-      "contacto": "CONTACTO",
-      "crearCuenta": "Crear Cuenta"
-    },
-  
-    "home": {
-      "construiTu": "COSNTRUI TU",
-      "cuerpoIdeal": "CUERPO IDEAL",
-      "descripcionHome": "En Tavross te vamos a ayudar a formar el cuerpo de tus sueños y tener una mejor salud y calidad de vida.",
-      "comienza": "Comienza"
-    },
-  
-    "rutinas": {
-      "titulo": "RUTINAS",
-      "section1": "GANAR MUSCULO",
-      "salud": "SALUD",
-      "cardio": "CARDIO",
-      "descpRutine1": "Rutinas para aquellos que este buscando ganar masa muscular y aumentar su fuerza.",
-      "descpRutine2": "Aquí odrás encontrar rutinas aerobicas y de resistencia, para correr, bicicleta, zumba y más.",
-      "descpRutine3": "Rutinas diseñadas para aquellas personas que su objetivo sea mantenerse saludable.",
-      "verRutinas": "VER RUTINAS",
-      "misRutinas": "Mis Rutinas",
-      "crearRutina": "Crear Rutina"
-    },
-  
-    "calculadora": {
-      "titulo": "Calculadora de RM",
-      "sub-titulo": "Calcula tu meta de resistencia muscular.",
-      "aclaracion": "Expresado en KG",
-      "peso": "Peso",
-      "repeticiones": "Repeticiones",
-      "enviar": "Enviar"
-    },
-  
-    "progreso": {
-      "titulo": "PROGRESO",
-      "ingresaTusDatos": "Ingresatus datos",
-      "ejercicio": "Ejercicio",
-      "peso": "Peso",
-      "repeticiones": "Repeticiones",
-      "enviar": "Enviar"
-    },
-  
-    "contact": {
-      "descpContact": "Pagina web dedicada al gimnasio y con el objetivo de que cada persona logre sus metas de una manera sencilla y eficaz.",
-      "nuestrasRedes": "Nuestras Redes",
-      "conctactanos": "Contactos",
-      "ayuda": "Ayuda y/o problemas...",
-      "enviar": "Enviar"
-    },
-  
-    "register": {
-      "titulo": "REGISTRARSE",
-      "subtitulo": "Registrate ahora para acceder a beneficios increibles",
-      "enviar": "Enviar",
-      "registrarse": "REGISTRARSE",
-      "yaTienesCuenta": "¿Ya tienes cuenta?",
-      "iniciarSesion": "Iniciar sesión."
-    },
-  
-    "login": {
-      "titulo": "INICIAR SESION",
-      "iniciarSesion": "INICIAR SESION",
-      "noTeHasRegistrado": "¿No te has registrado?",
-      "registrarse": "Registrate."
-    },
-  
-    "createRoutine": {
-      "titulo": "Crea Tu Rutina",
-      "step": "Paso",
-      "nombreDeLaRutina": "Nombre de la rutina",
-      "FinDeLaRutina": "Fin de la rutina",
-      "salud": "Salud",
-      "fuerza": "Fuerza",
-      "cardio": "Cardio",
-      "fin": "fin",
-      "cantidadDeSesiones": "Cantidad de sesiones",
-      "siguiente": "Siguiente",
-      "cantidadDeDivisionesMusculares": "Cantidad de divisiones musculares",
-      "descripcion": "Descripcion",
-      "enviar": "Enviar"
-    },
-  
-    "settings": {
-      "titulo": "CONFIGURACION",
-      "tuCuentaPersonal": "Tu cuenta personal",
-      "miCuenta": "MI CUENTA",
-      "accesibilidad": "ACCESIBILIDAD",
-      "idioma": "IDIOMA",
-      "apariencia": "APARIENCIA",
-      "cerrarSesion": "CERRAR SESION"
-    },
+  "header": {
+    "rutinas": "RUTINAS",
+    "turm": "TU RM",
+    "progreso": "PROGESO",
+    "contacto": "CONTACTO",
+    "crearCuenta": "Crear Cuenta"
+  },
 
-    "idioma": {
-      "titulo": "IDIOMA",
-      "selecIdioma": "Selecciona tu idioma"
-    },
-  
-    "account": {
-      "tuCuenta": "Tu cuenta",
-      "nombre": "Nombre",
-      "info1": "Tu nombre puede ser modificado en cualquier momento desde aquí.",
-      "info2": "Tu email puede ser modificado en cualquier momento desde aquí.",
-      "bio": "Bio",
-      "info3": "Tu bio puede ser modificada en cualquier momento desde aquí.",
-      "imagenDePerfil": "Imagen de perfil",
-      "editar": "Editar",
-      "guardarCambios": "Guardar Cambios"
-    },
-  
-    "Appearance": {
-      "apariencia": "Apariencia",
-      "colorDeFondo": "Color de fondo",
-      "guardarCambios": "Guardar Cambios",
-      "selecColor": "Clickee para seleccionar el color:"
-    }
+  "home": {
+    "construiTu": "COSNTRUI TU",
+    "cuerpoIdeal": "CUERPO IDEAL",
+    "descripcionHome": "En Tavross te vamos a ayudar a formar el cuerpo de tus sueños y tener una mejor salud y calidad de vida.",
+    "comienza": "Comienza"
+  },
+
+  "rutinas": {
+    "titulo": "RUTINAS",
+    "section1": "FUERZA",
+    "salud": "SALUD",
+    "cardio": "CARDIO",
+    "descpRutine1": "Rutinas para aquellos que este buscando ganar masa muscular y aumentar su fuerza.",
+    "descpRutine2": "Aquí odrás encontrar rutinas aerobicas y de resistencia, para correr, bicicleta, zumba y más.",
+    "descpRutine3": "Rutinas diseñadas para aquellas personas que su objetivo sea mantenerse saludable.",
+    "verRutinas": "VER RUTINAS",
+    "misRutinas": "Mis Rutinas",
+    "crearRutina": "Crear Rutina"
+  },
+
+  "calculadora": {
+    "titulo": "Calculadora de RM",
+    "sub-titulo": "Calcula tu meta de resistencia muscular.",
+    "aclaracion": "Expresado en KG",
+    "peso": "Peso",
+    "repeticiones": "Repeticiones",
+    "enviar": "Enviar"
+  },
+
+  "progreso": {
+    "titulo": "PROGRESO",
+    "ingresaTusDatos": "Ingresatus datos",
+    "ejercicio": "Ejercicio",
+    "peso": "Peso",
+    "repeticiones": "Repeticiones",
+    "enviar": "Enviar"
+  },
+
+  "contact": {
+    "descpContact": "Pagina web dedicada al gimnasio y con el objetivo de que cada persona logre sus metas de una manera sencilla y eficaz.",
+    "nuestrasRedes": "Nuestras Redes",
+    "conctactanos": "Contactos",
+    "ayuda": "Ayuda y/o problemas...",
+    "enviar": "Enviar"
+  },
+
+  "register": {
+    "titulo": "REGISTRARSE",
+    "subtitulo": "Registrate ahora para acceder a beneficios increibles",
+    "enviar": "Enviar",
+    "registrarse": "REGISTRARSE",
+    "yaTienesCuenta": "¿Ya tienes cuenta?",
+    "iniciarSesion": "Iniciar sesión."
+  },
+
+  "login": {
+    "titulo": "INICIAR SESION",
+    "iniciarSesion": "INICIAR SESION",
+    "noTeHasRegistrado": "¿No te has registrado?",
+    "registrarse": "Registrate."
+  },
+
+  "createRoutine": {
+    "titulo": "Crea Tu Rutina",
+    "step": "Paso",
+    "nombreDeLaRutina": "Nombre de la rutina",
+    "FinDeLaRutina": "Fin de la rutina",
+    "salud": "Salud",
+    "fuerza": "Fuerza",
+    "cardio": "Cardio",
+    "fin": "fin",
+    "cantidadDeSesiones": "Cantidad de sesiones",
+    "siguiente": "Siguiente",
+    "cantidadDeDivisionesMusculares": "Cantidad de divisiones musculares",
+    "descripcion": "Descripcion",
+    "enviar": "Enviar"
+  },
+
+  "settings": {
+    "titulo": "CONFIGURACION",
+    "tuCuentaPersonal": "Tu cuenta personal",
+    "miCuenta": "MI CUENTA",
+    "accesibilidad": "ACCESIBILIDAD",
+    "idioma": "IDIOMA",
+    "apariencia": "APARIENCIA",
+    "cerrarSesion": "CERRAR SESION"
+  },
+
+  "idioma": {
+    "titulo": "IDIOMA",
+    "selecIdioma": "Selecciona tu idioma"
+  },
+
+  "account": {
+    "tuCuenta": "Tu cuenta",
+    "nombre": "Nombre",
+    "info1": "Tu nombre puede ser modificado en cualquier momento desde aquí.",
+    "info2": "Tu email puede ser modificado en cualquier momento desde aquí.",
+    "bio": "Bio",
+    "info3": "Tu bio puede ser modificada en cualquier momento desde aquí.",
+    "imagenDePerfil": "Imagen de perfil",
+    "editar": "Editar",
+    "guardarCambios": "Guardar Cambios"
+  },
+
+  "Appearance": {
+    "apariencia": "Apariencia",
+    "colorDeFondo": "Color de fondo",
+    "guardarCambios": "Guardar Cambios",
+    "selecColor": "Clickee para seleccionar el color:"
   }
-  
+}
