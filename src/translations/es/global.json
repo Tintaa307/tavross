@@ -74,10 +74,12 @@
       "step": "Paso",
       "nombreDeLaRutina": "Nombre de la rutina",
       "FinDeLaRutina": "Fin de la rutina",
-      "salud": "salud",
+      "salud": "Salud",
       "fuerza": "Fuerza",
       "cardio": "Cardio",
+      "fin": "fin",
       "cantidadDeSesiones": "Cantidad de sesiones",
+      "siguiente": "Siguiente",
       "cantidadDeDivisionesMusculares": "Cantidad de divisiones musculares",
       "descripcion": "Descripcion",
       "enviar": "Enviar"
@@ -91,6 +93,11 @@
       "idioma": "IDIOMA",
       "apariencia": "APARIENCIA",
       "cerrarSesion": "CERRAR SESION"
+    },
+
+    "idioma": {
+      "titulo": "IDIOMA",
+      "selecIdioma": "Selecciona tu idioma"
     },
   
     "account": {
@@ -108,7 +115,8 @@
     "Appearance": {
       "apariencia": "Apariencia",
       "colorDeFondo": "Color de fondo",
-      "guardarCambios": "Guardar Cambios"
+      "guardarCambios": "Guardar Cambios",
+      "selecColor": "Clickee para seleccionar el color:"
     }
   }
   

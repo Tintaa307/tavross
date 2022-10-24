@@ -10,7 +10,7 @@ import Orange from "../../assets/home-orange.png"
 import Green from "../../assets/home-green.png"
 // import Swiper core and required modules
 import { Navigation } from "swiper"
-
+import { useTranslation } from "react-i18next"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 // Import Swiper styles
@@ -56,6 +56,7 @@ const data = [
 ]
 
 const Apariencia = ({ move }) => {
+  const [t, i18n] = useTranslation("global")
   const { color, changeColor } = useContext(ThemeContext)
   const [check, setCheck] = useState("none")
   const navigate = useNavigate()
@@ -73,10 +74,10 @@ const Apariencia = ({ move }) => {
     <section className={["section-apariencia", move].join(" ")}>
       <div className="container-apariencia-content">
         <div className="container-apariencia-title">
-          <h2>Apariencia</h2>
+          <h2>{t("Appearance.apariencia")}</h2>
         </div>
         <div className="container-apariencia-options">
-          <h3>Color de fondo</h3>
+          <h3>{t("Appearance.colorDeFondo")}</h3>
           <div className="container-colors">
             <Swiper
               modules={[Navigation]}
@@ -91,7 +92,7 @@ const Apariencia = ({ move }) => {
                     <img src={img} />
                     <div className={capa}>
                       <div className={["capa-content", id].join(" ")}>
-                        <h4>Clickee para seleccionar el color:</h4>
+                        <h4>{t("Appearance.selecColor")}</h4>
                         <i
                           className={["ri-check-line", color, check].join(" ")}
                         ></i>
@@ -104,7 +105,7 @@ const Apariencia = ({ move }) => {
             </Swiper>
           </div>
           <button onClick={saveData} type="submit">
-            Guardar Cambios
+          {t("Appearance.guardarCambios")}
           </button>
         </div>
       </div>

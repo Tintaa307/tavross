@@ -6,10 +6,14 @@ import * as Yup from "yup"
 import axios from "axios"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import ScrollReveal from "scrollreveal"
+import { useTranslation } from "react-i18next"
+
 
 const URI = "http://localhost:8000/usuarios"
 
 const Login = () => {
+  const [t, i18n] = useTranslation("global")
+
   const userRef = useRef(null)
   const passwordRef = useRef(null)
   const navigate = useNavigate()
@@ -58,7 +62,7 @@ const Login = () => {
             className="form"
             autoComplete="off"
           >
-            <h2 className="title">INICIAR SESION</h2>
+            <h2 className="title">{t("login.titulo")}</h2>
             <div className="input-div one ">
               <div className="i">
                 <i className="fa fa-user"></i>
@@ -88,13 +92,13 @@ const Login = () => {
               </div>
             </div>
             <button type="submit" className="boton-neon">
-              INICIAR SESION
+            {t("login.iniciarSesion")}
             </button>
             <div className="container-already">
               <h5>
-                ¿No te has registrado?{" "}
+              {t("login.noTeHasRegistrado")}{" "}
                 <Link className="inicia-sesion" to={"/register"}>
-                  Registrate.
+                {t("login.registrarse")}
                 </Link>
               </h5>
             </div>

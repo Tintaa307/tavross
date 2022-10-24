@@ -76,7 +76,9 @@
     "salud": "Health",
     "fuerza": "Strength",
     "cardio": "Cardio",
+    "fin": "End",
     "cantidadDeSesiones": "Number of sessions",
+    "siguiente": "Next",
     "cantidadDeDivisionesMusculares": "Number of muscle divisions",
     "descripcion": "Description",
     "enviar": "Send"
@@ -91,6 +93,12 @@
     "apariencia": "APPEARANCE",
     "cerrarSesion": "LOG OUT"
   },
+
+  "idioma": {
+    "titulo": "LANGUAGE",
+    "selecIdioma": "Choose your language"
+  },
+
 
   "account": {
     "tuCuenta": "Your account",
@@ -107,6 +115,7 @@
   "Appearance": {
     "apariencia": "Appearance",
     "colorDeFondo": "Background color",
-    "guardarCambios": "Save changes"
+    "guardarCambios": "Save changes",
+    "selecColor": "Click to choose the color:"
   }
 }

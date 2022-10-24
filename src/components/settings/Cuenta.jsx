@@ -2,10 +2,13 @@ import React, { useState, useRef } from "react"
 import "./settings.css"
 import axios from "axios"
 import { Navigate, useNavigate, useParams } from "react-router-dom"
+import { useTranslation } from "react-i18next"
+
 
 const URI = "http://localhost:8000/usuarios/"
 
 const Cuenta = ({ move }) => {
+  const [t, i18n] = useTranslation("global")
   const [image, setImage] = useState("")
   const fileRef = useRef(null)
   const imageRef = useRef(null)
@@ -43,40 +46,40 @@ const Cuenta = ({ move }) => {
     <section className={["section-cuenta", move].join(" ")}>
       <div className="container-cuenta-info">
         <div className="container-cuenta-title">
-          <h2>Tu cuenta</h2>
+          <h2>{t("account.tuCuenta")}</h2>
         </div>
         <form onSubmit={handleUpload} className="container-info-user">
           <div className="img-user-edit">
-            <h4>Imagen de perfil</h4>
+            <h4>{t("account.imagenDePerfil")}</h4>
             <div className="img-editor">
               <input type="file" ref={fileRef} style={{ display: "none" }} />
               <img src={image} ref={imageRef} className="current-img" />
             </div>
             <div onClick={handleImage} className="btn-edit">
               <i class="ri-pencil-line"></i>
-              <span>Editar</span>
+              <span>{t("account.editar")}</span>
             </div>
           </div>
           <div className="item">
-            <h4>Nombre</h4>
+            <h4>{t("account.nombre")}</h4>
             <input type="text" defaultValue={"Valentin Gonzalez"} />
             <p>
-              Tu nombre puede ser modificado en cualquier momento desde aquí.
+            {t("account.info1")}
             </p>
           </div>
           <div className="item">
             <h4>Email</h4>
             <input type="text" defaultValue={"Valentinta@icloud.com"} />
             <p>
-              Tu email puede ser modificado en cualquier momento desde aquí.
+            {t("account.info2")}
             </p>
           </div>
           <div className="item">
-            <h4>Bio</h4>
+            <h4>{t("account.bio")}</h4>
             <textarea placeholder="Escribe una breve descripción de ti..."></textarea>
-            <p>Tu bio puede ser modificada en cualquier momento desde aquí.</p>
+            <p>{t("account.info3")}</p>
           </div>
-          <button type="submit">Guardar Cambios</button>
+          <button type="submit">{t("account.guardarCambios")}</button>
         </form>
       </div>
     </section>

@@ -3,8 +3,11 @@ import { useNavigate } from "react-router-dom"
 import "./settings.css"
 import Espana from "../../assets/img-españa.png"
 import EstadosUnidos from "../../assets/img-EstadosUnidos.png"
+import { useTranslation } from "react-i18next"
+
 
 const Idioma = ({ move }) => {
+  const [t, i18n] = useTranslation("global")
   const [active, setActive] = useState("")
   const navigate = useNavigate()
 
@@ -32,10 +35,10 @@ const Idioma = ({ move }) => {
     <section className={["section-idioma", move].join(" ")}>
       <div className="container-idioma-content">
         <div className="container-idioma-title">
-          <h2>Idioma</h2>
+          <h2>{t("idioma.titulo")}</h2>
         </div>
         <div className="container-idioma-options">
-          <h3>Selecciona tu idioma</h3>
+          <h3>{t("idioma.selecIdioma")}</h3>
           <div className="container-idiomas">
             <div className="idioma">
               <div className={["card", active].join(" ")}>

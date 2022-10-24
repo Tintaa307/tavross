@@ -6,6 +6,7 @@ import * as Yup from "yup"
 import axios from "axios"
 import { Link, useNavigate } from "react-router-dom"
 import ScrollReveal from "scrollreveal"
+import { useTranslation } from "react-i18next"
 
 const SignupSchema = Yup.object().shape({
   username: Yup.string()
@@ -22,6 +23,8 @@ const SignupSchema = Yup.object().shape({
 const URI = "http://localhost:8000/usuarios/"
 
 const Register = () => {
+  const [t, i18n] = useTranslation("global")
+
   useEffect(() => {
     const sr = ScrollReveal()
 
@@ -71,8 +74,8 @@ const Register = () => {
           >
             {({ errors, touched, handleChange, values }) => (
               <Form className="form" autoComplete="off">
-                <h2 className="title">REGISTRARSE</h2>
-                <p>Registrate ahora para acceder a beneficios increibles</p>
+                <h2 className="title">{t("register.titulo")}</h2>
+                <p>{t("register.subtitulo")}</p>
                 <div className="input-div one ">
                   <div className="i">
                     <i className="fa fa-envelope"></i>
@@ -125,13 +128,13 @@ const Register = () => {
                   </div>
                 </div>
                 <button type="submit" className="boton-neon">
-                  REGISTRARSE
+                {t("register.registrarse")}
                 </button>
                 <div className="container-already">
                   <h5>
-                    ¿Ya tienes una cuenta?{" "}
+                  {t("register.yaTienesCuenta")}{" "}
                     <Link className="inicia-sesion" to={"/login"}>
-                      Inicar sesión.
+                    {t("register.iniciarSesion")}
                     </Link>
                   </h5>
                 </div>

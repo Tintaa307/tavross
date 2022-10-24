@@ -2,10 +2,12 @@ import React, { useRef, useState } from "react"
 import "./createRutine.css"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
+import { useTranslation } from "react-i18next"
 
 const URI = "http://localhost:8000/rutines"
 
 const CreateRutine = () => {
+  const [t, i18n] = useTranslation("global")
   const [move, setMove] = useState("")
   const [change, setChange] = useState("")
   const [change2, setChange2] = useState("")
@@ -60,26 +62,26 @@ const CreateRutine = () => {
 
   return (
     <div className="container-create-rutine">
-      <h1>Crea Tu Rutina</h1>
+      <h1>{t("createRoutine.titulo")}</h1>
       <div className="container-form">
         <div className="container-header-pasos">
           <div className="container-headers">
             <div className="item">
-              <h5>Paso 1</h5>
+              <h5>{t("createRoutine.step")} 1</h5>
               <div className={["circle", change].join(" ")}>
                 <span>1</span>{" "}
                 <i class={["ri-check-line", change].join(" ")}></i>
               </div>
             </div>
             <div className="item">
-              <h5>Paso 2</h5>
+              <h5>{t("createRoutine.step")} 2</h5>
               <div className={["circle", change2].join(" ")}>
                 <span>2</span>{" "}
                 <i class={["ri-check-line", change2].join(" ")}></i>
               </div>
             </div>
             <div className="item">
-              <h5>Fin</h5>
+              <h5>{t("createRoutine.fin")}</h5>
               <div className="circle">
                 <span>3</span> <i class="ri-check-line"></i>
               </div>
@@ -88,30 +90,30 @@ const CreateRutine = () => {
           <form onSubmit={handleSubmit} className="form">
             <div className={["steps", change].join(" ")}>
               <div className="item">
-                <h4>Nombre de la rutina</h4>
+                <h4>{t("createRoutine.nombreDeLaRutina")}</h4>
                 <input ref={nameRef} type="text" />
                 <div className="message">{res}</div>
               </div>
               <div className="item">
-                <h4>Fin de la rutina</h4>
+                <h4>{t("createRoutine.finDeLaRutina")}</h4>
                 <select ref={typeRef} className="select">
-                  <option value="salud">Salud</option>
-                  <option value="fuerza">Fuerza</option>
-                  <option value="cardio">Cardio</option>
+                  <option value="salud">{t("createRoutine.salud")}</option>
+                  <option value="fuerza">{t("createRoutine.fuerza")}</option>
+                  <option value="cardio">{t("createRoutine.cardio")}</option>
                 </select>
               </div>
               <div className="btn-sig" onClick={handleChange}>
-                Siguiente
+              {t("createRoutine.siguiente")}
               </div>
             </div>
             <div className={["steps two", change, move].join(" ")}>
               <div className="item">
-                <h4>Cantidad de sesiones</h4>
+                <h4>{t("createRoutine.antidadDeSesiones")}</h4>
                 <input ref={sesionesRef} type="number" />
                 <div className="message">{res}</div>
               </div>
               <div className="item">
-                <h4>Cantidad de divisiones musculares</h4>
+                <h4>{t("createRoutine.cantidadDeDivisionesMusculares")}</h4>
                 <select ref={divMuscularRef} className="select">
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -121,16 +123,16 @@ const CreateRutine = () => {
                 </select>
               </div>
               <div className="btn-sig" onClick={handleMove}>
-                Siguiente
+              {t("createRoutine.siguiente")}
               </div>
             </div>
             <div className={["steps three", move].join(" ")}>
               <div className="item">
-                <h4 className="desc">Descripcion</h4>
+                <h4 className="desc">{t("createRoutine.descripcion")}</h4>
                 <textarea ref={descripcionRef} />
               </div>
               <button className="btn-sig send" type="submit">
-                Enviar
+              {t("createRoutine.enviar")}
               </button>
             </div>
           </form>

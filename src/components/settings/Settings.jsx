@@ -4,6 +4,8 @@ import ProfileImage from "../../assets/gymbro.png"
 import Cuenta from "./Cuenta"
 import Apariencia from "./Apariencia"
 import Idioma from "./Idioma"
+import { useTranslation } from "react-i18next"
+
 
 const buttons = [
   {
@@ -33,13 +35,14 @@ const buttons = [
 ]
 
 const Settings = () => {
+  const [t, i18n] = useTranslation("global")
   const [move, setMove] = useState("one")
 
   return (
     <section className="section-settings">
       <div className="container-settings">
         <div className="container-settings-title">
-          <h1>CONFIGURACION</h1>
+          <h1>{t("settings.titulo")}</h1>
         </div>
         <aside className="config-aside">
           <div className="personal-info-top">
@@ -47,7 +50,7 @@ const Settings = () => {
               <img src={""} className="img-profile" />
             </div>
             <h2>Valentin Gonzalez</h2>
-            <h3>Tu cuenta personal</h3>
+            <h3>{t("settings.tuCuentaPersonal")}</h3>
           </div>
           <div className="container-list-config">
             <ul className="list-config">
@@ -65,7 +68,7 @@ const Settings = () => {
             </ul>
             <div className="container-quit-sesion">
               <button className="quit-sesion">
-                <i className="ri-door-open-line"></i>CERRAR SESION
+                <i className="ri-door-open-line"></i>{t("settings.cerrarSesion")}
               </button>
             </div>
           </div>

@@ -245,12 +245,12 @@ const Graphics = () => {
           <input
             type="text"
             onChange={handleChange}
-            placeholder="Ejercicio..."
+            placeholder={t("progreso.ejercicio")}
             ref={exRef}
           />
-          <input type="number" placeholder="Peso..." ref={pesoRef} />
-          <input type="number" placeholder="Repeticiones..." ref={repsRef} />
-          <button type="submit">Enviar</button>
+          <input type="number" placeholder={t("progreso.peso")} ref={pesoRef} />
+          <input type="number" placeholder={t("progreso.repeticiones")} ref={repsRef} />
+          <button type="submit">{t("progreso.enviar")}</button>
         </form>
       </div>
       <div className="container-graphics-info">
