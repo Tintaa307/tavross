@@ -10,11 +10,19 @@ import { useTranslation } from "react-i18next"
 const Idioma = ({ move }) => {
   const [idioma, setIdioma] = useState("es")
   const [t, i18n] = useTranslation("global")
-  const [active, setActive] = useState("")
+  const [active, setActive] = useState("four")
   const navigate = useNavigate()
+
+  useEffect(() => {
+    localStorage.getItem("active")
+    if (active) {
+      setActive(active)
+    }
+  }, [])
 
   const saveData = () => {
     localStorage.setItem("idioma", idioma)
+    localStorage.setItem("active", active)
     navigate("/settings")
   }
 
@@ -29,51 +37,59 @@ const Idioma = ({ move }) => {
           <div className="container-idiomas">
             <div className="idioma">
               <img
+                id="one"
                 onClick={() => {
                   i18n.changeLanguage(idioma)
                   setIdioma("ita")
-                  setActive("borderOne")
+                  setActive("one")
                   localStorage.getItem("idioma")
                 }}
                 src={Italia}
-                className={"img"}
+                className="img"
               />
+              <div className={["selected1", active].join(" ")}></div>
             </div>
             <div className="idioma">
               <img
+                id="two"
                 onClick={() => {
                   i18n.changeLanguage(idioma)
                   setIdioma("en")
-                  setActive("borderTwo")
+                  setActive("two")
                   localStorage.getItem("idioma")
                 }}
                 src={EstadosUnidos}
-                className={"img"}
+                className="img"
               />
+              <div className={["selected2", active].join(" ")}></div>
             </div>
             <div className="idioma">
               <img
+                id="three"
                 onClick={() => {
                   i18n.changeLanguage(idioma)
                   setIdioma("fr")
-                  setActive("borderThree")
+                  setActive("three")
                   localStorage.getItem("idioma")
                 }}
                 src={Francia}
-                className={"img"}
+                className="img"
               />
+              <div className={["selected3", active].join(" ")}></div>
             </div>
             <div className="idioma">
               <img
+                id="four"
                 onClick={() => {
                   i18n.changeLanguage(idioma)
-                  setActive("borderFour")
                   setIdioma("es")
+                  setActive("four")
                   localStorage.getItem("idioma")
                 }}
                 src={Espana}
-                className={"img"}
+                className="img"
               />
+              <div className={["selected4", active].join(" ")}></div>
             </div>
           </div>
           <button className="btn-save" onClick={saveData}>

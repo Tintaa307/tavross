@@ -650,6 +650,17 @@
   cursor: pointer;
   width: 50%;
   border: none;
+  transition: var(--transition);
+}
+
+.section-idioma
+  .container-idioma-content
+  .container-idioma-options
+  .container-idiomas
+  .idioma
+  img:hover {
+  transform: scale(1.05);
+  transition: var(--transition);
 }
 
 .section-idioma .container-idioma-content .container-idioma-options .btn-save {
@@ -672,8 +683,12 @@
   .container-idioma-options
   .container-idiomas
   .idioma
-  .img.borderOne {
-  border: 2px solid #fff;
+  .selected1 {
+  width: 130px;
+  height: 10px;
+  background-color: #1f6feb;
+  border-radius: 15px;
+  opacity: 0;
   transition: var(--transition);
 }
 
@@ -682,8 +697,8 @@
   .container-idioma-options
   .container-idiomas
   .idioma
-  .img.borderTwo {
-  border: 2px solid #fff;
+  .selected1.one {
+  opacity: 1;
   transition: var(--transition);
 }
 
@@ -692,8 +707,12 @@
   .container-idioma-options
   .container-idiomas
   .idioma
-  .img.borderThree {
-  border: 2px solid #fff;
+  .selected2 {
+  width: 130px;
+  height: 10px;
+  background-color: #1f6feb;
+  border-radius: 15px;
+  opacity: 0;
   transition: var(--transition);
 }
 
@@ -702,7 +721,55 @@
   .container-idioma-options
   .container-idiomas
   .idioma
-  .img.borderFour {
-  border: 2px solid #fff;
+  .selected2.two {
+  opacity: 1;
+  transition: var(--transition);
+}
+
+.section-idioma
+  .container-idioma-content
+  .container-idioma-options
+  .container-idiomas
+  .idioma
+  .selected3 {
+  width: 130px;
+  height: 10px;
+  background-color: #1f6feb;
+  border-radius: 15px;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.section-idioma
+  .container-idioma-content
+  .container-idioma-options
+  .container-idiomas
+  .idioma
+  .selected3.three {
+  opacity: 1;
+  transition: var(--transition);
+}
+
+.section-idioma
+  .container-idioma-content
+  .container-idioma-options
+  .container-idiomas
+  .idioma
+  .selected4 {
+  width: 130px;
+  height: 10px;
+  background-color: #1f6feb;
+  border-radius: 15px;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.section-idioma
+  .container-idioma-content
+  .container-idioma-options
+  .container-idiomas
+  .idioma
+  .selected4.four {
+  opacity: 1;
   transition: var(--transition);
 }
