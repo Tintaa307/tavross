@@ -89,6 +89,10 @@ h6 {
   font-weight: 600;
 }
 
+button {
+  cursor: pointer;
+}
+
 ul {
   list-style: none;
 }
