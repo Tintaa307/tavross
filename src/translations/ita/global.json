@@ -1,0 +1,121 @@
+{
+  "header": {
+    "rutinas": "ALLENAMENTO",
+    "turm": "LE TUE RM",
+    "progreso": "PROGRESSO",
+    "contacto": "CONTATTO",
+    "crearCuenta": "Creare un Profilo"
+  },
+
+  "home": {
+    "construiTu": "COSTRUISCI IL TUO",
+    "cuerpoIdeal": "CORPO IDEALE",
+    "descripcionHome": "In Tavross ti aiuteremo a modellare il corpo che desideri ed ad avere buona salute e qualita della vita.",
+    "comienza": "Inizia"
+  },
+
+  "rutinas": {
+    "titulo": "ALLENAMENTO",
+    "section1": "FORZA",
+    "salud": "SALUTE",
+    "cardio": "CARDIO",
+    "descpRutine1": "Allenamento por coloro che vogliono ingrossare massa muscolare ed aumentare la forza.",
+    "descpRutine2": "Qui troverai allenamenti aerobici e di resistenza, per correre, per fare bicicletta, zumba ed altri.",
+    "descpRutine3": "Allenamenti pronti per coloro che danno priorita alla salute.",
+    "verRutinas": "VEDI ALLENAMENTO",
+    "misRutinas": "I MIEI ESERCIZI",
+    "crearRutina": "Creare esercizi"
+  },
+
+  "calculadora": {
+    "titulo": "Calcolatrice di RM",
+    "sub-titulo": "Calcola il tuo obiettivo di resistenza muscolare.",
+    "aclaracion": "Espresso in KG",
+    "peso": "Peso",
+    "repeticiones": "Ripetizioni",
+    "enviar": "Inviare"
+  },
+
+  "progreso": {
+    "titulo": "PROGRESSO",
+    "ingresaTusDatos": "Inserisci i tuoi dati",
+    "ejercicio": "Esercizio",
+    "peso": "Peso",
+    "repeticiones": "Ripetizioni",
+    "enviar": "Inviare"
+  },
+
+  "contact": {
+    "descpContact": "Pagina web dedicata alla palestra con l`unico obiettivo che ogni persona riesca a raggiungere i propri obiettivi in un modo semplice e efficace.",
+    "nuestrasRedes": "I nostri social network",
+    "conctactanos": "Contatti telefonici",
+    "ayuda": "Aiuti e/o problemi...",
+    "enviar": "Inviare"
+  },
+
+  "register": {
+    "titulo": "REGISTRARSI",
+    "subtitulo": "Registrati adesso per accedere ad incredibili benefici",
+    "enviar": "Inviare",
+    "registrarse": "REGISTRARSI",
+    "yaTienesCuenta": "Hai gia un account?",
+    "iniciarSesion": "Accesso."
+  },
+
+  "login": {
+    "titulo": "ACCESSO",
+    "iniciarSesion": "ACCESSO",
+    "noTeHasRegistrado": "NON SEI ANCORA REGISTRATO?",
+    "registrarse": "ISCRIZIONE."
+  },
+
+  "createRoutine": {
+    "titulo": "Creare esercizi",
+    "step": "Passo",
+    "nombreDeLaRutina": "Nome della routine",
+    "FinDeLaRutina": "Fine della routine",
+    "salud": "Salute",
+    "fuerza": "Forza",
+    "cardio": "Cardio",
+    "fin": "fine",
+    "cantidadDeSesiones": "Numero di sessioni",
+    "siguiente": "Prossimo",
+    "cantidadDeDivisionesMusculares": "Numero di divisioni muscolari",
+    "descripcion": "Descrizione",
+    "enviar": "Inviare"
+  },
+
+  "settings": {
+    "titulo": "IMPOSTAZIONE DELL`ACCOUNT",
+    "tuCuentaPersonal": "Il tuo account personale",
+    "miCuenta": "IL MIO ACCOUNT",
+    "accesibilidad": "ACCESSO",
+    "idioma": "LINGUA",
+    "apariencia": "ASPETTO ESTERIORE",
+    "cerrarSesion": "CANCELLA LA SOTTOSCRIZIONE"
+  },
+
+  "idioma": {
+    "titulo": "Lingua",
+    "selecIdioma": "Scegli la lingua"
+  },
+
+  "account": {
+    "tuCuenta": "Il tuo account",
+    "nombre": "Nome",
+    "info1": "Il tuo nome puo essere modificato in qualsiasi momento da qui.",
+    "info2": "La tua  email puo essere modificata in qualsiasi momento da qui.",
+    "bio": "Bio",
+    "info3": "La tua bio puo essere modificata in qualsiasi momento da qui.",
+    "imagenDePerfil": "Immagine del profilo",
+    "editar": "Modifiche",
+    "guardarCambios": "Conservare le Modifiche"
+  },
+
+  "Appearance": {
+    "apariencia": "Aspetto esteriore",
+    "colorDeFondo": "Colore di sfondo",
+    "guardarCambios": "Conservare le Modifiche",
+    "selecColor": "Faccia click per selezionare il colore"
+  }
+}
