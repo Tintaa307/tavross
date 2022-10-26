@@ -51,7 +51,7 @@ const Cuenta = ({ move }) => {
     const newBio = newBioRef.current.defaultValue
     localStorage.setItem("imagen", preview)
 
-    axios.post(URI + id, {
+    axios.put(URI + id, {
       nombre: newName,
       email: newEmail,
       descripcion: newBio,

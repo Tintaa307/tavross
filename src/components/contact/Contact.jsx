@@ -1,9 +1,35 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./contact.css"
 import { useTranslation } from "react-i18next"
+import ScrollReveal from "scrollreveal"
 
 const Contact = () => {
   const [t, i18n] = useTranslation("global")
+
+  useEffect(() => {
+    const sr = ScrollReveal()
+
+    sr.reveal(".container-name", {
+      delay: 400,
+      origin: "top",
+      distance: "100px",
+      duration: 1000,
+    })
+
+    sr.reveal(".container-redes", {
+      delay: 500,
+      origin: "left",
+      distance: "100px",
+      duration: 1000,
+    })
+
+    sr.reveal(".container-contact-us", {
+      delay: 600,
+      origin: "right",
+      distance: "100px",
+      duration: 1000,
+    })
+  }, [])
 
   return (
     <section className="section-contact">

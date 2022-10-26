@@ -8,6 +8,17 @@
   background-color: #040404;
 }
 
+.container-create-rutine .container-link-back {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.container-create-rutine .container-link-back .link-back {
+  color: #fff;
+  font-size: 1.7rem;
+}
+
 .container-create-rutine h1 {
   text-align: center;
   color: #fff;

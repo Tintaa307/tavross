@@ -1,10 +1,11 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "./nav.css"
 import { Link } from "react-router-dom"
 import ButtonConfig from "./ButtonConfig"
 import Settings from "../settings/Settings"
 import Logo from "../../assets/pincheTavros.jpg"
 import { useTranslation } from "react-i18next"
+import ScrollReveal from "scrollreveal"
 
 const Nav = ({ hide }) => {
   const [t, i18n] = useTranslation("global")
@@ -28,6 +29,45 @@ const Nav = ({ hide }) => {
     setIsOpen("")
   }
 
+  useEffect(() => {
+    const sr = ScrollReveal()
+
+    sr.reveal(".nav-item1", {
+      delay: 400,
+      origin: "top",
+      distance: "100px",
+      duration: 1000,
+    })
+
+    sr.reveal(".nav-item2", {
+      delay: 500,
+      origin: "top",
+      distance: "100px",
+      duration: 1000,
+    })
+
+    sr.reveal(".nav-item3", {
+      delay: 600,
+      origin: "top",
+      distance: "100px",
+      duration: 1000,
+    })
+
+    sr.reveal(".nav-item4", {
+      delay: 700,
+      origin: "top",
+      distance: "100px",
+      duration: 1000,
+    })
+
+    sr.reveal(".button-nav", {
+      delay: 800,
+      origin: "top",
+      distance: "100px",
+      duration: 1000,
+    })
+  }, [])
+
   return (
     <>
       <header className={["header-container", navbar, hide].join(" ")}>
@@ -37,19 +77,19 @@ const Nav = ({ hide }) => {
           </div>
           <div className="container-list">
             <ul className="list">
-              <li>
+              <li className="nav-item1">
                 <a href="#Rutines">{t("header.rutinas")}</a>
               </li>
-              <li>
+              <li className="nav-item2">
                 <a href="#Calculadora">{t("header.turm")}</a>
               </li>
-              <li>
+              <li className="nav-item3">
                 <a href="#Progress">{t("header.progreso")}</a>
               </li>
-              <li>
+              <li className="nav-item4">
                 <a href="#Contact">{t("header.contacto")}</a>
               </li>
-              <li>
+              <li className="button-nav">
                 <Link to={"/register"} className="link-nav">
                   {t("header.crearCuenta")}
                 </Link>

@@ -4,6 +4,7 @@ import ProfileImage from "../../assets/gymbro.png"
 import Cuenta from "./Cuenta"
 import Apariencia from "./Apariencia"
 import Idioma from "./Idioma"
+import Accesibilidad from "./Accesibilidad"
 import { useTranslation } from "react-i18next"
 
 const Settings = () => {
@@ -75,6 +76,9 @@ const Settings = () => {
         <div className="container-config-parts">
           <div className="container-cuenta">
             <Cuenta move={move} />
+          </div>
+          <div className="container-accesibilidad">
+            <Accesibilidad move={move} />
           </div>
           <div className="container-idioma">
             <Idioma move={move} />

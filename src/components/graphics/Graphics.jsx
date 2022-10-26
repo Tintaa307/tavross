@@ -4,6 +4,7 @@ import * as am5 from "@amcharts/amcharts5"
 import * as am5xy from "@amcharts/amcharts5/xy"
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated"
 import { useTranslation } from "react-i18next"
+import ScrollReveal from "scrollreveal"
 // import Swiper core and required modules
 import { Pagination } from "swiper"
 
@@ -41,6 +42,31 @@ const Graphics = () => {
   const handleChange = (e) => {
     exRef === "" ? setTitle("Example...") : setTitle(exRef.current.value)
   }
+
+  useEffect(() => {
+    const sr = ScrollReveal()
+
+    sr.reveal(".titulo-progreso", {
+      delay: 400,
+      origin: "top",
+      distance: "100px",
+      duration: 1000,
+    })
+
+    sr.reveal(".form", {
+      delay: 400,
+      origin: "left",
+      distance: "100px",
+      duration: 1000,
+    })
+
+    sr.reveal(".container-graphics-info", {
+      delay: 400,
+      origin: "right",
+      distance: "100px",
+      duration: 1000,
+    })
+  }, [])
 
   useLayoutEffect(() => {
     let root = am5.Root.new("chartdiv")
@@ -236,7 +262,7 @@ const Graphics = () => {
 
   return (
     <section id="Progress" className="container-section-graphics">
-      <h1>{t("progreso.titulo")}</h1>
+      <h1 className="titulo-progreso">{t("progreso.titulo")}</h1>
       <div className="container-form-info">
         <form className="form">
           <h2 style={{ paddingBottom: "10px", fontSize: "28px" }}>
@@ -249,7 +275,11 @@ const Graphics = () => {
             ref={exRef}
           />
           <input type="number" placeholder={t("progreso.peso")} ref={pesoRef} />
-          <input type="number" placeholder={t("progreso.repeticiones")} ref={repsRef} />
+          <input
+            type="number"
+            placeholder={t("progreso.repeticiones")}
+            ref={repsRef}
+          />
           <button type="submit">{t("progreso.enviar")}</button>
         </form>
       </div>

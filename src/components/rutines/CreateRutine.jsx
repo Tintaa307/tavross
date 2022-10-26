@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
 import "./createRutine.css"
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import { useTranslation } from "react-i18next"
 
 const URI = "http://localhost:8000/rutines"
@@ -103,7 +103,7 @@ const CreateRutine = () => {
                 </select>
               </div>
               <div className="btn-sig" onClick={handleChange}>
-              {t("createRoutine.siguiente")}
+                {t("createRoutine.siguiente")}
               </div>
             </div>
             <div className={["steps two", change, move].join(" ")}>
@@ -123,7 +123,7 @@ const CreateRutine = () => {
                 </select>
               </div>
               <div className="btn-sig" onClick={handleMove}>
-              {t("createRoutine.siguiente")}
+                {t("createRoutine.siguiente")}
               </div>
             </div>
             <div className={["steps three", move].join(" ")}>
@@ -132,12 +132,16 @@ const CreateRutine = () => {
                 <textarea ref={descripcionRef} />
               </div>
               <button className="btn-sig send" type="submit">
-              {t("createRoutine.enviar")}
+                {t("createRoutine.enviar")}
               </button>
             </div>
           </form>
         </div>
-        <form className="form"></form>
+      </div>
+      <div className="container-link-back">
+        <Link className="link-back" to={"/"}>
+          <i class="ri-arrow-left-line"></i>
+        </Link>
       </div>
     </div>
   )
