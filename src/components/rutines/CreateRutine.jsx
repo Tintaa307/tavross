@@ -95,7 +95,7 @@ const CreateRutine = () => {
                 <div className="message">{res}</div>
               </div>
               <div className="item">
-                <h4>{t("createRoutine.finDeLaRutina")}</h4>
+                <h4>{t("createRoutine.FinDeLaRutina")}</h4>
                 <select ref={typeRef} className="select">
                   <option value="salud">{t("createRoutine.salud")}</option>
                   <option value="fuerza">{t("createRoutine.fuerza")}</option>
@@ -108,7 +108,7 @@ const CreateRutine = () => {
             </div>
             <div className={["steps two", change, move].join(" ")}>
               <div className="item">
-                <h4>{t("createRoutine.antidadDeSesiones")}</h4>
+                <h4>{t("createRoutine.cantidadDeSesiones")}</h4>
                 <input ref={sesionesRef} type="number" />
                 <div className="message">{res}</div>
               </div>

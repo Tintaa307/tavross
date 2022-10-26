@@ -8,7 +8,6 @@ import { Link, useNavigate, useParams } from "react-router-dom"
 import ScrollReveal from "scrollreveal"
 import { useTranslation } from "react-i18next"
 
-
 const URI = "http://localhost:8000/usuarios"
 
 const Login = () => {
@@ -38,10 +37,17 @@ const Login = () => {
 
   const validateUser = async (e) => {
     e.preventDefault()
-    await axios.post(URI + "/login", {
-      nombre: userRef.current.value,
-      contrasenia: passwordRef.current.value,
-    })
+    await axios
+      .post(URI + "/login", {
+        nombre: userRef.current.value,
+        contrasenia: passwordRef.current.value,
+      })
+      .then((res) => {
+        console.log(res)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
     getDataLogin()
   }
 
@@ -92,13 +98,13 @@ const Login = () => {
               </div>
             </div>
             <button type="submit" className="boton-neon">
-            {t("login.iniciarSesion")}
+              {t("login.iniciarSesion")}
             </button>
             <div className="container-already">
               <h5>
-              {t("login.noTeHasRegistrado")}{" "}
+                {t("login.noTeHasRegistrado")}{" "}
                 <Link className="inicia-sesion" to={"/register"}>
-                {t("login.registrarse")}
+                  {t("login.registrarse")}
                 </Link>
               </h5>
             </div>

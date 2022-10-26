@@ -9,9 +9,16 @@ import Global_es from "./translations/es/global.json"
 import Global_en from "./translations/en/global.json"
 import Global_ita from "./translations/ita/global.json"
 
+const idioma = ""
+if (localStorage.getItem("idioma")) {
+  idioma = localStorage.getItem("idioma")
+} else {
+  idioma = "es"
+}
+
 i18next.init({
   interpolation: { escapeValue: false },
-  lng: "es",
+  lng: idioma,
   resources: {
     es: {
       global: Global_es,
