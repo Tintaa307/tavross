@@ -112,6 +112,7 @@ export const login = async (req, res) => {
     } else {
       console.log("Login Exitoso")
       res.setHeader("Set-Cookie", setCookieRefresh)
+      console.log(token)
       res.status(200).send(token)
     }
   } else {

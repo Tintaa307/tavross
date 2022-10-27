@@ -16,14 +16,6 @@ const Login = () => {
   const passwordRef = useRef(null)
   const navigate = useNavigate()
   const { id } = useParams()
-  const [dataUser, setDataUser] =
-    useState[
-      {
-        id: "",
-        nombre: "",
-        email: "",
-      }
-    ]
 
   useEffect(() => {
     localStorage.getItem("auth")
@@ -55,17 +47,14 @@ const Login = () => {
         contrasenia: passwordRef.current.value,
       })
       .then((res) => {
-        setDataUser([
-          {
-            id: res.data.data.id,
-            nombre: res.data.data.nombre,
-            emial: res.data.data.email,
-          },
-        ])
+        console.log(res)
         localStorage.setItem("auth", res.data)
-        res.data !== ""
-          ? navigate("/")
-          : alert("usuario y/o contraseña incorrectos")
+        if (res.data !== "") {
+          navigate("/")
+          window.location.href = window.location.href
+        } else {
+          return <h4>El usuario y/o contraseña son incorrectos</h4>
+        }
       })
       .catch((error) => {
         console.log(error)
