@@ -93,6 +93,8 @@
   margin: 15px 0;
   transition: var(--transition);
   border-radius: 15px;
+  user-select: none;
+  cursor: pointer;
 }
 
 .section-settings

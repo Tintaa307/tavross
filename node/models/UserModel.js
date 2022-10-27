@@ -5,6 +5,7 @@ const UserModel = bd.define("usuarios", {
   nombre: { type: DataTypes.STRING },
   contrasenia: { type: DataTypes.TEXT },
   email: { type: DataTypes.TEXT },
+  bio: { type: DataTypes.TEXT },
 })
 
 export default UserModel

@@ -54,7 +54,7 @@ const Cuenta = ({ move }) => {
     axios.put(URI + id, {
       nombre: newName,
       email: newEmail,
-      descripcion: newBio,
+      bio: newBio,
     })
     navigate("/settings")
   }
