@@ -1,16 +1,20 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import "./nav.css"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import ButtonConfig from "./ButtonConfig"
 import Settings from "../settings/Settings"
 import Logo from "../../assets/pincheTavros.jpg"
 import { useTranslation } from "react-i18next"
 import ScrollReveal from "scrollreveal"
+import AuthContext from "../../context/LoggedContext"
 
 const Nav = ({ hide }) => {
   const [t, i18n] = useTranslation("global")
   const [isOpen, setIsOpen] = useState("")
   const [navbar, setNavbar] = useState("")
+  const { isLogged } = useContext(AuthContext)
+  const navigate = useNavigate()
+
   const onScroll = () => {
     if (window.scrollY > 100) {
       setNavbar("active")
@@ -90,9 +94,17 @@ const Nav = ({ hide }) => {
                 <a href="#Contact">{t("header.contacto")}</a>
               </li>
               <li className="button-nav">
-                <Link to={"/register"} className="link-nav">
-                  {t("header.crearCuenta")}
-                </Link>
+                {isLogged === "logged" ? (
+                  <>
+                    <Link className="link-nav" to={"/settings"}>
+                      Tu perfil
+                    </Link>
+                  </>
+                ) : (
+                  <Link to={"/register"} className="link-nav">
+                    {t("header.crearCuenta")}
+                  </Link>
+                )}
               </li>
             </ul>
           </div>

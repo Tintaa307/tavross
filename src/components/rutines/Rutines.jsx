@@ -1,11 +1,13 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useContext } from "react"
 import "./rutines.css"
 import { Link } from "react-router-dom"
 import ScrollReveal from "scrollreveal"
 import { useTranslation } from "react-i18next"
+import AuthContext from "../../context/LoggedContext"
 
 const Rutines = () => {
   const [t, i18n] = useTranslation("global")
+  const { isLogged } = useContext(AuthContext)
 
   useEffect(() => {
     const sr = ScrollReveal()
@@ -85,13 +87,13 @@ const Rutines = () => {
         </div>
       </div>
       <div className="buttons-rutinas">
-        <div className="links-rutinas">
-          <div className="btn-rutina">
+        <div className={["links-rutinas", isLogged].join(" ")}>
+          <div className={["btn-rutina", isLogged].join(" ")}>
             <Link to={"/me/rutinas"} className="link-rutines">
               {t("rutinas.misRutinas")}
             </Link>
           </div>
-          <div className="btn-rutina">
+          <div className={["btn-rutina", isLogged].join(" ")}>
             <Link to={"/create/rutine"} className="link-rutines">
               {t("rutinas.crearRutina")}
             </Link>

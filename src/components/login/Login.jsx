@@ -12,28 +12,40 @@ const URI = "http://localhost:8000/usuarios"
 
 const Login = () => {
   const [t, i18n] = useTranslation("global")
-
   const userRef = useRef(null)
   const passwordRef = useRef(null)
   const navigate = useNavigate()
   const { id } = useParams()
+  const [dataUser, setDataUser] =
+    useState[
+      {
+        id: "",
+        nombre: "",
+        email: "",
+      }
+    ]
+
   useEffect(() => {
-    const sr = ScrollReveal()
+    localStorage.getItem("auth")
+  }, [])
 
-    sr.reveal(".container-login-img", {
-      delay: 400,
-      origin: "left",
-      distance: "100px",
-      duration: 1000,
-    })
+  // useEffect(() => {
+  //   const sr = ScrollReveal()
 
-    sr.reveal(".container-form-login", {
-      delay: 400,
-      origin: "right",
-      distance: "100px",
-      duration: 1000,
-    })
-  })
+  //   sr.reveal(".container-login-img", {
+  //     delay: 400,
+  //     origin: "left",
+  //     distance: "100px",
+  //     duration: 1000,
+  //   })
+
+  //   sr.reveal(".container-form-login", {
+  //     delay: 400,
+  //     origin: "right",
+  //     distance: "100px",
+  //     duration: 1000,
+  //   })
+  // })
 
   const validateUser = async (e) => {
     e.preventDefault()
@@ -43,7 +55,17 @@ const Login = () => {
         contrasenia: passwordRef.current.value,
       })
       .then((res) => {
-        console.log(res)
+        setDataUser([
+          {
+            id: res.data.data.id,
+            nombre: res.data.data.nombre,
+            emial: res.data.data.email,
+          },
+        ])
+        localStorage.setItem("auth", res.data)
+        res.data !== ""
+          ? navigate("/")
+          : alert("usuario y/o contraseña incorrectos")
       })
       .catch((error) => {
         console.log(error)

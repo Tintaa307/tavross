@@ -62,7 +62,7 @@ export const getOneUser = async (req, res) => {
 // get token
 
 export const login = async (req, res) => {
-  const { id, nombre, contrasenia } = req.body
+  const { id, email, nombre, contrasenia } = req.body
 
   const user_query = await UserModel.findOne({
     where: { nombre: nombre },
@@ -74,6 +74,7 @@ export const login = async (req, res) => {
       data: {
         id,
         nombre,
+        email,
       },
     },
     process.env.SECRET
@@ -111,7 +112,7 @@ export const login = async (req, res) => {
     } else {
       console.log("Login Exitoso")
       res.setHeader("Set-Cookie", setCookieRefresh)
-      res.status(200).send("El token" + token)
+      res.status(200).send(token)
     }
   } else {
     console.log("El usuario y/0 contraseña no son correctos")

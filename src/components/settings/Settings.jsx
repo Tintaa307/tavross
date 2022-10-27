@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react"
+import React, { useRef, useState, useEffect, useContext } from "react"
 import "./settings.css"
 import ProfileImage from "../../assets/gymbro.png"
 import Cuenta from "./Cuenta"
@@ -6,10 +6,20 @@ import Apariencia from "./Apariencia"
 import Idioma from "./Idioma"
 import Accesibilidad from "./Accesibilidad"
 import { useTranslation } from "react-i18next"
+import { Link, useNavigate } from "react-router-dom"
+import AuthContext from "../../context/LoggedContext"
 
 const Settings = () => {
   const [t, i18n] = useTranslation("global")
   const [move, setMove] = useState("one")
+  const { setIsLogged } = useContext(AuthContext)
+  const navigate = useNavigate()
+
+  const handleLogOut = () => {
+    localStorage.setItem("auth", setIsLogged(""))
+    navigate("/")
+  }
+
   const buttons = [
     {
       content: t("settings.miCuenta"),
@@ -66,7 +76,7 @@ const Settings = () => {
               ))}
             </ul>
             <div className="container-quit-sesion">
-              <button className="quit-sesion">
+              <button onClick={handleLogOut} className="quit-sesion">
                 <i className="ri-door-open-line"></i>
                 {t("settings.cerrarSesion")}
               </button>
@@ -87,6 +97,11 @@ const Settings = () => {
             <Apariencia move={move} />
           </div>
         </div>
+      </div>
+      <div className="container-arrow-back">
+        <Link className="link-back" to={"/"}>
+          <i className="ri-arrow-left-line"></i>
+        </Link>
       </div>
     </section>
   )

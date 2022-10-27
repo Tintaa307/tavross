@@ -829,3 +829,14 @@
   color: #fff;
   margin-bottom: 10px;
 }
+
+.container-arrow-back {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.container-arrow-back .link-back {
+  font-size: 1.6rem;
+  color: #fff;
+}

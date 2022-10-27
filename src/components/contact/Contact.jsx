@@ -35,7 +35,7 @@ const Contact = () => {
     <section className="section-contact">
       <div className="container-content-contact">
         <div className="container-contact-us">
-          <h2>{t("contact.contactanos")}</h2>
+          <h2>{t("contact.conctactanos")}</h2>
           <h3>tavross2022@gmail.com</h3>
           <form className="form">
             <textarea placeholder={t("contact.ayuda")} />

@@ -17,12 +17,12 @@ const ButtonConfig = ({ isOpen, handleOpen, handleClose }) => {
   return (
     <div className="container-buttons-config">
       <div className="container-buttons">
-        <div className={["button-rueda", isOpen].join(" ")}>
+        <div className="button-rueda">
           <Link to={"/settings"} className="link-settings">
             <i onClick={handleOpen} className="ri-settings-2-line rueda"></i>
           </Link>
         </div>
-        <div className={["button-back", isOpen].join(" ")}>
+        <div className="button-back">
           <Link to={"/"}>
             <i onClick={handleClose} className="ri-arrow-left-line"></i>
           </Link>

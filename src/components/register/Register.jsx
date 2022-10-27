@@ -25,23 +25,23 @@ const URI = "http://localhost:8000/usuarios/"
 const Register = () => {
   const [t, i18n] = useTranslation("global")
 
-  useEffect(() => {
-    const sr = ScrollReveal()
+  // useEffect(() => {
+  //   const sr = ScrollReveal()
 
-    sr.reveal(".container-login-img", {
-      delay: 400,
-      origin: "left",
-      distance: "100px",
-      duration: 1000,
-    })
+  //   sr.reveal(".container-login-img", {
+  //     delay: 400,
+  //     origin: "left",
+  //     distance: "100px",
+  //     duration: 1000,
+  //   })
 
-    sr.reveal(".container-form", {
-      delay: 400,
-      origin: "right",
-      distance: "100px",
-      duration: 1000,
-    })
-  })
+  //   sr.reveal(".container-form", {
+  //     delay: 400,
+  //     origin: "right",
+  //     distance: "100px",
+  //     duration: 1000,
+  //   })
+  // })
 
   const navigate = useNavigate()
 
@@ -128,13 +128,13 @@ const Register = () => {
                   </div>
                 </div>
                 <button type="submit" className="boton-neon">
-                {t("register.registrarse")}
+                  {t("register.registrarse")}
                 </button>
                 <div className="container-already">
                   <h5>
-                  {t("register.yaTienesCuenta")}{" "}
+                    {t("register.yaTienesCuenta")}{" "}
                     <Link className="inicia-sesion" to={"/login"}>
-                    {t("register.iniciarSesion")}
+                      {t("register.iniciarSesion")}
                     </Link>
                   </h5>
                 </div>
