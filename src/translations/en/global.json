@@ -4,7 +4,8 @@
     "turm": "YOUR RM",
     "progreso": "PROGRESS",
     "contacto": "CONTACT",
-    "crearCuenta": "Register"
+    "crearCuenta": "Register here",
+    "tuPerfil": "Your profile"
   },
 
   "home": {
@@ -23,7 +24,7 @@
     "descpRutine2": "Here you will find aerobic and resistance routines, for running, cycling, zumba and more.",
     "descpRutine3": "Routines designed for those whose goal is to stay healthy.",
     "verRutinas": "SEE ROUTINES",
-    "misRutinas": "MYy Routines",
+    "misRutinas": "My Routines",
     "crearRutina": "Create Routine"
   },
 
@@ -109,7 +110,8 @@
     "info3": "Your bio can be changed at any time from here.",
     "imagenDePerfil": "Profile image",
     "editar": "Edit",
-    "guardarCambios": "Save changes"
+    "guardarCambios": "Save changes",
+    "escribeUnaBreveDescripcion": "Write a brief description"
   },
 
   "Appearance": {

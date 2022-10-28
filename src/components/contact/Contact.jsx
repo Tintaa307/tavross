@@ -32,7 +32,7 @@ const Contact = () => {
   }, [])
 
   return (
-    <section className="section-contact">
+    <section id="Contact" className="section-contact">
       <div className="container-content-contact">
         <div className="container-contact-us">
           <h2>{t("contact.conctactanos")}</h2>

@@ -20,6 +20,7 @@ const Home = () => {
       origin: "left",
       distance: "100px",
       duration: 1000,
+      reset: false,
     })
 
     sr.reveal(".container-tri-tre", {
@@ -27,6 +28,7 @@ const Home = () => {
       origin: "right",
       distance: "100px",
       duration: 1000,
+      reset: false,
     })
 
     sr.reveal(".container-tri-dos", {
@@ -34,6 +36,7 @@ const Home = () => {
       origin: "right",
       distance: "100px",
       duration: 1000,
+      reset: false,
     })
 
     sr.reveal(".container-tri-uno", {
@@ -41,6 +44,7 @@ const Home = () => {
       origin: "right",
       distance: "100px",
       duration: 1000,
+      reset: false,
     })
   })
 
@@ -56,12 +60,11 @@ const Home = () => {
             <div className="content-presentation">
               <h1>{t("home.construiTu")}</h1>
               <h2>{t("home.cuerpoIdeal")}</h2>
-              <p>
-                {t("home.descripcionHome")}
-              </p>
+              <p>{t("home.descripcionHome")}</p>
               <div className="container-a">
                 <a href="#Rutines">
-                  {t("home.comienza")}<i className="ri-arrow-right-line"></i>
+                  {t("home.comienza")}
+                  <i className="ri-arrow-right-line"></i>
                 </a>
               </div>
             </div>

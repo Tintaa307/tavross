@@ -4,6 +4,8 @@ import ScrollReveal from "scrollreveal"
 import { Link } from "react-router-dom"
 
 const ButtonConfig = ({ isOpen, handleOpen, handleClose }) => {
+  const userId = localStorage.getItem("userId")
+
   useEffect(() => {
     const sr = ScrollReveal()
 
@@ -18,7 +20,7 @@ const ButtonConfig = ({ isOpen, handleOpen, handleClose }) => {
     <div className="container-buttons-config">
       <div className="container-buttons">
         <div className="button-rueda">
-          <Link to={"/settings"} className="link-settings">
+          <Link to={`/settings/${userId}`} className="link-settings">
             <i onClick={handleOpen} className="ri-settings-2-line rueda"></i>
           </Link>
         </div>

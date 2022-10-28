@@ -62,23 +62,31 @@ export const getOneUser = async (req, res) => {
 // get token
 
 export const login = async (req, res) => {
-  const { id, email, nombre, contrasenia } = req.body
+  const { nombre, contrasenia } = req.body
 
   const user_query = await UserModel.findOne({
     where: { nombre: nombre },
   })
 
+  const userId = user_query.getDataValue("id")
+  const userName = user_query.getDataValue("nombre")
+  const userEmail = user_query.getDataValue("email")
+
+  console.log(userId, userName, userEmail)
+
   const token = jwt.sign(
     {
       expiresIn: "15m",
-      data: {
-        id,
-        nombre,
-        email,
+      userdata: {
+        userId,
+        userName,
+        userEmail,
       },
     },
     process.env.SECRET
   )
+
+  const decodedToken = jwt.decode(token)
 
   const refreshToken = jwt.sign(
     {
@@ -113,7 +121,7 @@ export const login = async (req, res) => {
       console.log("Login Exitoso")
       res.setHeader("Set-Cookie", setCookieRefresh)
       console.log(token)
-      res.status(200).send(token)
+      res.status(200).send({ token, decodedToken })
     }
   } else {
     console.log("El usuario y/0 contraseña no son correctos")

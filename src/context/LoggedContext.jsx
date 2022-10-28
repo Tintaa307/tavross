@@ -6,8 +6,12 @@ const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState(false)
   const [isLogged, setIsLogged] = useState("")
 
+  console.log(auth)
+
   useEffect(() => {
-    localStorage.getItem("auth") !== "" ? setAuth(true) : setAuth(false)
+    localStorage.getItem("auth") !== "notLogged" || ""
+      ? setAuth(true)
+      : setAuth(false)
     if (auth !== false) {
       setIsLogged("logged")
     } else {

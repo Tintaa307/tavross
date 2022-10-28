@@ -9,16 +9,28 @@ const Rutines = () => {
   const [t, i18n] = useTranslation("global")
   const { isLogged } = useContext(AuthContext)
 
-  useEffect(() => {
-    const sr = ScrollReveal()
+  // useEffect(() => {
+  //   const sr = ScrollReveal()
+  //   sr.reveal(".container-rutines-title", {
+  //     delay: 400,
+  //     origin: "top",
+  //     distance: "100px",
+  //     duration: 1000,
+  //   })
+  //   sr.reveal(".card", {
+  //     delay: 500,
+  //     origin: "top",
+  //     distance: "100px",
+  //     duration: 1000,
+  //   })
 
-    sr.reveal(".section", {
-      delay: 400,
-      origin: "top",
-      distance: "100px",
-      duration: 1000,
-    })
-  })
+  //   sr.reveal(".btn-rutina", {
+  //     delay: 600,
+  //     origin: "top",
+  //     distance: "100px",
+  //     duration: 1000,
+  //   })
+  // })
 
   return (
     <section id="Rutines" className="section">

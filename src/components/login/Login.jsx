@@ -16,8 +16,13 @@ const Login = () => {
   const passwordRef = useRef(null)
   const navigate = useNavigate()
   const { id } = useParams()
+  let userData = {}
+  let decodedInfo = {}
 
   useEffect(() => {
+    localStorage.getItem("userId")
+    localStorage.getItem("userName")
+    localStorage.getItem("userEmail")
     localStorage.getItem("auth")
   }, [])
 
@@ -47,13 +52,22 @@ const Login = () => {
         contrasenia: passwordRef.current.value,
       })
       .then((res) => {
-        console.log(res)
-        localStorage.setItem("auth", res.data)
+        decodedInfo = res.data.decodedToken
+        userData = res.config.data
+        userData = JSON.parse(userData)
+        localStorage.setItem("userName", userData.nombre)
+        localStorage.setItem("auth", res.data.token)
+        localStorage.setItem("userId", decodedInfo.userdata.userId)
+        localStorage.setItem("userEmail", decodedInfo.userdata.userEmail)
         if (res.data !== "") {
           navigate("/")
           window.location.href = window.location.href
         } else {
-          return <h4>El usuario y/o contraseña son incorrectos</h4>
+          return (
+            <h4 className="error-message">
+              El usuario y/o contraseña son incorrectos
+            </h4>
+          )
         }
       })
       .catch((error) => {

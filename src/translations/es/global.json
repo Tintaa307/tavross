@@ -4,7 +4,8 @@
     "turm": "TU RM",
     "progreso": "PROGESO",
     "contacto": "CONTACTO",
-    "crearCuenta": "Crear Cuenta"
+    "crearCuenta": "Crear Cuenta",
+    "tuPerfil": "Tu Perfil"
   },
 
   "home": {
@@ -109,7 +110,8 @@
     "info3": "Tu bio puede ser modificada en cualquier momento desde aquí.",
     "imagenDePerfil": "Imagen de perfil",
     "editar": "Editar",
-    "guardarCambios": "Guardar Cambios"
+    "guardarCambios": "Guardar Cambios",
+    "escribeUnaBreveDescripcion": "Escribe una breve descripcion de ti mismo."
   },
 
   "Appearance": {

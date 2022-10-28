@@ -17,6 +17,8 @@ const Cuenta = ({ move }) => {
   const newBioRef = useRef(null)
   const { id } = useParams()
   const navigate = useNavigate()
+  const userName = localStorage.getItem("userName")
+  const userEmail = localStorage.getItem("userEmail")
 
   useEffect(() => {
     if (image) {
@@ -56,7 +58,7 @@ const Cuenta = ({ move }) => {
       email: newEmail,
       bio: newBio,
     })
-    navigate("/settings")
+    navigate(`/settings/${id}`)
   }
 
   return (
@@ -90,17 +92,25 @@ const Cuenta = ({ move }) => {
           </div>
           <div className="item">
             <h4>{t("account.nombre")}</h4>
-            <input type="text" defaultValue={"Valentin Gonzalez"} />
+            <input
+              type="text"
+              defaultValue={userName === "" ? "@exmaple name" : userName}
+            />
             <p>{t("account.info1")}</p>
           </div>
           <div className="item">
             <h4>Email</h4>
-            <input type="text" defaultValue={"Valentinta@icloud.com"} />
+            <input
+              type="text"
+              defaultValue={userEmail === "" ? "example@gmail.com" : userEmail}
+            />
             <p>{t("account.info2")}</p>
           </div>
           <div className="item">
             <h4>{t("account.bio")}</h4>
-            <textarea placeholder="Escribe una breve descripción de ti..."></textarea>
+            <textarea
+              placeholder={t("account.escribeUnaBreveDescripcion")}
+            ></textarea>
             <p>{t("account.info3")}</p>
           </div>
           <button type="submit">{t("account.guardarCambios")}</button>

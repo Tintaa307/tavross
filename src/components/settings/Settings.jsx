@@ -14,9 +14,11 @@ const Settings = () => {
   const [move, setMove] = useState("one")
   const { setIsLogged } = useContext(AuthContext)
   const navigate = useNavigate()
+  const userName = localStorage.getItem("userName")
 
   const handleLogOut = () => {
-    localStorage.setItem("auth", setIsLogged(""))
+    localStorage.setItem("auth", "notLogged")
+    window.location.href = window.location.href
     navigate("/")
   }
 
@@ -58,7 +60,7 @@ const Settings = () => {
             <div className="container-profile-img">
               <img src={""} className="img-profile" />
             </div>
-            <h2>Valentin Gonzalez</h2>
+            <h2>{userName === "" ? "@user" : userName}</h2>
             <h3>{t("settings.tuCuentaPersonal")}</h3>
           </div>
           <div className="container-list-config">

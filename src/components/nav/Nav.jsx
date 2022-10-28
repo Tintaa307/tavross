@@ -97,7 +97,7 @@ const Nav = ({ hide }) => {
                 {isLogged === "logged" ? (
                   <>
                     <Link className="link-nav" to={"/settings"}>
-                      Tu perfil
+                      {t("header.tuPerfil")}
                     </Link>
                   </>
                 ) : (
