@@ -7,6 +7,7 @@ const RutinesModel = bd.define("rutinas", {
   divMusculares: { type: DataTypes.NUMBER },
   sesiones: { type: DataTypes.NUMBER },
   descripcion: { type: DataTypes.STRING },
+  user_rutine: { type: DataTypes.INTEGER },
 })
 
 export default RutinesModel

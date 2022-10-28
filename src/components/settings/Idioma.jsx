@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import "./settings.css"
 import Espana from "../../assets/img-españa.png"
 import EstadosUnidos from "../../assets/img-EstadosUnidos.png"
@@ -12,6 +12,7 @@ const Idioma = ({ move }) => {
   const [t, i18n] = useTranslation("global")
   const [active, setActive] = useState("four")
   const navigate = useNavigate()
+  const { id } = useParams()
 
   useEffect(() => {
     localStorage.getItem("active")
@@ -23,7 +24,7 @@ const Idioma = ({ move }) => {
   const saveData = () => {
     localStorage.setItem("idioma", idioma)
     localStorage.setItem("active", active)
-    navigate("/settings")
+    navigate(`/settings${id}`)
   }
 
   return (

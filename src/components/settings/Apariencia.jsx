@@ -2,7 +2,7 @@ import React, { useEffect, useContext, useState } from "react"
 import "./settings.css"
 import ThemeContext from "../../context/ThemeContext"
 import ScrollReveal from "scrollreveal"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import Red from "../../assets/home-red.png"
 import Blue from "../../assets/home-blue.png"
 import Purple from "../../assets/home-violet.png"
@@ -60,6 +60,7 @@ const Apariencia = ({ move }) => {
   const { color, changeColor } = useContext(ThemeContext)
   const [check, setCheck] = useState("none")
   const navigate = useNavigate()
+  const { id } = useParams()
 
   const handleConfirmed = () => {
     setCheck("check")
@@ -67,7 +68,7 @@ const Apariencia = ({ move }) => {
 
   const saveData = () => {
     localStorage.setItem("color", color)
-    navigate("/settings")
+    navigate(`/settings${id}`)
   }
 
   return (
@@ -105,7 +106,7 @@ const Apariencia = ({ move }) => {
             </Swiper>
           </div>
           <button onClick={saveData} type="submit">
-          {t("Appearance.guardarCambios")}
+            {t("Appearance.guardarCambios")}
           </button>
         </div>
       </div>
