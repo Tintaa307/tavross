@@ -12,13 +12,17 @@ const Cuenta = ({ move }) => {
   const [image, setImage] = useState("")
   const [preview, setPreview] = useState("")
   const fileRef = useRef(null)
-  const newNameRef = useRef(null)
-  const newEmailRef = useRef(null)
-  const newBioRef = useRef(null)
+  const [newUserName, setNewUserName] = useState("")
+  const [newUserEmail, setNewUserEmail] = useState("")
+  const [newUserBio, setNewUserBio] = useState("")
   const { id } = useParams()
   const navigate = useNavigate()
   const userName = localStorage.getItem("userName")
   const userEmail = localStorage.getItem("userEmail")
+
+  useEffect(() => {
+    localStorage.getItem("userBio")
+  }, [])
 
   useEffect(() => {
     if (image) {
@@ -46,19 +50,25 @@ const Cuenta = ({ move }) => {
     }
   }
 
+  console.log(newUserName)
+
   const handleUpload = (e) => {
     e.preventDefault()
-    const newName = newNameRef.current.defaultValue
-    const newEmail = newEmailRef.current.defaultValue
-    const newBio = newBioRef.current.defaultValue
-    localStorage.setItem("imagen", preview)
-
+    if (newUserName !== "" || newUserEmail !== "" || newUserBio !== "") {
+      localStorage.setItem("userName", newUserName)
+      localStorage.setItem("userEmail", newUserEmail)
+      localStorage.setItem("userBio", newUserBio)
+    } else {
+      setNewUserName(userName)
+      setNewUserEmail(userEmail)
+    }
     axios.put(URI + id, {
-      nombre: newName,
-      email: newEmail,
-      bio: newBio,
+      nombre: newUserName,
+      email: newUserEmail,
+      bio: newUserBio,
     })
     navigate(`/settings/${id}`)
+    window.location.href = window.location.href
   }
 
   return (
@@ -93,14 +103,16 @@ const Cuenta = ({ move }) => {
           <div className="item">
             <h4>{t("account.nombre")}</h4>
             <input
+              onChange={(e) => setNewUserName(e.target.value)}
               type="text"
-              defaultValue={userName === "" ? "@exmaple name" : userName}
+              defaultValue={userName === "" ? "@example name" : userName}
             />
             <p>{t("account.info1")}</p>
           </div>
           <div className="item">
             <h4>Email</h4>
             <input
+              onChange={(e) => setNewUserEmail(e.target.value)}
               type="text"
               defaultValue={userEmail === "" ? "example@gmail.com" : userEmail}
             />
@@ -109,8 +121,11 @@ const Cuenta = ({ move }) => {
           <div className="item">
             <h4>{t("account.bio")}</h4>
             <textarea
+              onChange={(e) => setNewUserBio(e.target.value)}
               placeholder={t("account.escribeUnaBreveDescripcion")}
-            ></textarea>
+            >
+              {localStorage.getItem("userBio")}
+            </textarea>
             <p>{t("account.info3")}</p>
           </div>
           <button type="submit">{t("account.guardarCambios")}</button>

@@ -14,6 +14,7 @@ const Nav = ({ hide }) => {
   const [navbar, setNavbar] = useState("")
   const { isLogged } = useContext(AuthContext)
   const navigate = useNavigate()
+  const userId = localStorage.getItem("userId")
 
   const onScroll = () => {
     if (window.scrollY > 100) {
@@ -96,7 +97,7 @@ const Nav = ({ hide }) => {
               <li className="button-nav">
                 {isLogged === "logged" ? (
                   <>
-                    <Link className="link-nav" to={"/settings"}>
+                    <Link className="link-nav" to={`/settings/${userId}`}>
                       {t("header.tuPerfil")}
                     </Link>
                   </>
