@@ -13,6 +13,21 @@ export const createRutine = async (req, res) => {
   }
 }
 
+// get rutines by user
+
+export const getRutinesByUser = async (req, res) => {
+  try {
+    const rutines = await RutinesModel.findAll({
+      where: { user_rutine: req.params.id },
+    })
+    rutines
+      ? res.status(200).json({ message: "Rutines Found", data: rutines })
+      : res.status(404).json({ message: "Rutines Not Found" })
+  } catch (error) {
+    res.status(500).json({ error: error.message })
+  }
+}
+
 // get rutines
 
 export const getRutines = async (req, res) => {

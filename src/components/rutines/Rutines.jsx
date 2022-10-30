@@ -8,6 +8,7 @@ import AuthContext from "../../context/LoggedContext"
 const Rutines = () => {
   const [t, i18n] = useTranslation("global")
   const { isLogged } = useContext(AuthContext)
+  const idUser = localStorage.getItem("userId")
 
   // useEffect(() => {
   //   const sr = ScrollReveal()
@@ -101,12 +102,17 @@ const Rutines = () => {
       <div className="buttons-rutinas">
         <div className={["links-rutinas", isLogged].join(" ")}>
           <div className={["btn-rutina", isLogged].join(" ")}>
-            <Link to={"/me/rutinas"} className="link-rutines">
+            <Link to={`exercises`} className="link-rutines">
+              {t("rutinas.ejercicios")}
+            </Link>
+          </div>
+          <div className={["btn-rutina", isLogged].join(" ")}>
+            <Link to={`/show/rutines/${idUser}`} className="link-rutines">
               {t("rutinas.misRutinas")}
             </Link>
           </div>
           <div className={["btn-rutina", isLogged].join(" ")}>
-            <Link to={"/create/rutine"} className="link-rutines">
+            <Link to={`/create/rutine/${idUser}`} className="link-rutines">
               {t("rutinas.crearRutina")}
             </Link>
           </div>

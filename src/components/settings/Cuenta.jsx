@@ -15,10 +15,13 @@ const Cuenta = ({ move }) => {
   const [newUserName, setNewUserName] = useState("")
   const [newUserEmail, setNewUserEmail] = useState("")
   const [newUserBio, setNewUserBio] = useState("")
+  const [userData, setUserData] = useState([])
   const { id } = useParams()
   const navigate = useNavigate()
   const userName = localStorage.getItem("userName")
   const userEmail = localStorage.getItem("userEmail")
+
+  console.log(userData)
 
   useEffect(() => {
     localStorage.getItem("userBio")

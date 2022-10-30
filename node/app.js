@@ -4,6 +4,7 @@ import userRoutes from "./routes/UsersRouter.js"
 import bd from "./dataBase/bd.js"
 import rutineRoutes from "./routes/RutinesRouter.js"
 import exerciseRoutes from "./routes/EjerciciosRouter.js"
+import userExercisesRoutes from "./routes/UserExercisesRoutes.js"
 
 const app = express()
 
@@ -20,6 +21,7 @@ app.use(express.json())
 app.use("/usuarios", userRoutes)
 app.use("/rutinas", rutineRoutes)
 app.use("/exercises", exerciseRoutes)
+app.use("/user/exercises", userExercisesRoutes)
 
 // try connection
 

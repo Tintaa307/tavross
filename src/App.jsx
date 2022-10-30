@@ -11,6 +11,8 @@ import Settings from "./components/settings/Settings"
 import Page404 from "./components/notFound/Page404"
 import CreateRutine from "./components/rutines/CreateRutine"
 import ThemeContext from "./context/ThemeContext"
+import ShowUserRutines from "./components/rutines/ShowUserRutines"
+import Ejercicios from "./components/rutines/Ejercicios"
 
 function App() {
   const [hide, setHide] = useState("")
@@ -38,7 +40,9 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/settings/:id" element={<Settings />} />
-            <Route path="/create/rutine" element={<CreateRutine />} />
+            <Route path="/create/rutine/:id" element={<CreateRutine />} />
+            <Route path="/show/rutines/:id" element={<ShowUserRutines />} />
+            <Route path="/exercises" element={<Ejercicios />} />
             <Route path="*" element={<Page404 />} />
           </Routes>
         </BrowserRouter>

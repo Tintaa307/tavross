@@ -5,6 +5,7 @@ import {
   getRutineById,
   updateRutine,
   deleteRutine,
+  getRutinesByUser,
 } from "../controller/RutinesController.js"
 
 const router = express.Router()
@@ -15,5 +16,6 @@ router.get("/", getRutines)
 router.get("/:id", getRutineById)
 router.put("/:id", updateRutine)
 router.delete("/:id", deleteRutine)
+router.get("/user/:id", getRutinesByUser)
 
 export default router

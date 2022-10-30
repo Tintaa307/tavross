@@ -1,5 +1,5 @@
 import express from "express"
-import { getAllExercises } from "../controller/EjerciciosController"
+import { getAllExercises } from "../controller/EjerciciosController.js"
 
 const router = express.Router()
 

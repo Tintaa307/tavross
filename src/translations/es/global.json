@@ -9,7 +9,7 @@
   },
 
   "home": {
-    "construiTu": "COSNTRUI TU",
+    "construiTu": "CONSTRUI TU",
     "cuerpoIdeal": "CUERPO IDEAL",
     "descripcionHome": "En Tavross te vamos a ayudar a formar el cuerpo de tus sueños y tener una mejor salud y calidad de vida.",
     "comienza": "Comienza"
@@ -25,7 +25,8 @@
     "descpRutine3": "Rutinas diseñadas para aquellas personas que su objetivo sea mantenerse saludable.",
     "verRutinas": "VER RUTINAS",
     "misRutinas": "Mis Rutinas",
-    "crearRutina": "Crear Rutina"
+    "crearRutina": "Crear Rutina",
+    "ejercicios": "Ejercicios"
   },
 
   "calculadora": {
@@ -39,7 +40,7 @@
 
   "progreso": {
     "titulo": "PROGRESO",
-    "ingresaTusDatos": "Ingresatus datos",
+    "ingresaTusDatos": "Ingresa tus datos",
     "ejercicio": "Ejercicio",
     "peso": "Peso",
     "repeticiones": "Repeticiones",

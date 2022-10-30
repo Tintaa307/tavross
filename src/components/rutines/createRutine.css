@@ -201,6 +201,11 @@
   font-size: 1.1rem;
 }
 
+.container-create-rutine .container-form .form .steps .item select option {
+  color: #000;
+  background-color: transparent;
+}
+
 .container-create-rutine .container-form .form .steps .btn-sig {
   width: 80%;
   height: 40px;
@@ -217,7 +222,27 @@
   cursor: pointer;
 }
 
-.container-create-rutine .container-form .form .steps .btn-sig .send {
+.container-create-rutine .container-form .form .btn-sig .send {
+  position: relative;
+  width: 80%;
+  height: 40px;
+  background-color: rgb(8, 170, 105);
+  border: none;
+  border-radius: 5px;
+  padding-top: 6px;
+  display: block;
+  margin: auto;
+  margin-top: 1.2rem;
+  color: #fff;
+  text-align: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.container-create-rutine .container-form .form .btn-sig .send:hover {
+  opacity: 0.6;
+  transition: var(--transition);
 }
 
 .container-create-rutine
