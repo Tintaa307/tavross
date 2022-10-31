@@ -842,3 +842,17 @@
   font-size: 1.6rem;
   color: #fff;
 }
+
+.message-not-logged {
+  position: absolute;
+  top: 40%;
+  left: 100px;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.message-not-logged .link-to-register {
+  color: var(--color-main);
+}

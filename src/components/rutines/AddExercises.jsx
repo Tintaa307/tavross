@@ -41,7 +41,7 @@ const AddExercises = () => {
       <h1>{t("crearEjercicios.agregaTusEjercicios")}</h1>
       <div className="container-form">
         <form onSubmit={addExercise} className="add-exercises">
-          <h2>{t("crearEjercicios.crearEjercicios")}</h2>
+          <h2>{t("crearEjercicios.ingresaTusEjercicios")}</h2>
           <div className="container-inputs">
             <input
               onChange={(e) => setEjercicio(e.target.value)}

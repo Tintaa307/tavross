@@ -15,6 +15,7 @@ const Settings = () => {
   const { setIsLogged } = useContext(AuthContext)
   const navigate = useNavigate()
   const userName = localStorage.getItem("userName")
+  const auth = localStorage.getItem("auth")
 
   const handleLogOut = () => {
     localStorage.setItem("auth", "notLogged")
@@ -60,7 +61,9 @@ const Settings = () => {
             <div className="container-profile-img">
               <img src={""} className="img-profile" />
             </div>
-            <h2>{userName === "" ? "@user" : userName}</h2>
+            <h2>
+              {auth !== "notLogged" ? userName : t("account.noTienesCuentaAun")}
+            </h2>
             <h3>{t("settings.tuCuentaPersonal")}</h3>
           </div>
           <div className="container-list-config">

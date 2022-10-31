@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react"
 import "./settings.css"
 import axios from "axios"
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate, useParams, Link } from "react-router-dom"
 import { useTranslation } from "react-i18next"
 import { useEffect } from "react"
 
@@ -20,6 +20,8 @@ const Cuenta = ({ move }) => {
   const navigate = useNavigate()
   const userName = localStorage.getItem("userName")
   const userEmail = localStorage.getItem("userEmail")
+
+  const auth = localStorage.getItem("auth")
 
   console.log(userData)
 
@@ -75,66 +77,82 @@ const Cuenta = ({ move }) => {
   }
 
   return (
-    <section className={["section-cuenta", move].join(" ")}>
-      <div className="container-cuenta-info">
-        <div className="container-cuenta-title">
-          <h2>{t("account.tuCuenta")}</h2>
-        </div>
-        <form onSubmit={handleUpload} className="container-info-user">
-          <div className="img-user-edit">
-            <h4>{t("account.imagenDePerfil")}</h4>
-            <div className="img-editor">
-              <input
-                type="file"
-                id="files"
-                onChange={handleChange}
-                accept="image/*"
-                ref={fileRef}
-                style={{ display: "none" }}
-              />
-              {preview ? (
-                <img src={preview} alt="preview" className="img-preview" />
-              ) : (
-                <div className="img-preview"></div>
-              )}
+    <>
+      {auth !== "notLogged" ? (
+        <section className={["section-cuenta", move].join(" ")}>
+          <div className="container-cuenta-info">
+            <div className="container-cuenta-title">
+              <h2>{t("account.tuCuenta")}</h2>
             </div>
-            <div onClick={() => fileRef.current.click()} className="btn-edit">
-              <i class="ri-pencil-line"></i>
-              <span>{t("account.editar")}</span>
-            </div>
+            <form onSubmit={handleUpload} className="container-info-user">
+              <div className="img-user-edit">
+                <h4>{t("account.imagenDePerfil")}</h4>
+                <div className="img-editor">
+                  <input
+                    type="file"
+                    id="files"
+                    onChange={handleChange}
+                    accept="image/*"
+                    ref={fileRef}
+                    style={{ display: "none" }}
+                  />
+                  {preview ? (
+                    <img src={preview} alt="preview" className="img-preview" />
+                  ) : (
+                    <div className="img-preview"></div>
+                  )}
+                </div>
+                <div
+                  onClick={() => fileRef.current.click()}
+                  className="btn-edit"
+                >
+                  <i class="ri-pencil-line"></i>
+                  <span>{t("account.editar")}</span>
+                </div>
+              </div>
+              <div className="item">
+                <h4>{t("account.nombre")}</h4>
+                <input
+                  onChange={(e) => setNewUserName(e.target.value)}
+                  type="text"
+                  defaultValue={userName === "" ? "@example name" : userName}
+                />
+                <p>{t("account.info1")}</p>
+              </div>
+              <div className="item">
+                <h4>Email</h4>
+                <input
+                  onChange={(e) => setNewUserEmail(e.target.value)}
+                  type="text"
+                  defaultValue={
+                    userEmail === "" ? "example@gmail.com" : userEmail
+                  }
+                />
+                <p>{t("account.info2")}</p>
+              </div>
+              <div className="item">
+                <h4>{t("account.bio")}</h4>
+                <textarea
+                  onChange={(e) => setNewUserBio(e.target.value)}
+                  placeholder={t("account.escribeUnaBreveDescripcion")}
+                >
+                  {localStorage.getItem("userBio")}
+                </textarea>
+                <p>{t("account.info3")}</p>
+              </div>
+              <button type="submit">{t("account.guardarCambios")}</button>
+            </form>
           </div>
-          <div className="item">
-            <h4>{t("account.nombre")}</h4>
-            <input
-              onChange={(e) => setNewUserName(e.target.value)}
-              type="text"
-              defaultValue={userName === "" ? "@example name" : userName}
-            />
-            <p>{t("account.info1")}</p>
-          </div>
-          <div className="item">
-            <h4>Email</h4>
-            <input
-              onChange={(e) => setNewUserEmail(e.target.value)}
-              type="text"
-              defaultValue={userEmail === "" ? "example@gmail.com" : userEmail}
-            />
-            <p>{t("account.info2")}</p>
-          </div>
-          <div className="item">
-            <h4>{t("account.bio")}</h4>
-            <textarea
-              onChange={(e) => setNewUserBio(e.target.value)}
-              placeholder={t("account.escribeUnaBreveDescripcion")}
-            >
-              {localStorage.getItem("userBio")}
-            </textarea>
-            <p>{t("account.info3")}</p>
-          </div>
-          <button type="submit">{t("account.guardarCambios")}</button>
-        </form>
-      </div>
-    </section>
+        </section>
+      ) : (
+        <h2 className="message-not-logged">
+          {t("account.noTeHasRegistradoAun")}{" "}
+          <Link className="link-to-register" to={"/register"}>
+            {t("account.registrateAqui")}!
+          </Link>
+        </h2>
+      )}
+    </>
   )
 }
 

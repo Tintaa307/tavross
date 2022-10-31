@@ -22,6 +22,8 @@ const CreateRutine = () => {
   const [sesiones, setSesiones] = useState("")
   const [descripcion, setDescription] = useState("")
 
+  console.log(name, type, divMuscular, sesiones, descripcion, userId)
+
   //refs
   const nameRef = useRef(null)
   const typeRef = useRef(null)
@@ -119,9 +121,15 @@ const CreateRutine = () => {
                   ref={typeRef}
                   className="select"
                 >
-                  <option value="salud">{t("createRoutine.salud")}</option>
-                  <option value="fuerza">{t("createRoutine.fuerza")}</option>
-                  <option value="cardio">{t("createRoutine.cardio")}</option>
+                  <option value={t("createRoutine.salud")}>
+                    {t("createRoutine.salud")}
+                  </option>
+                  <option value={t("createRoutine.fuerza")}>
+                    {t("createRoutine.fuerza")}
+                  </option>
+                  <option value={t("createRoutine.cardio")}>
+                    {t("createRoutine.cardio")}
+                  </option>
                 </select>
               </div>
               <div className="btn-sig" onClick={handleChange}>

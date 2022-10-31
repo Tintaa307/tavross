@@ -46,12 +46,15 @@ const Register = () => {
   const navigate = useNavigate()
 
   const saveUser = async (values) => {
-    await axios.post(URI, {
-      nombre: values.username,
-      email: values.email,
-      contrasenia: values.password,
-    })
-    navigate("/login")
+    await axios
+      .post(URI, {
+        nombre: values.username,
+        email: values.email,
+        contrasenia: values.password,
+      })
+      .then((res) => {
+        res.data !== null ? navigate("/login") : console.log(res.data)
+      })
   }
   return (
     <div className="container-register">

@@ -112,7 +112,10 @@
     "imagenDePerfil": "Imagen de perfil",
     "editar": "Editar",
     "guardarCambios": "Guardar Cambios",
-    "escribeUnaBreveDescripcion": "Escribe una breve descripcion de ti mismo."
+    "escribeUnaBreveDescripcion": "Escribe una breve descripcion de ti mismo.",
+    "noTeHasRegistradoAun": "¿No te has registrado aún?",
+    "registrateAqui": "Registrate Aqui",
+    "noTienesCuentaAun": "No tienes cuenta"
   },
 
   "Appearance": {
