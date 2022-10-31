@@ -1,4 +1,4 @@
-import UserExercisesModel from "../models/UserExercises.js"
+import UserExercisesModel from "../models/UserExercisesModel.js"
 
 // get rutine exercises
 

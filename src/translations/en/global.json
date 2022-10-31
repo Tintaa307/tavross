@@ -120,5 +120,29 @@
     "colorDeFondo": "Background color",
     "guardarCambios": "Save changes",
     "selecColor": "Click to choose the color:"
+  },
+
+  "tusRutinas": {
+    "titulo": "Your routines",
+    "tipoDeLaRutina": "Type of routine",
+    "verDetallesDeLaRutina": "See routine details"
+  },
+
+  "ejercicios": {
+    "titulo": "Exercises",
+    "agregarEjercicio": "Add exercise",
+    "noHayEjercicios": "There are no exercises",
+    "ejercicios": "Exercises",
+    "pesos": "Weights",
+    "repeticiones": "Repetitions"
+  },
+
+  "crearEjercicios": {
+    "agregaTusEjercicios": "Add your exercises",
+    "crearEjercicios": "Enter your exercises",
+    "ejercicio": "Exercise...",
+    "peso": "Weight...",
+    "repeticiones": "Repetitions...",
+    "enviar": "Send"
   }
 }

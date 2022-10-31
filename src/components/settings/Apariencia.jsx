@@ -60,7 +60,7 @@ const Apariencia = ({ move }) => {
   const { color, changeColor } = useContext(ThemeContext)
   const [check, setCheck] = useState("none")
   const navigate = useNavigate()
-  const { id } = useParams()
+  const userId = localStorage.getItem("userId")
 
   const handleConfirmed = () => {
     setCheck("check")
@@ -68,7 +68,7 @@ const Apariencia = ({ move }) => {
 
   const saveData = () => {
     localStorage.setItem("color", color)
-    navigate(`/settings${id}`)
+    navigate(`/settings/${userId}`)
   }
 
   return (

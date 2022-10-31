@@ -204,6 +204,7 @@
 .container-create-rutine .container-form .form .steps .item select option {
   color: #000;
   background-color: transparent;
+  outline: none;
 }
 
 .container-create-rutine .container-form .form .steps .btn-sig {

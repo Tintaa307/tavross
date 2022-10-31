@@ -328,6 +328,31 @@
 .section-show-rutines
   .container-content-rutines
   .container-rutinas
+  .rutina
+  .info-rutine
+  .link-detalles {
+  color: #fff;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.section-show-rutines
+  .container-content-rutines
+  .container-rutinas
+  .rutina
+  .info-rutine
+  .link-detalles
+  i {
+  color: var(--color-main);
+  font-size: 1.5rem;
+}
+
+.section-show-rutines
+  .container-content-rutines
+  .container-rutinas
   .rutina:hover {
   transform: scale(1.05);
   transition: var(--transition);
@@ -359,4 +384,215 @@
   margin-top: 2rem;
   color: #fff;
   font-size: 3rem;
+}
+
+.section-rutines-exercises {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: #040404;
+}
+
+.section-rutines-exercises h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+.section-rutines-exercises .container-exercises-list {
+  width: 100%;
+  margin-top: 3rem;
+  height: 75vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.section-rutines-exercises .container-add-exercises {
+  position: absolute;
+  top: 30px;
+  right: 140px;
+}
+
+.section-rutines-exercises .container-add-exercises .link-add {
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: var(--color-main);
+  padding: 15px 15px;
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.section-rutines-exercises .container-add-exercises .link-add:hover {
+  opacity: 0.5;
+  transition: var(--transition);
+}
+
+.section-rutines-exercises .container-exercises-list .container-row {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.section-rutines-exercises
+  .container-exercises-list
+  .container-row:nth-child(1) {
+  border-right: 2px solid #fff;
+}
+
+.section-rutines-exercises
+  .container-exercises-list
+  .container-row:nth-child(2) {
+  border-right: 2px solid #fff;
+}
+
+.section-rutines-exercises .container-exercises-list .container-row h2 {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 2px solid #fff;
+}
+
+.section-rutines-exercises .container-exercises-list .container-row ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-rutines-exercises .container-exercises-list .container-row ul li {
+  cursor: pointer;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+  text-align: center;
+}
+
+.section-rutines-exercises .container-exercises-list .container-row ul li h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.section-rutines-exercises .container-back {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.section-rutines-exercises .container-back i {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.create-exercises {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: #040404;
+}
+
+.create-exercises h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+
+.create-exercises .container-form {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  display: block;
+  margin: auto;
+  margin-top: 3rem;
+  border-radius: 10px;
+  background-color: #13131a;
+}
+
+.create-exercises .container-form .container-img {
+  width: 50%;
+  height: 100%;
+}
+
+.create-exercises .container-form .container-img img {
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.create-exercises .container-form .add-exercises {
+  width: 35%;
+  height: 410px;
+  position: absolute;
+  right: 185px;
+}
+
+.create-exercises .container-form .add-exercises h2 {
+  color: #fff;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.create-exercises .container-form .add-exercises .container-inputs {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.create-exercises .container-form .add-exercises .container-inputs input {
+  width: 60%;
+  margin: 20px 0;
+  height: 35px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0 10px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.create-exercises .container-form .add-exercises .btn-send {
+  width: 60%;
+  height: 35px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+.create-exercises .container-form .add-exercises .btn-send:hover {
+  background-color: var(--color-main);
+  transition: var(--transition);
+}
+
+.create-exercises .container-back {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.create-exercises .container-back i {
+  color: #fff;
+  font-size: 1.5rem;
 }

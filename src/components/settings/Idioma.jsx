@@ -12,7 +12,7 @@ const Idioma = ({ move }) => {
   const [t, i18n] = useTranslation("global")
   const [active, setActive] = useState("four")
   const navigate = useNavigate()
-  const { id } = useParams()
+  const userId = localStorage.getItem("userId")
 
   useEffect(() => {
     localStorage.getItem("active")
@@ -24,7 +24,7 @@ const Idioma = ({ move }) => {
   const saveData = () => {
     localStorage.setItem("idioma", idioma)
     localStorage.setItem("active", active)
-    navigate(`/settings${id}`)
+    navigate(`/settings/${userId}`)
   }
 
   return (

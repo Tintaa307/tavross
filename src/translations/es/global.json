@@ -120,5 +120,29 @@
     "colorDeFondo": "Color de fondo",
     "guardarCambios": "Guardar Cambios",
     "selecColor": "Clickee para seleccionar el color:"
+  },
+
+  "tusRutinas": {
+    "titulo": "Tus Rutinas",
+    "tipoDeLaRutina": "Tipo de la rutina",
+    "verDetallesDeLaRutina": "Ver detalles de la rutina"
+  },
+
+  "ejercicios": {
+    "titulo": "Ejercicios",
+    "agregarEjercicio": "Agrega ejercicios",
+    "noHayEjercicios": "No hay ejercicios",
+    "ejercicios": "Ejercicios",
+    "pesos": "Pesos",
+    "repeticiones": "Repeticiones"
+  },
+
+  "crearEjercicios": {
+    "agregaTusEjercicios": "Agrega tus ejercicios",
+    "ingresaTusEjercicios": "Ingresa tus ejercicios",
+    "ejercicio": "Ejercicio...",
+    "peso": "Peso...",
+    "repeticiones": "Repeticiones...",
+    "enviar": "Enviar..."
   }
 }

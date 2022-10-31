@@ -18,8 +18,8 @@ const Settings = () => {
 
   const handleLogOut = () => {
     localStorage.setItem("auth", "notLogged")
-    window.location.href = window.location.href
     navigate("/")
+    window.location.href = window.location.href
   }
 
   const buttons = [
