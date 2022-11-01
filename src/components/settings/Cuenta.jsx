@@ -34,8 +34,10 @@ const Cuenta = ({ move }) => {
       const reader = new FileReader()
       reader.onload = () => {
         setPreview(reader.result)
+        console.log(reader.result)
       }
       reader.readAsDataURL(image)
+      console.log(image)
     } else {
       setPreview(null)
     }
