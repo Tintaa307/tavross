@@ -15,9 +15,11 @@ import ShowUserRutines from "./components/rutines/ShowUserRutines"
 import Ejercicios from "./components/rutines/Ejercicios"
 import RutineExercises from "./components/rutines/RutineExercises"
 import AddExercises from "./components/rutines/AddExercises"
+import Preload from "./components/preload/Preload"
 
 function App() {
   const [hide, setHide] = useState("")
+  const [counter, setCounter] = useState(0)
 
   const path = window.location.pathname
   console.log(path)
@@ -32,28 +34,36 @@ function App() {
     hanldleUrl()
   }, [path])
 
+  setTimeout(() => {
+    setCounter(counter + 1)
+  }, 1000)
+
   return (
     <>
-      <div color={color} className="container-all">
-        <BrowserRouter>
-          <Nav hide={hide} />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/settings/:id" element={<Settings />} />
-            <Route path="/create/rutine/:id" element={<CreateRutine />} />
-            <Route path="/show/rutines/:id" element={<ShowUserRutines />} />
-            <Route path="/exercises" element={<Ejercicios />} />
-            <Route path="/add/exercises/:id" element={<AddExercises />} />
-            <Route
-              path="/rutina/ejercicios/:id"
-              element={<RutineExercises />}
-            />
-            <Route path="*" element={<Page404 />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
+      {counter <= 1.5 ? (
+        <Preload />
+      ) : (
+        <div color={color} className="container-all">
+          <BrowserRouter>
+            <Nav hide={hide} />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/settings/:id" element={<Settings />} />
+              <Route path="/create/rutine/:id" element={<CreateRutine />} />
+              <Route path="/show/rutines/:id" element={<ShowUserRutines />} />
+              <Route path="/exercises" element={<Ejercicios />} />
+              <Route path="/add/exercises/:id" element={<AddExercises />} />
+              <Route
+                path="/rutina/ejercicios/:id"
+                element={<RutineExercises />}
+              />
+              <Route path="*" element={<Page404 />} />
+            </Routes>
+          </BrowserRouter>
+        </div>
+      )}
     </>
   )
 }
