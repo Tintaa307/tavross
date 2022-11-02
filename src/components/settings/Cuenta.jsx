@@ -18,8 +18,6 @@ const Cuenta = ({ move }) => {
   const [userData, setUserData] = useState([])
   const { id } = useParams()
   const navigate = useNavigate()
-  const userName = localStorage.getItem("userName")
-  const userEmail = localStorage.getItem("userEmail")
 
   const auth = localStorage.getItem("auth")
 
@@ -33,7 +31,8 @@ const Cuenta = ({ move }) => {
     if (image) {
       const reader = new FileReader()
       reader.onload = () => {
-        setPreview(reader.result)
+        localStorage.setItem("image", reader.result)
+        setPreview(localStorage.getItem("image"))
         console.log(reader.result)
       }
       reader.readAsDataURL(image)
@@ -61,21 +60,26 @@ const Cuenta = ({ move }) => {
 
   const handleUpload = (e) => {
     e.preventDefault()
-    if (newUserName !== "" || newUserEmail !== "" || newUserBio !== "") {
-      localStorage.setItem("userName", newUserName)
-      localStorage.setItem("userEmail", newUserEmail)
-      localStorage.setItem("userBio", newUserBio)
-    } else {
-      setNewUserName(userName)
-      setNewUserEmail(userEmail)
-    }
     axios.put(URI + id, {
       nombre: newUserName,
       email: newUserEmail,
       bio: newUserBio,
     })
     navigate(`/settings/${id}`)
-    window.location.href = window.location.href
+  }
+
+  useEffect(() => {
+    dataUser()
+  }, [])
+
+  const dataUser = async () => {
+    await axios
+      .get(URI + id)
+
+      .then((res) => {
+        console.log(res.data)
+      })
+      .catch((err) => console.log(err))
   }
 
   return (
@@ -108,7 +112,7 @@ const Cuenta = ({ move }) => {
                   onClick={() => fileRef.current.click()}
                   className="btn-edit"
                 >
-                  <i class="ri-pencil-line"></i>
+                  <i className="ri-pencil-line"></i>
                   <span>{t("account.editar")}</span>
                 </div>
               </div>
@@ -117,7 +121,9 @@ const Cuenta = ({ move }) => {
                 <input
                   onChange={(e) => setNewUserName(e.target.value)}
                   type="text"
-                  defaultValue={userName === "" ? "@example name" : userName}
+                  defaultValue={
+                    newUserName === "" ? "@example name" : newUserName
+                  }
                 />
                 <p>{t("account.info1")}</p>
               </div>
@@ -127,7 +133,7 @@ const Cuenta = ({ move }) => {
                   onChange={(e) => setNewUserEmail(e.target.value)}
                   type="text"
                   defaultValue={
-                    userEmail === "" ? "example@gmail.com" : userEmail
+                    newUserEmail === "" ? "example@gmail.com" : newUserEmail
                   }
                 />
                 <p>{t("account.info2")}</p>
@@ -137,9 +143,12 @@ const Cuenta = ({ move }) => {
                 <textarea
                   onChange={(e) => setNewUserBio(e.target.value)}
                   placeholder={t("account.escribeUnaBreveDescripcion")}
-                >
-                  {localStorage.getItem("userBio")}
-                </textarea>
+                  defaultValue={
+                    newUserBio === ""
+                      ? t("account.escribeUnaBreveDescripcion")
+                      : newUserBio
+                  }
+                ></textarea>
                 <p>{t("account.info3")}</p>
               </div>
               <button type="submit">{t("account.guardarCambios")}</button>

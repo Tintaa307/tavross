@@ -22,7 +22,6 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   const path = window.location.pathname
-  console.log(path)
 
   const hanldleUrl = () => {
     path === "/register" ? setHide("hide") : setHide("")
