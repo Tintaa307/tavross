@@ -6,7 +6,7 @@ const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState(false)
   const [isLogged, setIsLogged] = useState("")
 
-  console.log(auth)
+  // console.log(auth)
 
   useEffect(() => {
     localStorage.getItem("auth") !== "notLogged" || ""
@@ -22,6 +22,7 @@ const AuthProvider = ({ children }) => {
   const data = {
     isLogged,
     setIsLogged,
+    setAuth,
   }
 
   return <AuthContext.Provider value={data}>{children}</AuthContext.Provider>

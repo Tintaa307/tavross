@@ -19,7 +19,7 @@ import Preload from "./components/preload/Preload"
 
 function App() {
   const [hide, setHide] = useState("")
-  const [counter, setCounter] = useState(0)
+  const [loading, setLoading] = useState(true)
 
   const path = window.location.pathname
   console.log(path)
@@ -34,14 +34,10 @@ function App() {
     hanldleUrl()
   }, [path])
 
-  setTimeout(() => {
-    setCounter(counter + 1)
-  }, 1000)
-
   return (
     <>
-      {counter <= 1.5 ? (
-        <Preload />
+      {loading ? (
+        <Preload setLoading={setLoading} />
       ) : (
         <div color={color} className="container-all">
           <BrowserRouter>

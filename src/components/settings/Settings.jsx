@@ -12,15 +12,15 @@ import AuthContext from "../../context/LoggedContext"
 const Settings = () => {
   const [t, i18n] = useTranslation("global")
   const [move, setMove] = useState("one")
-  const { setIsLogged } = useContext(AuthContext)
+  const { setIsLogged, setAuth } = useContext(AuthContext)
   const navigate = useNavigate()
   const userName = localStorage.getItem("userName")
   const auth = localStorage.getItem("auth")
 
   const handleLogOut = () => {
     localStorage.setItem("auth", "notLogged")
+    setAuth(false)
     navigate("/")
-    window.location.href = window.location.href
   }
 
   const buttons = [

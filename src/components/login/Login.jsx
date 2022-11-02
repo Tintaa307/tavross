@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect, useRef, useContext } from "react"
 import "./login.css"
 import Image from "../../assets/loginPerson.png"
 import { Formik, Form, Field } from "formik"
@@ -7,6 +7,7 @@ import axios from "axios"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import ScrollReveal from "scrollreveal"
 import { useTranslation } from "react-i18next"
+import AuthContext from "../../context/LoggedContext"
 
 const URI = "http://localhost:8000/usuarios"
 
@@ -16,6 +17,7 @@ const Login = () => {
   const passwordRef = useRef(null)
   const navigate = useNavigate()
   const { id } = useParams()
+  const { setAuth } = useContext(AuthContext)
   let userData = {}
   let decodedInfo = {}
 
@@ -59,9 +61,9 @@ const Login = () => {
         localStorage.setItem("auth", res.data.token)
         localStorage.setItem("userId", decodedInfo.userdata.userId)
         localStorage.setItem("userEmail", decodedInfo.userdata.userEmail)
+        setAuth(true)
         if (res.data !== "") {
           navigate("/")
-          window.location.href = window.location.href
         } else {
           return (
             <h4 className="error-message">

@@ -1,7 +1,17 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./preload.css"
 
-const Preload = () => {
+const Preload = ({ setLoading }) => {
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500)
+
+    return () => {
+      clearTimeout()
+    }
+  }, [])
+
   return (
     <section className="section-preload">
       <div className="container-svg">
