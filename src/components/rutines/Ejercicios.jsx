@@ -25,7 +25,7 @@ const Ejercicios = () => {
     // toda la palabra menos la primer mayuscula
     const restoPalabra = letraMayus.slice(1)
 
-    restoPalabra.map((l) => {
+    Array.from(restoPalabra).map((l) => {
       return esMayus(l) ? ` ${l}` : l
     })
   }
