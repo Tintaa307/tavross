@@ -21,9 +21,9 @@ const Cuenta = ({ move }) => {
 
   const auth = localStorage.getItem("auth")
 
-  console.log(userData)
-
   useEffect(() => {
+    localStorage.getItem("userName")
+    localStorage.getItem("userEmail")
     localStorage.getItem("userBio")
   }, [])
 
@@ -56,8 +56,6 @@ const Cuenta = ({ move }) => {
     }
   }
 
-  console.log(newUserName)
-
   const handleUpload = (e) => {
     e.preventDefault()
     axios.put(URI + id, {
@@ -66,20 +64,6 @@ const Cuenta = ({ move }) => {
       bio: newUserBio,
     })
     navigate(`/settings/${id}`)
-  }
-
-  useEffect(() => {
-    dataUser()
-  }, [])
-
-  const dataUser = async () => {
-    await axios
-      .get(URI + id)
-
-      .then((res) => {
-        console.log(res.data)
-      })
-      .catch((err) => console.log(err))
   }
 
   return (
@@ -122,7 +106,9 @@ const Cuenta = ({ move }) => {
                   onChange={(e) => setNewUserName(e.target.value)}
                   type="text"
                   defaultValue={
-                    newUserName === "" ? "@example name" : newUserName
+                    newUserName === ""
+                      ? localStorage.getItem("userName")
+                      : newUserName
                   }
                 />
                 <p>{t("account.info1")}</p>
@@ -133,7 +119,9 @@ const Cuenta = ({ move }) => {
                   onChange={(e) => setNewUserEmail(e.target.value)}
                   type="text"
                   defaultValue={
-                    newUserEmail === "" ? "example@gmail.com" : newUserEmail
+                    newUserEmail === ""
+                      ? localStorage.getItem("userEmail")
+                      : newUserEmail
                   }
                 />
                 <p>{t("account.info2")}</p>
@@ -145,7 +133,7 @@ const Cuenta = ({ move }) => {
                   placeholder={t("account.escribeUnaBreveDescripcion")}
                   defaultValue={
                     newUserBio === ""
-                      ? t("account.escribeUnaBreveDescripcion")
+                      ? localStorage.getItem("userBio")
                       : newUserBio
                   }
                 ></textarea>

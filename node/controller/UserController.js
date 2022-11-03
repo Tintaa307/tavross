@@ -48,12 +48,12 @@ export const getAllUsers = async (req, res) => {
 
 export const getOneUser = async (req, res) => {
   try {
-    await UserModel.findAll({
+    const user = await UserModel.findAll({
       where: {
         id: req.params.id,
       },
     })
-    res.json({ message: "user found" })
+    res.json({ message: "user found", data: user })
   } catch (error) {
     console.log("error", error)
   }
