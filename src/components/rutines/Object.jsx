@@ -6,7 +6,6 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js"
 const Object = () => {
   const canvasRef = useRef(null)
   const scene = new THREE.Scene()
-  scene.background = new THREE.Color(0xffffff)
   const camera = new THREE.PerspectiveCamera(
     75,
     window.innerWidth / window.innerHeight,
@@ -33,11 +32,11 @@ const Object = () => {
         function (gltf) {
           scene.add(gltf.scene)
         },
-        function( onProgress ) {
-            console.log(onProgress)
+        function (onProgress) {
+          console.log(onProgress)
         },
         function (error) {
-          console.error(error)
+          console.log(error)
         }
       )
     }
@@ -50,7 +49,10 @@ const Object = () => {
   }, [])
 
   return (
-    <div style={{ position: "absolute", top: 0, left: 0, width: "100%" }} className="container-canvas">
+    <div
+      style={{ position: "absolute", top: 0, left: 0, width: "100%" }}
+      className="container-canvas"
+    >
       <div ref={canvasRef} className="canvas"></div>
     </div>
   )
