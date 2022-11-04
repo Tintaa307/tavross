@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import "./rutines.css"
 import axios from "axios"
+import Object from "./Object"
 
 const URI = "http://localhost:8000/exercises/"
 
@@ -51,6 +52,9 @@ const Ejercicios = () => {
             <p>{descripcion}</p>
           </div>
         ))}
+      </div>
+      <div className="container-object">
+        <Object />
       </div>
     </section>
   )
