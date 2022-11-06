@@ -165,7 +165,7 @@
   color: #0f0;
 }
 
-.container-section-rutines .card .box .content a {
+.container-section-rutines .card .box .content .link-see {
   position: relative;
   display: inline-block;
   padding: 8px 20px;
@@ -429,14 +429,6 @@
   font-size: 3rem;
 }
 
-.section-rutines-exercises .container-exercises-list {
-  width: 100%;
-  margin-top: 3rem;
-  height: 75vh;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
 .section-rutines-exercises .container-add-exercises {
   position: absolute;
   top: 30px;
@@ -456,6 +448,14 @@
 .section-rutines-exercises .container-add-exercises .link-add:hover {
   opacity: 0.5;
   transition: var(--transition);
+}
+
+.section-rutines-exercises .container-exercises-list {
+  width: 100%;
+  margin-top: 3rem;
+  height: 75vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .section-rutines-exercises .container-exercises-list .container-row {
@@ -621,4 +621,280 @@
 .create-exercises .container-back i {
   color: #fff;
   font-size: 1.5rem;
+}
+
+.section-see-rutines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: #040404;
+}
+
+.section-see-rutines .container-content-see-rutines {
+  width: 100%;
+  height: 100%;
+}
+
+.section-see-rutines .container-content-see-rutines .container-fuerza {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.section-see-rutines .container-content-see-rutines .container-fuerza.one {
+  display: block;
+}
+
+.section-see-rutines .container-content-see-rutines .container-cardio {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.section-see-rutines .container-content-see-rutines .container-cardio.two {
+  display: block;
+}
+
+.section-see-rutines .container-content-see-rutines .container-salud {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.section-see-rutines .container-content-see-rutines .container-salud.three {
+  display: block;
+}
+
+/* fuerza */
+
+.section-fuerza {
+  width: 100%;
+  height: 95%;
+}
+
+.section-fuerza h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+.section-fuerza .container-exercises-list {
+  width: 100%;
+  margin-top: 3rem;
+  height: 75vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.section-fuerza .container-exercises-list .container-row {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.section-fuerza .container-exercises-list .container-row:nth-child(1) {
+  border-right: 2px solid #fff;
+}
+
+.section-fuerza .container-exercises-list .container-row:nth-child(2) {
+  border-right: 2px solid #fff;
+}
+
+.section-fuerza .container-exercises-list .container-row h2 {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 2px solid #fff;
+}
+
+.section-fuerza .container-exercises-list .container-row ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-fuerza .container-exercises-list .container-row ul li {
+  cursor: pointer;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+  text-align: center;
+}
+
+.section-fuerza .container-exercises-list .container-row ul li h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.section-fuerza .container-back {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.section-fuerza .container-back i {
+  color: #fff;
+  font-size: 2rem;
+}
+
+/* cardio */
+
+.section-cardio {
+  width: 100%;
+  height: 95%;
+}
+
+.section-cardio h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+.section-cardio .container-exercises-list {
+  width: 100%;
+  margin-top: 3rem;
+  height: 75vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.section-cardio .container-exercises-list .container-row {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.section-cardio .container-exercises-list .container-row:nth-child(1) {
+  border-right: 2px solid #fff;
+}
+
+.section-cardio .container-exercises-list .container-row:nth-child(2) {
+  border-right: 2px solid #fff;
+}
+
+.section-cardio .container-exercises-list .container-row h2 {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 2px solid #fff;
+}
+
+.section-cardio .container-exercises-list .container-row ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-cardio .container-exercises-list .container-row ul li {
+  cursor: pointer;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+  text-align: center;
+}
+
+.section-cardio .container-exercises-list .container-row ul li h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.section-cardio .container-back {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.section-cardio .container-back i {
+  color: #fff;
+  font-size: 2rem;
+}
+
+/* salud */
+
+.section-salud {
+  width: 100%;
+  height: 95%;
+}
+
+.section-salud h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+.section-salud .container-exercises-list {
+  width: 100%;
+  margin-top: 3rem;
+  height: 75vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.section-salud .container-exercises-list .container-row {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.section-salud .container-exercises-list .container-row:nth-child(1) {
+  border-right: 2px solid #fff;
+}
+
+.section-salud .container-exercises-list .container-row:nth-child(2) {
+  border-right: 2px solid #fff;
+}
+
+.section-salud .container-exercises-list .container-row h2 {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 2px solid #fff;
+}
+
+.section-salud .container-exercises-list .container-row ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-salud .container-exercises-list .container-row ul li {
+  cursor: pointer;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+  text-align: center;
+}
+
+.section-salud .container-exercises-list .container-row ul li h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.section-salud .container-back {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.section-salud .container-back i {
+  color: #fff;
+  font-size: 2rem;
 }

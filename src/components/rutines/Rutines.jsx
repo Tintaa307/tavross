@@ -54,7 +54,9 @@ const Rutines = () => {
               <div className="container-descrip">
                 {t("rutinas.descpRutine1")}
               </div>
-              <a href="#">{t("rutinas.verRutinas")}</a>
+              <Link to={"/see/rutines/1"} className="link-see" href="#">
+                {t("rutinas.verRutinas")}
+              </Link>
             </div>
           </div>
         </div>
@@ -74,7 +76,9 @@ const Rutines = () => {
               <div className="container-descrip">
                 {t("rutinas.descpRutine2")}
               </div>
-              <a href="#">{t("rutinas.verRutinas")}</a>
+              <Link to={"/see/rutines/2"} className="link-see" href="#">
+                {t("rutinas.verRutinas")}
+              </Link>
             </div>
           </div>
         </div>
@@ -94,7 +98,9 @@ const Rutines = () => {
               <div className="container-descrip">
                 {t("rutinas.descpRutine3")}
               </div>
-              <a href="#">{t("rutinas.verRutinas")}</a>
+              <Link to={"/see/rutines/"} className="link-see" href="#">
+                {t("rutinas.verRutinas")}
+              </Link>
             </div>
           </div>
         </div>

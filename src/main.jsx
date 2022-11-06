@@ -8,6 +8,7 @@ import i18next from "i18next"
 import Global_es from "./translations/es/global.json"
 import Global_en from "./translations/en/global.json"
 import Global_ita from "./translations/ita/global.json"
+import Global_fr from "./translations/fr/global.json"
 import { AuthProvider } from "./context/LoggedContext"
 
 let idioma = ""
@@ -29,6 +30,9 @@ i18next.init({
     },
     ita: {
       global: Global_ita,
+    },
+    fr: {
+      global: Global_fr,
     },
   },
 })

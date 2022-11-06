@@ -1,0 +1,156 @@
+{
+  "header": {
+    "rutinas": "ROUTINES",
+    "turm": "VOTRE RM",
+    "progreso": "LE PROGRÈS",
+    "contacto": "CONTACT",
+    "crearCuenta": "Créer un Compte",
+    "tuPerfil": "Ton Profil"
+  },
+
+  "home": {
+    "construiTu": "CONSTRUISEZ VOTRE",
+    "cuerpoIdeal": "CORPS IDÉAL",
+    "descripcionHome": "Chez Tavross, nous allons vous aider à former le corps de vos rêves et à avoir une meilleure santé et qualité de vie.",
+    "comienza": "Commence"
+  },
+
+  "rutinas": {
+    "titulo": "RUTINES",
+    "section1": "FORCE",
+    "salud": "SANTÉ",
+    "cardio": "CARDIO",
+    "descpRutine1": "Routines pour ceux qui cherchent à gagner de la masse musculaire et à augmenter leur force.",
+    "descpRutine2": "Vous trouverez ici des routines d'aérobie et de résistance, pour la course, le vélo, la zumba et plus encore.",
+    "descpRutine3": "Des routines conçues pour ceux dont l'objectif est de rester en bonne santé.",
+    "verRutinas": "VOIR LES ROUTINES",
+    "misRutinas": "Mes routines",
+    "crearRutina": "Créer une routine",
+    "ejercicios": "Exercices",
+    "rutinaDeCardio": "Routine Cardiovasculaire",
+    "rutinaDeFuerza": "Musculation",
+    "rutinaDeSalud": "Routine Saine",
+    "sinPeso": "En apesanteur",
+    "aTuGusto": "À votre goût"
+  },
+
+  "calculadora": {
+    "titulo": "Calculatrice RM",
+    "sub-titulo": "Calculez votre objectif d'endurance musculaire.",
+    "aclaracion": "Express en KG",
+    "peso": "Lester",
+    "repeticiones": "Répétitions",
+    "enviar": "Envoyer"
+  },
+
+  "progreso": {
+    "titulo": "LE PROGRÈS",
+    "ingresaTusDatos": "Entrez vos données",
+    "ejercicio": "Exercer",
+    "peso": "Lester",
+    "repeticiones": "Répétitions",
+    "enviar": "Envoyer"
+  },
+
+  "contact": {
+    "descpContact": "Site dédié à la gym et dans le but que chaque personne atteigne ses objectifs de manière simple et efficace.",
+    "nuestrasRedes": "Nos Réseaux",
+    "conctactanos": "Contacts",
+    "ayuda": "Aide et/ou problèmes...",
+    "enviar": "Envoyer"
+  },
+
+  "register": {
+    "titulo": "ENREGISTREMENT",
+    "subtitulo": "Inscrivez-vous maintenant pour accéder à des avantages incroyables",
+    "enviar": "Envoyer",
+    "registrarse": "ENREGISTREMENT",
+    "yaTienesCuenta": "Avez-vous déjà un compte?",
+    "iniciarSesion": "Commencer la session."
+  },
+
+  "login": {
+    "titulo": "COMMENCER LA SESSION",
+    "iniciarSesion": "COMMENCER LA SESSION",
+    "noTeHasRegistrado": "Vous n'êtes pas inscrit?",
+    "registrarse": "S'inscrire."
+  },
+
+  "createRoutine": {
+    "titulo": "Créez Votre Routine",
+    "step": "Marcher",
+    "nombreDeLaRutina": "Nom de routine",
+    "FinDeLaRutina": "Fin de routine",
+    "salud": "Santé",
+    "fuerza": "Force",
+    "cardio": "Cardio",
+    "fin": "terminer",
+    "cantidadDeSesiones": "Nombre de séances",
+    "siguiente": "Suivant",
+    "cantidadDeDivisionesMusculares": "Nombre de divisions musculaires",
+    "descripcion": "La description",
+    "enviar": "Envoyer"
+  },
+
+  "settings": {
+    "titulo": "PARAMÈTRE",
+    "tuCuentaPersonal": "Votre compte personnel",
+    "miCuenta": "MON COMPTE",
+    "accesibilidad": "ACCESSIBILITÉ",
+    "idioma": "LANGAGE",
+    "apariencia": "APPARENCE",
+    "cerrarSesion": "FERMER LA SESSION"
+  },
+
+  "idioma": {
+    "titulo": "Langage",
+    "selecIdioma": "Choisissez votre langue"
+  },
+
+  "account": {
+    "tuCuenta": "Ton compte",
+    "nombre": "Nom",
+    "info1": "Votre nom peut être modifié à tout moment à partir d'ici.",
+    "info2": "Votre email peut être modifié à tout moment à partir d'ici.",
+    "bio": "La description",
+    "info3": "Votre description peut être modifiée à tout moment à partir d'ici.",
+    "imagenDePerfil": "Image de profil",
+    "editar": "Éditer",
+    "guardarCambios": "Enregistrer les modifications",
+    "escribeUnaBreveDescripcion": "Rédigez une brève description de vous-même.",
+    "noTeHasRegistradoAun": "Vous n'êtes pas encore inscrit ?",
+    "registrateAqui": "Inscrivez-vous ici",
+    "noTienesCuentaAun": "Vous n'avez pas de compte"
+  },
+
+  "Appearance": {
+    "apariencia": "Apparence",
+    "colorDeFondo": "Couleur de l'arrière plan",
+    "guardarCambios": "Enregistrer les modifications",
+    "selecColor": "Cliquez pour sélectionner la couleur:"
+  },
+
+  "tusRutinas": {
+    "titulo": "Vos routines",
+    "tipoDeLaRutina": "Type de routine",
+    "verDetallesDeLaRutina": "Afficher les détails de la routine"
+  },
+
+  "ejercicios": {
+    "titulo": "Exercices",
+    "agregarEjercicio": "Ajouter des exercices",
+    "noHayEjercicios": "Pas d'exercices",
+    "ejercicios": "Exercices",
+    "pesos": "Lester",
+    "repeticiones": "Pépétitions"
+  },
+
+  "crearEjercicios": {
+    "agregaTusEjercicios": "Ajoutez vos exercices",
+    "ingresaTusEjercicios": "Entrez vos exercices",
+    "ejercicio": "Exercer...",
+    "peso": "Lester...",
+    "repeticiones": "Pépétitions...",
+    "enviar": "Envoyer"
+  }
+}

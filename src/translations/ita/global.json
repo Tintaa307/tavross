@@ -26,7 +26,12 @@
     "verRutinas": "VEDI ALLENAMENTO",
     "misRutinas": "I MIEI ESERCIZI",
     "crearRutina": "Creare esercizi",
-    "ejercicios": "Esercizi"
+    "ejercicios": "Esercizi",
+    "rutinaDeCardio": "Esercizio di cardio",
+    "rutinaDeFuerza": "Esercizio di forza",
+    "rutinaDeSalud": "Esercizio di salute",
+    "sinPeso": "Senza peso",
+    "aTuGusto": "A tuo gusto"
   },
 
   "calculadora": {

@@ -16,6 +16,7 @@ import Ejercicios from "./components/rutines/Ejercicios"
 import RutineExercises from "./components/rutines/RutineExercises"
 import AddExercises from "./components/rutines/AddExercises"
 import Preload from "./components/preload/Preload"
+import SeeRutines from "./components/rutines/examples/SeeRutines"
 
 function App() {
   const [hide, setHide] = useState("")
@@ -54,6 +55,7 @@ function App() {
                 path="/rutina/ejercicios/:id"
                 element={<RutineExercises />}
               />
+              <Route path="/see/rutines/:id" element={<SeeRutines />} />
               <Route path="*" element={<Page404 />} />
             </Routes>
           </BrowserRouter>

@@ -26,7 +26,12 @@
     "verRutinas": "VER RUTINAS",
     "misRutinas": "Mis Rutinas",
     "crearRutina": "Crear Rutina",
-    "ejercicios": "Ejercicios"
+    "ejercicios": "Ejercicios",
+    "rutinaDeCardio": "Rutina de Cardio",
+    "rutinaDeFuerza": "Rutina de Fuerza",
+    "rutinaDeSalud": "Rutina Saludable",
+    "sinPeso": "Sin Peso",
+    "aTuGusto": "A tu gusto"
   },
 
   "calculadora": {
