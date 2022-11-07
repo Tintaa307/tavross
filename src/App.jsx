@@ -17,6 +17,7 @@ import RutineExercises from "./components/rutines/RutineExercises"
 import AddExercises from "./components/rutines/AddExercises"
 import Preload from "./components/preload/Preload"
 import SeeRutines from "./components/rutines/examples/SeeRutines"
+import AccesibilityContext from "./context/AccesibilityContext"
 
 function App() {
   const [hide, setHide] = useState("")
@@ -29,6 +30,7 @@ function App() {
   }
 
   const { color } = useContext(ThemeContext)
+  const { opaque, animation, letterSpacing } = useContext(AccesibilityContext)
 
   useEffect(() => {
     hanldleUrl()
@@ -39,7 +41,13 @@ function App() {
       {loading ? (
         <Preload setLoading={setLoading} />
       ) : (
-        <div color={color} className="container-all">
+        <div
+          letter-spacing={letterSpacing}
+          animation={animation}
+          opaque={opaque}
+          color={color}
+          className="container-all"
+        >
           <BrowserRouter>
             <Nav hide={hide} />
             <Routes>

@@ -46,6 +46,7 @@
   --title-size: 1.7rem;
   --big-word: 6rem;
   --special: 3rem;
+  --letter-spacing: none;
 
   /* =========== TRANSITIONS =========== */
   --transition: all 0.25s ease-in-out;
@@ -87,6 +88,7 @@ h5,
 h6 {
   color: var(--text-color);
   font-weight: 600;
+  letter-spacing: var(--letter-spacing);
 }
 
 button {
@@ -161,8 +163,15 @@ a {
   --color-main: var(--color-main-opaque);
   --color-main-light: #0048cf7e;
   --color-main-lighten: #0060de83;
-  --transition: none;
   --box-shadow: none;
+}
+
+[animation="animation"] {
+  --transition: none;
+}
+
+[letterSpacing="letterSpacing"] {
+  letter-spacing: 2px;
 }
 
 [font-size="big"] {

@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize"
 
-const bd = new Sequelize("tavross", "root", "rootroot", {
+const bd = new Sequelize("tavross", "root", "", {
   dialect: "mysql",
   host: "localhost",
 })
