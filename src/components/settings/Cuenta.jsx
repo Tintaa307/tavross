@@ -1,8 +1,9 @@
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useContext } from "react"
 import "./settings.css"
 import axios from "axios"
 import { useNavigate, useParams, Link } from "react-router-dom"
 import { useTranslation } from "react-i18next"
+import AuthContext from "../../context/LoggedContext"
 import { useEffect } from "react"
 
 const URI = "http://localhost:8000/usuarios/"
@@ -16,6 +17,7 @@ const Cuenta = ({ move }) => {
   const [newUserEmail, setNewUserEmail] = useState("")
   const [newUserBio, setNewUserBio] = useState("")
   const [userData, setUserData] = useState([])
+  const { setIsLogged, setAuth } = useContext(AuthContext)
   const { id } = useParams()
   const navigate = useNavigate()
 
@@ -68,8 +70,8 @@ const Cuenta = ({ move }) => {
 
   return (
     <>
-      {auth !== "notLogged" ? (
-        <section className={["section-cuenta", move].join(" ")}>
+      <section className={["section-cuenta", move].join(" ")}>
+        {auth !== "notLogged" ? (
           <div className="container-cuenta-info">
             <div className="container-cuenta-title">
               <h2>{t("account.tuCuenta")}</h2>
@@ -142,15 +144,15 @@ const Cuenta = ({ move }) => {
               <button type="submit">{t("account.guardarCambios")}</button>
             </form>
           </div>
-        </section>
-      ) : (
-        <h2 className="message-not-logged">
-          {t("account.noTeHasRegistradoAun")}{" "}
-          <Link className="link-to-register" to={"/register"}>
-            {t("account.registrateAqui")}!
-          </Link>
-        </h2>
-      )}
+        ) : (
+          <h2 className="message-not-logged">
+            {t("account.noTeHasRegistradoAun")}{" "}
+            <Link className="link-to-register" to={"/register"}>
+              {t("account.registrateAqui")}!
+            </Link>
+          </h2>
+        )}
+      </section>
     </>
   )
 }

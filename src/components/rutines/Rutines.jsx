@@ -98,7 +98,7 @@ const Rutines = () => {
               <div className="container-descrip">
                 {t("rutinas.descpRutine3")}
               </div>
-              <Link to={"/see/rutines/"} className="link-see" href="#">
+              <Link to={"/see/rutines/3"} className="link-see" href="#">
                 {t("rutinas.verRutinas")}
               </Link>
             </div>
