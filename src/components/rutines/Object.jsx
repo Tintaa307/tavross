@@ -2,10 +2,14 @@ import React, { useState, useRef, useEffect } from "react"
 import * as THREE from "three"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js"
+import "./rutines.css"
+import { AnimationMixer, LoopRepeat } from "three"
 
 const Object = () => {
   const canvasRef = useRef(null)
   const scene = new THREE.Scene()
+  let light
+  scene.background = new THREE.Color(0x13131a)
   const camera = new THREE.PerspectiveCamera(
     75,
     window.innerWidth / window.innerHeight,
@@ -21,16 +25,29 @@ const Object = () => {
     canvas.appendChild(renderer.domElement)
     camera.position.z = 0.3
     controls.update()
-    const light = new THREE.AmbientLight(0xffffff, 0.5)
+    scene.fog = new THREE.Fog(0xa0a0a0, 200, 1000)
+    light = new THREE.HemisphereLight(0xffffff, 0x444444)
+    light.position.set(0, 200, 0)
     scene.add(light)
-    const light2 = new THREE.PointLight(0xffffff, 0.5)
-    scene.add(light2)
+    light = new THREE.DirectionalLight(0xffffff)
+    light.position.set(0, 200, 100)
+    light.castShadow = true
+    light.shadow.camera.top = 180
+    light.shadow.camera.bottom = -100
+    light.shadow.camera.left = -120
+    light.shadow.camera.right = 120
+    scene.add(light)
+
     function loadGLTF() {
       let object = new GLTFLoader()
       object.load(
-        "./bicep.gltf",
+        "/chicamodelo/scene.gltf",
         function (gltf) {
-          scene.add(gltf.scene)
+          let modelGltf = gltf.scene
+          let mixer = new AnimationMixer(modelGltf)
+          let action = mixer.clipAction(gltf.animations[0])
+          modelGltf.scale.set(0.1, 0.1, 0.1)
+          scene.add(modelGltf)
         },
         function (onProgress) {
           console.log(onProgress)
@@ -49,10 +66,7 @@ const Object = () => {
   }, [])
 
   return (
-    <div
-      style={{ position: "absolute", top: 0, left: 0, width: "100%" }}
-      className="container-canvas"
-    >
+    <div className="container-canvas">
       <div ref={canvasRef} className="canvas"></div>
     </div>
   )

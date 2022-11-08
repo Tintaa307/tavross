@@ -42,7 +42,7 @@ function App() {
         <Preload setLoading={setLoading} />
       ) : (
         <div
-          letter-spacing={letterSpacing}
+          letterSpacing={letterSpacing}
           animation={animation}
           opaque={opaque}
           color={color}

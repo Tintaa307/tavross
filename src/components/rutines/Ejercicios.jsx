@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import "./rutines.css"
 import axios from "axios"
+import Obj from "./Object"
 
 const URI = "http://localhost:8000/exercises/"
 
@@ -19,15 +20,19 @@ const Ejercicios = () => {
   }
 
   const normalizarTexto = (str) => {
-    // la palabra con la primer latra mayus
-    const letraMayus = str.charAt(0).toUpperCase() + str.slice(1)
+    // la palabra con la primer letra mayus
+    const letraMayus = str.charAt(0).toUpperCase()
 
     // toda la palabra menos la primer mayuscula
     const restoPalabra = letraMayus.slice(1)
 
-    Array.from(restoPalabra).map((l) => {
+    const espacios = Array.from(restoPalabra).map((l) => {
       return esMayus(l) ? ` ${l}` : l
     })
+
+    const palabraFinal = letraMayus + espacios
+
+    return palabraFinal
   }
 
   const getEjercicios = async () => {
@@ -45,12 +50,13 @@ const Ejercicios = () => {
     <section className="section-ejercicios">
       <h1>Ejercicios</h1>
       <div className="container-ejercicios">
-        {ejercicios.map(({ nombre, descripcion }) => (
-          <div className="ejercicio">
+        {ejercicios.map(({ nombre, descripcion }, i) => (
+          <div className="ejercicio" key={i}>
             <h2>{normalizarTexto(nombre)}</h2>
             <p>{descripcion}</p>
           </div>
         ))}
+        <Obj />
       </div>
     </section>
   )
