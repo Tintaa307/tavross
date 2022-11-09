@@ -24,13 +24,16 @@ const Ejercicios = () => {
     const letraMayus = str.charAt(0).toUpperCase()
 
     // toda la palabra menos la primer mayuscula
-    const restoPalabra = letraMayus.slice(1)
+    const restoPalabra = str.slice(1)
 
-    const espacios = Array.from(restoPalabra).map((l) => {
-      return esMayus(l) ? ` ${l}` : l
-    })
+    const espacios = restoPalabra
+      .split("")
+      .map((l) => (esMayus(l) ? ` ${l}` : l))
+      .join("")
 
     const palabraFinal = letraMayus + espacios
+
+    console.log(palabraFinal)
 
     return palabraFinal
   }
