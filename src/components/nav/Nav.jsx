@@ -42,6 +42,7 @@ const Nav = ({ hide }) => {
       origin: "top",
       distance: "100px",
       duration: 1000,
+      reset: false,
     })
 
     sr.reveal(".nav-item2", {
@@ -49,6 +50,7 @@ const Nav = ({ hide }) => {
       origin: "top",
       distance: "100px",
       duration: 1000,
+      reset: false,
     })
 
     sr.reveal(".nav-item3", {
@@ -56,6 +58,7 @@ const Nav = ({ hide }) => {
       origin: "top",
       distance: "100px",
       duration: 1000,
+      reset: false,
     })
 
     sr.reveal(".nav-item4", {
@@ -63,6 +66,7 @@ const Nav = ({ hide }) => {
       origin: "top",
       distance: "100px",
       duration: 1000,
+      reset: false,
     })
 
     sr.reveal(".button-nav", {
@@ -78,7 +82,7 @@ const Nav = ({ hide }) => {
       <header className={["header-container", navbar, hide].join(" ")}>
         <nav className="container-nav">
           <div className="container-name">
-            <a href="#Home"> {/* <img src={Logo} alt="" />*/ "TAVROSS"}</a>
+            <a href="#Home">TAVROSS</a>
           </div>
           <div className="container-list">
             <ul className="list">

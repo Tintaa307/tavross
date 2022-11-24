@@ -108,17 +108,17 @@ const Rutines = () => {
       <div className="buttons-rutinas">
         <div className={["links-rutinas", isLogged].join(" ")}>
           <div className={["btn-rutina", isLogged].join(" ")}>
-            <Link to={`exercises`} className="link-rutines">
+            <Link to={`exercises`} className="link link-rutines">
               {t("rutinas.ejercicios")}
             </Link>
           </div>
           <div className={["btn-rutina", isLogged].join(" ")}>
-            <Link to={`/show/rutines/${idUser}`} className="link-rutines">
+            <Link to={`/show/rutines/${idUser}`} className="link link-rutines">
               {t("rutinas.misRutinas")}
             </Link>
           </div>
           <div className={["btn-rutina", isLogged].join(" ")}>
-            <Link to={`/create/rutine/${idUser}`} className="link-rutines">
+            <Link to={`/create/rutine/${idUser}`} className="link link-rutines">
               {t("rutinas.crearRutina")}
             </Link>
           </div>

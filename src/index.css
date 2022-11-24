@@ -13,6 +13,8 @@
   /* =========== COLORS =========== */
   --color-main: #8800ac;
   --color-main-opaque: #001890;
+  --color-main-opaque-light: #001890a6;
+  --color-main-opaque-lighten: #00189055;
   --color-main-light: #ff1928;
   --color-main-lighten: #ff303f;
   --title-color: #000;
@@ -78,6 +80,7 @@ body {
   font-size: var(--default-size);
   background-color: #040404;
   overflow-x: hidden;
+  transition: var(--transition);
 }
 
 h1,
@@ -91,6 +94,14 @@ h6 {
   letter-spacing: var(--letter-spacing);
 }
 
+p {
+  letter-spacing: var(--letter-spacing);
+}
+
+div {
+  letter-spacing: var(--letter-spacing);
+}
+
 button {
   cursor: pointer;
 }
@@ -100,7 +111,12 @@ ul {
 }
 
 a {
+  letter-spacing: var(--letter-spacing);
   text-decoration: none;
+}
+
+button {
+  letter-spacing: var(--letter-spacing);
 }
 
 [theme="dark"] {
@@ -124,6 +140,8 @@ a {
   --color-main-light: #ff1928;
   --color-main-lighten: #ff1f2e;
   --color-main-opaque: #b9000c;
+  --color-main-opaque-light: #b9000ca6;
+  --color-main-opaque-lighten: #b9000c55;
   --box-shadow: 0 0 12px #ec000f;
 }
 
@@ -132,6 +150,8 @@ a {
   --color-main-light: #1939dc;
   --color-main-lighten: #2444e7;
   --color-main-opaque: #001890;
+  --color-main-opaque-light: #001890a6;
+  --color-main-opaque-lighten: #00189055;
   --box-shadow: 0 0 12px #0020c3;
 }
 
@@ -140,6 +160,8 @@ a {
   --color-main-light: #ff6114;
   --color-main-lighten: #ff7124;
   --color-main-opaque: #cc3e00;
+  --color-main-opaque-light: #cc3e00a6;
+  --color-main-opaque-lighten: #cc3e0055;
   --box-shadow: 0 0 12px #ff4d00ff;
 }
 
@@ -147,7 +169,9 @@ a {
   --color-main: #33a100ff;
   --color-main-light: #4cba19;
   --color-main-lighten: #57c524;
-  --color-main-opaque: #236e00;
+  --color-main-opaque: #236e00d8;
+  --color-main-opaque-light: #236e00a6;
+  --color-main-opaque-lighten: #236e0055;
   --box-shadow: 0 0 12px #33a100ff;
 }
 
@@ -156,13 +180,15 @@ a {
   --color-main-light: #9f17c3;
   --color-main-lighten: #ac24d0;
   --color-main-opaque: #600079;
+  --color-main-opaque-light: #600079a6;
+  --color-main-opaque-lighten: #60007955;
   --box-shadow: 0 0 12px #8800ac;
 }
 
 [opaque="opaque"] {
   --color-main: var(--color-main-opaque);
-  --color-main-light: #0048cf7e;
-  --color-main-lighten: #0060de83;
+  --color-main-light: var(--color-main-opaque-light);
+  --color-main-lighten: var(--color-main-opaque-lighten);
   --box-shadow: none;
 }
 
@@ -170,8 +196,8 @@ a {
   --transition: none;
 }
 
-[letterSpacing="letterSpacing"] {
-  letter-spacing: 2px;
+[letter-spacing="letter-spacing"] {
+  --letter-spacing: 3px;
 }
 
 [font-size="big"] {
