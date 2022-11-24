@@ -8,6 +8,7 @@ const Accesibilidad = ({ move }) => {
   const [spacingState, setSpacingState] = useState("")
   const [animationState, setAnimationState] = useState("")
   const [opaqueState, setOpaqueState] = useState("")
+
   const {
     animation,
     handleAnimation,

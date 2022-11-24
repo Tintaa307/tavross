@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react"
 import * as THREE from "three"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js"
-import "./rutines.css"
 import { AnimationMixer, LoopRepeat } from "three"
 
 const Object = () => {
@@ -38,27 +37,31 @@ const Object = () => {
     light.shadow.camera.right = 120
     scene.add(light)
 
-    function loadGLTF() {
-      let object = new GLTFLoader()
-      object.load(
-        "/chicamodelo/scene.gltf",
-        function (gltf) {
-          let modelGltf = gltf.scene
-          let mixer = new AnimationMixer(modelGltf)
-          let action = mixer.clipAction(gltf.animations[0])
-          modelGltf.scale.set(0.1, 0.1, 0.1)
-          scene.add(modelGltf)
-        },
-        function (onProgress) {
-          console.log(onProgress)
-        },
-        function (error) {
-          console.log(error)
-        }
-      )
-    }
-    loadGLTF()
+    let object = new GLTFLoader()
+    let mixer
+    object.load(
+      "/bicep.gltf",
+      function (gltf) {
+        let modelGltf = gltf.scene
+        modelGltf.scale.set(0.1, 0.1, 0.1)
+        scene.add(modelGltf)
+        mixer = new THREE.AnimationMixer(modelGltf)
+        const clips = gltf.animations
+        const action = mixer.clipAction(clips[0])
+        action.play()
+      },
+      function (onProgress) {
+        console.log(onProgress)
+      },
+      function (error) {
+        console.log(error)
+      }
+    )
+    const clock = new THREE.Clock()
     const animate = () => {
+      if (mixer) {
+        mixer.update(clock.getDelta())
+      }
       requestAnimationFrame(animate)
       renderer.render(scene, camera)
     }
